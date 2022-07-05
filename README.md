@@ -41,14 +41,17 @@ Exclusivity defines whether the data is shared after its flow, or whether it bec
 ### Positionality
 Positionality defines from what position data flows out of a file, and to what position data flows into a file. These can be abstract concepts (like begining or end) or concrete positional integers (like 1 or 20 or 50).
 
-<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Positionality.jpg" height=280 width=400/>
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/a1e934f8cf644f4423608af5b67b903426952137/Docs/Positionality.png" height=280 width=400/>
 
 
 ### Conditionals and Mitigation
 
 Conditionals are basically IF ELSE blocks with boolean statements on the output of the previous statement or statement block. They require a statement or statement block in order to be executable.
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/ebe3e781f31dd6331f1ed2725c64e985e666ed6d/Docs/Conditionals.jpg" height=280 width=400/>
 
 Mitigation specifies what happens to an interaction when the initial interaction tried, but failed for some reason.
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/733daec245cf3d680554b4c31820bcf90be8f590/Docs/Mitigation.jpg" height=280 width=400/>
+
 
 ### Looping
 
