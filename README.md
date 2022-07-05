@@ -95,25 +95,27 @@ This is necessary for some of the features of this specification. Temporary file
 ## Abstract Api
 This abstract api is useful until we have a Virtual IO Language wrapper to enable this type of scripting.
 
-    a.pre(
-      (data)=>{
-        //pre script here
-        //then flow
-        a.flow(b, quant, exclsv, p1, p2)
-      }
-   ).post(
-    (data)=>{
-      //some post script
-    }
-   ).flow(c)
-      
-    a.pre(
-      (data)=>{
+        a.pre(
+          (data)=>{
             //pre script here
-            //then stream
-            a.stream(quant, p1, p2) 
-      }
-    ).post(
-      //post script here
-    ).stream(c) //then stream to c
+            //then flow
+            a.flow(b, quant, exclsv, p1, p2)
+          }
+        ).post(
+            (data)=>{
+              //some post script
+            }
+        ).flow(c)
+
+        a.pre(
+          (data)=>{
+                //pre script here
+                //then stream
+                a.stream(quant, p1, p2) 
+          }
+        ).post(
+            (data)=>{
+              //some post script
+            }
+        ).stream(c) //then stream to c
         
