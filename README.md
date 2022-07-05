@@ -1,6 +1,6 @@
-# The File Interaction Model (FIM) 0.1
+# The File Interaction Sexy Transaction (FIST) 0.1
 
-The File Interaction Model is specified as a Turing Complete File Computer.
+The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
 
 ## We can begin with the 12 Main Concepts:
 
