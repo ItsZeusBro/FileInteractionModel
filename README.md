@@ -65,7 +65,7 @@ This is an iterator that runs a statement or statement block until the boolean c
 
 
 ### Pre-Actions
-These are actions you specify that are to take place on the data before it is inserted into the file at its given position
+These are actions you specify that are to take place on the data before it is inserted into the file at its given position. These are just functions you pass in.
 
 ### Post-Actions
 These are actions you specify that are to take place on the file (as a whole) after data is inserted into it at some position
@@ -94,9 +94,26 @@ This is necessary for some of the features of this specification. Temporary file
 
 ## Abstract Api
 This abstract api is useful until we have a Virtual IO Language wrapper to enable this type of scripting.
-1. a.Flow(b.pre(script1), quant, exclsv, p1, p2).post(script2)    //flow
-2. a.Flow(b).Flow(c)                                              //chaining
-3. pre(script)                                                    //pre action
-4. post(script)                                                   //post action
-5. a.Stream(b.pre(script1), quant, p1, p2).post(script2)          
-//Continuous Stream until quant reached (a p1 is the postition after which you wish to stream. b p2 is the position after which you stream the data to.)
+
+    a.pre(
+      (data)=>{
+        //pre script here
+        //then flow
+        a.flow(b, quant, exclsv, p1, p2)
+      }
+   ).post(
+    (data)=>{
+      //some post script
+    }
+   ).flow(c)
+      
+a.pre(
+  (data)=>{
+        //pre script here
+        //then stream
+        a.stream(quant, p1, p2) 
+  }
+).post(
+  //post script here
+).stream(c) //then stream to c
+        
