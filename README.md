@@ -107,13 +107,13 @@ This abstract api is useful until we have a Virtual IO Language wrapper to enabl
     }
    ).flow(c)
       
-a.pre(
-  (data)=>{
-        //pre script here
-        //then stream
-        a.stream(quant, p1, p2) 
-  }
-).post(
-  //post script here
-).stream(c) //then stream to c
+    a.pre(
+      (data)=>{
+            //pre script here
+            //then stream
+            a.stream(quant, p1, p2) 
+      }
+    ).post(
+      //post script here
+    ).stream(c) //then stream to c
         
