@@ -2,28 +2,21 @@
 This is a new specification that I am developing to use for TikiTaka and other programs
 
 ## We can begin with the 12 Main Concepts:
-1. Flow
-2. Stream
-3. Directionality
-4. Quantality
-5. Exclusivity
-6. Positionality
-7. Conditionals (and Mitigation)
-8. Looping
-9. Pre-actions
-10. Post-actions
-11. Syncronicity
-12. Chaining
+
+1. Directionality
+2. Quantality
+3. Exclusivity
+4. Positionality
+5. Conditionals (and Mitigation)
+6. Looping
+7. Pre-actions
+8. Post-actions
+9. Syncronicity
+10. Chaining
+11.Flow
+12.Stream
 
 
-### Flow
-A Flow in this context is a terminating execution that runs on a File Interaction. It runs left to right, and top down. Like the english language.
-
-<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Flow.jpg" height=245 width=350/>
-
-
-### Stream
-A Stream in this context is a non-terminating execution (watcher) that runs on a File Interaction.
 
 ### Directionality
 Directionality simply means what direction belongs to the flow of data. It is represented by an arrow. This is the most simple idea in the specification and cannot be mistaken because its abstractual. The only things that matter here is the fact that its an arrow. This is because all arrows have a direction, and its direction determines the flow of data. When added the FIM specification, it should come from a node and to another. If you have a bidirectional arrow without constraints, you can mirror one files behavior to that of the other (from left to right).
@@ -70,6 +63,16 @@ If you have a bidriectional flow model, you can use the bidirectional arrow or a
 
 ### Chaining, Forks, and Junctions
 Chaining is a modeling technique that demonstrates a compound flow model, where you have a starting node, and flow the data to other nodes syncronously or asyncronously, effectively piping the flow into another node or multiple nodes. Forks are when a file flow syncronously splits into two different asyncronous paths. Two asyncronous paths of execution can only converge on a Junction. They need to terminate on the junction that executes the end result of the flow of a fork. The junction can merge file results in a number of syncronous ways.
+
+### Flow
+A Flow in this context is a terminating execution that runs on a File Interaction. It runs left to right, and top down. Like the english language.
+
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Flow.jpg" height=245 width=350/>
+
+
+### Stream
+A Stream in this context is a non-terminating execution (watcher) that runs on a File Interaction. Streams can be chained together with pre and post scripts.
+
 
 
 ## Abstract Api
