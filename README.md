@@ -95,6 +95,8 @@ This is necessary for some of the features of this specification. Temporary file
 ## Abstract Api
 This abstract api is useful until we have a Virtual IO Language wrapper to enable some of the specified features of The File Interaction Model.
 
+For now, i'm thinking of doing something chained to represent high level syncronous behavior with possible low level asyncronous behavior:
+
         api.a.pre(
           (data)=>{
             //pre script here
