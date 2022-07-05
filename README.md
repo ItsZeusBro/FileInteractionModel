@@ -17,7 +17,10 @@ This is a new specification that I am developing to use for TikiTaka and other p
 
 
 ### Flow
-A Flow in this context is a terminating execution that runs on a File Interaction.
+A Flow in this context is a terminating execution that runs on a File Interaction. It runs left to right, and top down. Like the english language.
+
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Flow.jpg" height=245 width=350/>
+
 
 ### Stream
 A Stream in this context is a non-terminating execution (watcher) that runs on a File Interaction.
@@ -25,24 +28,24 @@ A Stream in this context is a non-terminating execution (watcher) that runs on a
 ### Directionality
 Directionality simply means what direction belongs to the flow of data. It is represented by an arrow. This is the most simple idea in the specification and cannot be mistaken because its abstractual. The only things that matter here is the fact that its an arrow. This is because all arrows have a direction, and its direction determines the flow of data. When added the FIM specification, it should come from a node and to another. If you have a bidirectional arrow without constraints, you can mirror one files behavior to that of the other (from left to right).
 
-<img src="https://github.com/ItsZeusBro/TikiTaka/blob/7a46a5a074f1d58712f3777b1dd8c30cac52aa38/Docs/Directionality.jpg" height=245 width=350/>
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Directionality.jpg" height=245 width=350/>
 
 ### Quantality
 Quantality defines the constraints upon the flow which defaults to "all data" when not constrained. The quantity of data in the flow matters for all kinds of situations in manipulating files. Different keywords such as All, Half, N, [1, 2, ...N], are used to represent the amount of data (in bits, bytes, or  chunks of arbitrary size) flowing from one file to the other. Don't worry about the other stuff on the diagram here for now.
 
-<img src="https://github.com/ItsZeusBro/TikiTaka/blob/8df5aa08e514060a9f05719e66e973fedc070e43/Docs/Quantality1.png" height=280 width=400/>
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Quantality1.png" height=280 width=400/>
 
 
 ### Exclusivity
 Exclusivity defines whether the data is shared after its flow, or whether it becomes exclusive to a new owner.
 
-<img src="https://github.com/ItsZeusBro/TikiTaka/blob/0da184363446b48c4672771e5b8dc0924000c15c/Docs/Exclusivity.jpg" height=280 width=400/>
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Exclusivity.jpg" height=280 width=400/>
 
 
 ### Positionality
 Positionality defines from what position data flows out of a file, and to what position data flows into a file. These can be abstract concepts (like begining or end) or concrete positional integers (like 1 or 20 or 50).
 
-<img src="https://github.com/ItsZeusBro/TikiTaka/blob/352f46409d9d873aeaf20d5522e552e27dc08137/Docs/Positionality.jpg" height=280 width=400/>
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Positionality.jpg" height=280 width=400/>
 
 
 ### Conditionals and Mitigation
