@@ -17,7 +17,7 @@ The File Interaction Model is specified as a Turing Complete Computer for File I
 11. Chaining
 12. Flow
 13. Stream
-14. Virtual IO
+14. Virtual IO (Looping, Conditionals, and Forks will be disabled until this resource is enabled)
 
 ### Files
 These are files.
