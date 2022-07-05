@@ -95,7 +95,7 @@ This is necessary for some of the features of this specification. Temporary file
 ## Abstract Api
 This abstract api is useful until we have a Virtual IO Language wrapper to enable this type of scripting.
 
-        a.pre(
+        api.a.pre(
           (data)=>{
             //pre script here
             //then flow
@@ -105,9 +105,7 @@ This abstract api is useful until we have a Virtual IO Language wrapper to enabl
             (data)=>{
               //some post script
             }
-        ).flow(c)
-
-        a.pre(
+        ).flow(c).a.pre(
           (data)=>{
                 //pre script here
                 //then stream
