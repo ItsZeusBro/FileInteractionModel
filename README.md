@@ -1,5 +1,6 @@
 # The File Interaction Model (FIM) 0.1
-This is a new specification that I am developing to use for TikiTaka and other programs
+
+The File Interaction Model is specified as Turing Complete Computer for File Interactions.
 
 ## We can begin with the 12 Main Concepts:
 
