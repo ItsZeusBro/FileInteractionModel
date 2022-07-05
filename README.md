@@ -97,25 +97,28 @@ This abstract api is useful until we have a Virtual IO Language wrapper to enabl
 
 For now, i'm thinking of doing something chained to represent high level syncronous behavior with possible low level asyncronous behavior. We wanted it this way because of the fact that people might run into problems while expecting one job to finish before another, while in reality the second job was dependent in some way on the completion of the first.
 
-        a.pre(
-          (data)=>{
-            //pre script here
-            //then flow
-            a.flow(b, quant, exclsv, p1, p2)
-          }
-        ).post(
-            (data)=>{
-              //some post script
-            }
-        ).flow(c).a.pre(
-          (data)=>{
-                //pre script here
-                //then stream
-                a.stream(quant, p1, p2) 
-          }
-        ).post(
-            (data)=>{
-              //some post script
-            }
+        a.pre(b,
+                (data)=>{
+                //pre script here  
+                }
+                
+        ).post(b,
+                (data)=>{
+                //some post script
+                //...
+                }
+        )
+        .flow(b, quant, exclsv, p1, p2)
+        .pre(c,
+                (data)=>{
+                  //pre script here
+                  //...
+
+                }
+        )
+        .post(c,
+                (data)=>{
+                //some post script
+                //...
+                }
         ).stream(c) //then stream to c
-        
