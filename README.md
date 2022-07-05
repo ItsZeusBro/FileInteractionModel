@@ -97,7 +97,7 @@ This abstract api is useful until we have a Virtual IO Language wrapper to enabl
 
 For now, i'm thinking of doing something chained to represent high level syncronous behavior with possible low level asyncronous behavior. We wanted it this way because of the fact that people might run into problems while expecting one job to finish before another, while in reality the second job was dependent in some way on the completion of the first.
 
-        api.a.pre(
+        a.pre(
           (data)=>{
             //pre script here
             //then flow
