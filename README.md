@@ -1,6 +1,6 @@
 # The File Interaction Model (FIM) 0.1
 
-The File Interaction Model is specified as a Turing Complete Computer for File Interactions.
+The File Interaction Model is specified as a Turing Complete File Computer.
 
 ## We can begin with the 12 Main Concepts:
 
