@@ -1,4 +1,4 @@
-# The File Interaction Sexy Transaction (FIST) 0.1
+# File Interaction Sexy Transaction (FIST) 0.1
 
 The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
 
