@@ -15,8 +15,8 @@ The File Interaction Model is specified as a Turing Complete Computer for File I
 9. Post-actions
 10. Syncronicity
 11. Chaining
-12.Flow
-13.Stream
+12. Flow
+13. Stream
 14. Virtual IO
 
 ### Files
