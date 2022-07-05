@@ -98,7 +98,5 @@ This abstract api is useful until we have a Virtual IO Language wrapper to enabl
 2. a.Flow(b).Flow(c)                                              //chaining
 3. pre(script)                                                    //pre action
 4. post(script)                                                   //post action
-5. a.Stream(b.pre(script1), quant, p1, p2).post(script2)          //Continuous Stream until quant reached 
-                                                                  //(a p1 is the postition after which you 
-                                                                  //wish to stream. b p2 is the position 
-                                                                  //after which you stream the data to.)
+5. a.Stream(b.pre(script1), quant, p1, p2).post(script2)          
+//Continuous Stream until quant reached (a p1 is the postition after which you wish to stream. b p2 is the position after which you stream the data to.)
