@@ -3,20 +3,22 @@ This is a new specification that I am developing to use for TikiTaka and other p
 
 ## We can begin with the 12 Main Concepts:
 
-1. Directionality
-2. Quantality
-3. Exclusivity
-4. Positionality
-5. Conditionals (and Mitigation)
-6. Looping
-7. Pre-actions
-8. Post-actions
-9. Syncronicity
-10. Chaining
-11.Flow
-12.Stream
+1. Files
+2. Directionality
+3. Quantality
+4. Exclusivity
+5. Positionality
+6. Conditionals (and Mitigation)
+7. Looping
+8. Pre-actions
+9. Post-actions
+10. Syncronicity
+11. Chaining
+12.Flow
+13.Stream
 
-
+### Files
+These are files.
 
 ### Directionality
 Directionality simply means what direction belongs to the flow of data. It is represented by an arrow. This is the most simple idea in the specification and cannot be mistaken because its abstractual. The only things that matter here is the fact that its an arrow. This is because all arrows have a direction, and its direction determines the flow of data. When added the FIM specification, it should come from a node and to another. If you have a bidirectional arrow without constraints, you can mirror one files behavior to that of the other (from left to right).
