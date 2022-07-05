@@ -93,6 +93,7 @@ This is necessary for some of the features of this specification. Temporary file
 
 
 ## Abstract Api
+This abstract api is useful until we have a Virtual IO Language wrapper to enable this type of scripting.
 1. a.Flow(b.pre(script1), quant, exclsv, p1, p2).post(script2)    //flow
 2. a.Flow(b).Flow(c)                                              //chaining
 3. pre(script)                                                    //pre action
