@@ -57,7 +57,10 @@ Mitigation specifies what happens to an interaction when the initial interaction
 
 ### Looping
 
-This is an iterator that runs a statement or statement block until the boolean conditional statement is no longer valid
+This is an iterator that runs a statement or statement block until the boolean conditional statement is no longer valid. You can also mitigate the effect of an entire loop, because they are hard to reason about when it comes to files.
+
+<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/ecee5bbb1793eeb4ca01dc41acf9b59aaceb2a11/Docs/Looping.jpg" height=280 width=400/>
+
 
 ### Pre-Actions
 These are actions you specify that are to take place on the data before it is inserted into the file at its given position
