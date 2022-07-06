@@ -15,10 +15,16 @@ class Fist{
         this.file = new File(file)
     }
     flow(b, quant, exclsv, p1, p2, pre, post){
+        //before any file functions get called on b.file.whatever() or before it recieves any data
+        //set the pre and post scripts using b.file.scripts(pre, post)
+        b.file.scripts(pre, post)
 
+        //use a.file.whatever(b) to perform file operations from a to b
+        
         return b;
     }
     stream(b, quant, p1, p2, pre, post){
+        b.file.scripts(pre, post)
         return b;
     }
 }
