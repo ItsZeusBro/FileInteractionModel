@@ -37,7 +37,8 @@ export class FistView{
         // );
     }
     check(fist){
-        if((fist != typeof Fist)||(!this.checkpath(fist))){
+        console.log(process.cwd(), fist)
+        if((fist != typeof Fist)&&(!this.checkpath(fist))){
             throw Error("You can only flow to another fist");
         }
     }
