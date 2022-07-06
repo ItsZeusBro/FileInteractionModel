@@ -1,9 +1,9 @@
 //High level Script Controller
+import { _Script_ } from "../../../Model/_Interactions_/_Script_/_Script_.js";
 export class Script{
     constructor(prepo){
-        //use this as an identity for the script. PreScript and PostScript can inherit from
-        //this class
-        this.prepo=prepo
+        this._Script_ = new _Script_(prepo)
+        
     }
 
 }

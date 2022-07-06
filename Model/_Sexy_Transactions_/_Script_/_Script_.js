@@ -1,13 +1,13 @@
 export class _Script_{
-    constructor(){
+    //keep these low level functions pure
+    //do not keep a constructor or state
+    //unless you absolutely have to
+
+    _pre_(){
 
     }
 
-    pre(){
-
-    }
-
-    post(){
+    _post_(){
         
     }
 }

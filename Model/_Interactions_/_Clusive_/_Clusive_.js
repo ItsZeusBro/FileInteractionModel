@@ -1,27 +1,27 @@
 export class _Clusive_{
-    constructor(){
+    //keep these low level functions pure
+    //do not keep a constructor or state
+    //unless you absolutely have to
+    _ex_range_(source_path, n, m){
 
     }
-    _ex_range(source_path, n, m){
+    _ex_n_(source_path, n){
 
     }
-    _ex_n(source_path, n){
+    _ex_m_(source_path, m){
 
     }
-    _ex_m(source_path, m){
-
-    }
-    _ex(source_path){
+    _ex_(source_path){
 
     }
 
-    _in_range(source_path, n, m){
+    _in_range_(source_path, n, m){
 
     }
-    _in_n(source_path, n){
+    _in_n_(source_path, n){
 
     }
-    _in_m(source_path, m){
+    _in_m_(source_path, m){
 
     }
 }
