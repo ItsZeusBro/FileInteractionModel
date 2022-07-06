@@ -104,6 +104,9 @@ This abstract api is useful until we have a Virtual IO Language wrapper
                 //Under the hood a virtual file structure is created for you
                 //so you only have to write to the actual file if it completes
                 //the job without throwing an error (which you can catch here)
+                //You should be able to do asyncronous behavior here because pre
+                //only returns "this" to the next chain if that async functionality
+                //finishes the job.
                 //pre script here  
                 }
                 
