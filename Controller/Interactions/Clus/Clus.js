@@ -1,7 +1,7 @@
 import { _Clusive_ } from "../../Internals/_Interactions_/_Clusive_/_Clusive_";
 export class Clus{
     constructor(sourcepath, ivity){
-        this.sourcepath
+        this.sourcepath=sourcepath;
         this.ivity;
         this.n;
         this.m;
@@ -12,7 +12,7 @@ export class Clus{
     clus(ivity){
         //clsvty is expected to be like 'in:n:m'
         this.look4clues(ivity)
-        this._Clusive_ = new _Clusive_(this.ivity, this.n, this.m)
+        this._Clusive_ = new _Clusive_(this.sourcepath, this.ivity, this.n, this.m)
     }
 
     look4clues(ivity){

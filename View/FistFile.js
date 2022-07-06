@@ -23,7 +23,7 @@ class FistFile{
         }
 
     }
-
+    
     flow(b, q, clsvty, pin, pout, pre, post){
         q = new Quantifier(q);
         clsvty = new Clus(this.sourcepath, clsvty);
