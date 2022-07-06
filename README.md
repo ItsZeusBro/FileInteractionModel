@@ -102,10 +102,10 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               
               a.flow( 
                       b, 
-                      quant, 
-                      exclsv, 
-                      p1, 
-                      p2,
+                      q, 
+                      x, 
+                      pin, 
+                      pout,
                       (data)=>{
                               //pre script here  
                       },
@@ -115,9 +115,9 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
                       
               ).stream( 
                       c,
-                      quant,
-                      p1,
-                      p2,
+                      q,
+                      pin,
+                      pout,
                       (data)=>{
                               //pre script here  
                       },
