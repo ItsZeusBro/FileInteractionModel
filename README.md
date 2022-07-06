@@ -100,7 +100,10 @@ This abstract api is useful until we have a Virtual IO Language wrapper
 
         a.pre(b,
                 (data)=>{
-                //mitigations, conditionals, and looping can be done here for now...
+                //mitigations, conditionals, and looping can be done here for now.
+                //Under the hood a virtual file structure is created for you
+                //so you only have to write to the actual file if it completes
+                //the job without throwing an error (which you can catch here)
                 //pre script here  
                 }
                 
