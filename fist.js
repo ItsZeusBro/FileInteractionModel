@@ -26,3 +26,15 @@ class Fist{
         return this;
     }
 }
+class File{
+    constructor(){
+        File.prototype.create = this.create;
+
+    }
+
+    create(){
+        return this;
+    }
+}
+var fist = new Fist()
+fist.flow().stream().pre().fist().flow().stream().pre().post()
