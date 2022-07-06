@@ -7,11 +7,11 @@ export class Fist{
 
     }
 
-    flowto(fist, ){
+    flow(fist, tifier, ivity, atin, atout){
 
     }
-    streamto(fist, ){
-
+    stream(fist, tifier, atin, atout){
+        //tifier here means stream up to n number of bytes
     }
     pound(imganirayFist){
 

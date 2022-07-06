@@ -1,29 +1,39 @@
 //INTERFACE
 //import {File} from "../Controller/File/File.js"
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
+import {Fist} from "../../Fist.js"
+import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
 //import {Stream} from "../Controller/SexyTransactions/Stream/Stream.js";
 //import {Fist} from "../Controller/Fist.js"
 
-class FistView{
+export class FistView{
     constructor(file, post){
         //this.FistFile = new Fist(file, post)
     }
     
-    flow(st, ifier, ivity, atin, atout){
-        new Flow(
-            this.cleanFi(st), 
+    flow(fist, tifier, ivity, atin, atout){
+        return new Flow().flow(
+            this.check(fist), 
             this.cleanQuan(tifier), 
-            this.cleanClus(ivityObj), 
+            this.cleanClus(ivity), 
             this.cleanPosition(atin), 
             this.cleanPosition(atout)
         )
     }
 
-    stream(st, ier, In, Out){
-
+    stream(fist, tifier, atin, atout){
+        return new Stream().stream(
+            this.check(fist), 
+            this.cleanQuan(tifier),
+            this.cleanPosition(atin),
+            this.cleanPosition(atout)
+        )
+        
     }
-    cleanFi(st){
-
+    check(fist){
+        if(fist != typeof Fist){
+            throw Error("You can only flow to another fist")
+        }
 
     }
     cleanQuan(tifier){
