@@ -15,24 +15,36 @@ export class Clus{
         this._Clusive_ = new _Clusive_(this.ivity, this.n, this.m)
     }
 
-    look4clues(){
+    look4clues(ivity){
         var clues;
-        var iv = ivity.split(':');
-        if(iv[0]!='in' && inv[0]!='out'){
-            throw Error("bad inclusivity option")
-        }else{
-            this.ivity=iv.pop(0)
-        }
-        if(!isInteger(iv[0])&&!isInteger(iv[1])){
-            throw Error("bad inclusivity option")
-        }else{
-            this.n=iv.pop(0)
-            try{
-                this.m=iv.pop(0)
-            }catch{
-                this.m=undefined
+        try{
+            var iv = ivity.split(':');
+            if(iv[0]!='in' && inv[0]!='out'){
+                throw Error("bad inclusivity option")
+            }else{
+                this.ivity=iv.pop(0)
             }
+            if(!isInteger(iv[0])&&!isInteger(iv[1])){
+                throw Error("bad inclusivity option")
+            }else{
+                try{
+                    this.n=iv.pop(0)
+                }
+                try{
+                    this.m=iv.pop(0)
+                }catch{
+                    this.m=undefined
+                }
+            }
+        }catch{
+            if(ivity!='in' && ivity!='out'){
+                throw Error("bad inclusivity option")
+            }else{
+                this.ivity=ivity
+            }
+        
         }
+        
         return
     }
 
