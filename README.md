@@ -98,7 +98,7 @@ This is necessary for some of the features of this specification. Temporary file
 This abstract api is useful until we have a Virtual IO Language wrapper
 
 
-        a.pre(b,
+        fist.pre(a, b,
                 (data)=>{
                 //mitigations, conditionals, and looping can be done here for now.
                 //Under the hood a virtual file structure is created for you
@@ -110,23 +110,23 @@ This abstract api is useful until we have a Virtual IO Language wrapper
                 //pre script here  
                 }
                 
-        ).post(b,
+        ).post(a, b,
                 (data)=>{
                 //some post script
                 //...
                 }
         )
-        .flow(b, quant, exclsv, p1, p2)
-        .pre(c,
+        .flow(a, b, quant, exclsv, p1, p2)
+        .pre(b, c,
                 (data)=>{
                   //pre script here
                   //...
 
                 }
         )
-        .post(c,
+        .post(b, c,
                 (data)=>{
                 //some post script
                 //...
                 }
-        ).stream(c) //then stream to c
+        ).stream(b, c) //then stream to c
