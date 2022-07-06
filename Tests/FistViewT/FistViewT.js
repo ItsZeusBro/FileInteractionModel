@@ -19,7 +19,7 @@ export class FistViewT extends Comet{
         var fist = new Fist();
         var file='./tests/fist.file'
         //, tifier, ivity, atin, atout
-        this.fist.flow(file);
+        fist.flow(file);
 
     }
 
