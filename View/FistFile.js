@@ -8,9 +8,10 @@ import {Position} from "../Controller/Interactions/Position/Position.js";
 import {Quantifier} from "../Controller/Interactions/Quantifier/Quantifier.js";
 
 class FistFile{
-    constructor(post){
+    constructor(path, post){
         Fist.prototype.flow = this.flow;
         Fist.prototype.stream = this.stream;
+        this.File = new File();
         this.Flow = new Flow();
         this.Stream = new Stream();
         this.Post = new Script('post');
@@ -24,14 +25,7 @@ class FistFile{
             //a post script immediately if available on this FistFile
             this.Post.post(post)
         }
-        String.prototype.flow = (b, q, clsvty, pin, pout, pre, post)=>{
-            //console.log(this)
-            return new FistFile(this).flow(b, q, clsvty, pin, pout, pre)
-        }
-        String.prototype.stream = (b, q, pin, pout, pre, post)=>{
-            //console.log(this)
-            return new FistFile(this).stream(b, q, pin, pout, pre)
-        }
+
     }
 
     flow(b, q, clsvty, pin, pout, pre, post){

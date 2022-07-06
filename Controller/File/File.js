@@ -1,9 +1,10 @@
 //FILE INTERFACE API, and CONTROLLER API
-import * as fs from "node:fs"
 import {_File_} from "../../Internals/_File_/_File_.js"
-export class Fist{
-    constructor(){
-        this._file_ = _File_()    //File business logic goes underneath the hood
+export class File{
+    constructor(path){
+        console.log("File(path)")
+        this._file_ = _File_(path)    //File business logic goes underneath the hood
+
     }
 
 

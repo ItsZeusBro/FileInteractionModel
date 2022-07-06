@@ -5,17 +5,10 @@ import * as fs from "node:fs"
 
 //FILE BUSINESS LOGIC
 class _File_{
-    constructor(path, post){
+    constructor(path){
+      console.log("_File_(path)")
+      this.path=path
 
-        //These take this _File_ object in order to access the file
-        //for flowing, streaming, scripting, etc.
-        this._flow_ = new _Flow_(this);
-        this._stream_ = new _Stream_(this);
-        this._pre_ = new _Script_(this); 
-        this._post_ = new _Script_(this);
-        this._path_ = path;
-
-       
     }
 
 
