@@ -7,14 +7,7 @@ export class File{
         File.prototype.stream = this.stream;
         this._file_ = _File_(path, post)    //File business logic
     }
-    flow(b, q, clusivity, pin, pout, pre, post){
-        this._file_.flow(b, q, clusivity, pin, pout, pre, post)
-        return b;
-    }
-    stream(b, q, pin, pout, pre, post){
-        this._file_.flow(b, q, pin, pout, pre, post)
-        return b;
-    }
+
 
 
 }
