@@ -1,5 +1,5 @@
-import {_Flow_} from "../_Flow_/_Flow_.js"
-import {_Stream_} from "../_Stream_/_Stream_.js"
+import {_Flow_} from "../_Flow_/_Flow_.js.js"
+import {_Stream_} from "../_Stream_/_Stream_.js.js"
 import {_Script_} from "../_Sexy_Transactions_/_Script_/_Script_.js"
 import * as fs from "node:fs"
 
@@ -15,11 +15,7 @@ class _File_{
         this._post_ = new _Script_(this);
         this._path_ = path;
 
-        if (post){
-            //if this is the first in the chain, it should run
-            //a post script immediately if available
-            this._post_.post(post)
-        }
+       
     }
 
 

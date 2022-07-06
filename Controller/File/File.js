@@ -2,9 +2,8 @@
 import * as fs from "node:fs"
 import {_File_} from "../../Internals/_File_/_File_.js"
 export class Fist{
-    constructor(path, post){
-
-        this._file_ = _File_(path, post)    //File business logic goes underneath the hood
+    constructor(){
+        this._file_ = _File_()    //File business logic goes underneath the hood
     }
 
 
