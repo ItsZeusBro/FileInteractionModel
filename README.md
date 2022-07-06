@@ -127,13 +127,13 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               )
               
               //Legend:
-              //a is a File() 
-              //b is a File()
-              //c is a File()
-              //q is a Quantifier()
-              //exin is a Clusive()
-              //pin is a Position()
-              //pout is a Position()
+              //a is a File(path, post_callback) 
+              //b is a File(path, [post_callback])
+              //c is a File(path, [post_callback])
+              //q is a Quantifier(n, m)
+              //exin is a Clusive(orientation, n, m)
+              //pin is a Position(n)
+              //pout is a Position(n)
 
 ## Shortcut
 You can use this in your code:
