@@ -1,9 +1,9 @@
 //FILE INTERFACE API, and CONTROLLER API
-import {_File_} from "../../Internals/_File_/_File_.js"
+//import {_File_} from "../../Internals/_File_/_File_.js"
 export class File{
     constructor(path){
-        console.log("File(path)")
-        this._file_ = _File_(path)    //File business logic goes underneath the hood
+        // console.log("File(path)")
+        // this._file_ = _File_(path)    //File business logic goes underneath the hood
 
     }
 

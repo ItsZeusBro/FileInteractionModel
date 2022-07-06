@@ -3,8 +3,8 @@ export class _Stream_{
     //do not keep a constructor or state
     //unless you absolutely have to
 
-    _stream_(b, quant, p1, p2, pre, post){
+    // _stream_(b, quant, p1, p2, pre, post){
 
-    }
+    // }
 
 }

@@ -1,43 +1,43 @@
 //INTERFACE
-import {File} from "../Controller/File/File.js"
+//import {File} from "../Controller/File/File.js"
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
-import {Stream} from "../Controller/SexyTransactions/Stream/Stream.js";
-import {Fist} from "../Controller/Fist.js"
+//import {Stream} from "../Controller/SexyTransactions/Stream/Stream.js";
+//import {Fist} from "../Controller/Fist.js"
 
-class Fist{
+class FistView{
     constructor(file, post){
-       this.FistFile = new Fist(file, post)
+        //this.FistFile = new Fist(file, post)
     }
     
-    flow(st, ier, ity, In, Out){
+    flow(st, ifier, ivity, atin, atout){
         new Flow(
-            this.clean_fi(st), 
-            this.clean_if(ier), 
-            this.clean_iv(ity), 
-            this.clean_ition(In), 
-            this.clean_ition(Out)
+            this.cleanFi(st), 
+            this.cleanQuan(tifier), 
+            this.cleanClus(ivityObj), 
+            this.cleanPosition(atin), 
+            this.cleanPosition(atout)
         )
     }
 
     stream(st, ier, In, Out){
 
     }
-    clean_fi(st){
-        
+    cleanFi(st){
+
 
     }
-    clean_if(ier){
+    cleanQuan(tifier){
         //accept a float statistical value between 1 and 100 percent for buffer files
         //abstract options "all", percentage, integer representing bytes, mb, gb, etc.
-        if(ier=='all' || ier=='All' || ier=='ALL'){
+        if(tifier=='all' || tifier=='All' || tifier=='ALL'){
             return Infinity;
-        }else if(ier=="Half"||ier=="HALF"||ier=="half"){
+        }else if(tifier=="Half"||tifier=="HALF"||tifier=="half"){
             return 0.50;
-        }else if(isInteger(ier)){
-            return ier;
-        }else if(isFloat(ier)){
-            if(ier<1){
-                return Number.parseFloat(ier).toFixed(2)
+        }else if(isInteger(tifier)){
+            return tifier;
+        }else if(isFloat(tifier)){
+            if(tifier<1){
+                return Number.parseFloat(tifier).toFixed(2)
             }else{
                 return Error("float value must be less than 1")
             }
@@ -46,47 +46,47 @@ class Fist{
             throw Error("Invalid Quantifier")
         }
     }
-    clean_iv(ity){
-        var ivity = {}
+    cleanClus(ivity){
+        var ivityObj = {}
         try{
-            ity = ity.split(':');
-            if(ity[0]!='in' && ity[0]!='ex'){
+            ivity = ivity.split(':');
+            if(ivity[0]!='in' && ivity[0]!='ex'){
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
                 )
             }else{
-                ivity['iv']=ity.pop(0)
+                ivityObj['iv']=ivity.pop(0)
             }
-            if(!isInteger(ity[0])&&!isInteger(ity[1])){
+            if(!isInteger(ivity[0])&&!isInteger(ivity[1])){
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
                 )
             }else{
                 //this means they are integers
-                ivity['it']=ity[0];
-                ivity['y']=ity[1];
+                ivityObj['it']=ivity[0];
+                ivityObj['y']=ivity[1];
             }
         }catch{
-            if(ity!='in' && ity!='ex' && ity!=undefined){
+            if(ivity!='in' && ivity!='ex' && ivity!=undefined){
                 throw Error(
-                    `an ity is supposed to look like in:n:m 
+                    `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
                 )
-            }else if(ity==undefined){
-                ivity['iv']=undefined;
-                ivity['it']=ity;
-                ivity['y']=undefined;
+            }else if(ivity==undefined){
+                ivityObj['iv']=undefined;
+                ivityObj['it']=ivity;
+                ivityObj['y']=undefined;
             }else{
-                ivity['iv']=undefined
-                ivity['it']=undefined;
-                ivity['y']=ity;
+                ivityObj['iv']=undefined
+                ivityObj['it']=undefined;
+                ivityObj['y']=ivity;
             }
         }
-        return ivity
+        return ivityObj
     }
-    clean_ition(){
+    cleanPosition(at){
         //'at:b' or 'at:e' or 'b' or 'e' or 'at:n', or n, or undefined
         if(isInteger(at)){
             return at
@@ -99,7 +99,7 @@ class Fist{
                     return Number.INFINITY
                 }else{
                     at = at.split(':')
-                    this.pinpout(at[1]) 
+                    this.cleanPosition(at[1]) 
                     //we know its an b or e, so just use recursion
                 }
             }
