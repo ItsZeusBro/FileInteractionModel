@@ -2,36 +2,42 @@
 import {File} from "../Controller/File/File.js"
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
 import {Stream} from "../Controller/SexyTransactions/Stream/Stream.js";
+import {Fist} from "../Controller/Fist.js"
 
-
-class FistFile{
+class Fist{
     constructor(file, post){
-       this.Fist(file, post)
+       this.FistFile = new Fist(file, post)
     }
     
-    flow(b, ifier, ivity, itionIn, itionOut, pre, post){
-
+    flow(st, ier, ity, In, Out){
+        new Flow(
+            this.clean_fi(st), 
+            this.clean_if(ier), 
+            this.clean_iv(ity), 
+            this.clean_ition(In), 
+            this.clean_ition(Out)
+        )
     }
 
-    stream(b, q, pin, pout, pre, post){
+    stream(st, ier, In, Out){
 
     }
-    b(){
-
+    clean_fi(st){
+        
 
     }
-    q(){
+    clean_if(ier){
         //accept a float statistical value between 1 and 100 percent for buffer files
         //abstract options "all", percentage, integer representing bytes, mb, gb, etc.
-        if(q=='all' || q=='All' || q=='ALL'){
+        if(ier=='all' || ier=='All' || ier=='ALL'){
             return Infinity;
-        }else if(q=="Half"||q=="HALF"||q=="half"){
+        }else if(ier=="Half"||ier=="HALF"||ier=="half"){
             return 0.50;
-        }else if(isInteger(q)){
-            return q;
-        }else if(isFloat(q)){
-            if(q<1){
-                return Number.parseFloat(q).toFixed(2)
+        }else if(isInteger(ier)){
+            return ier;
+        }else if(isFloat(ier)){
+            if(ier<1){
+                return Number.parseFloat(ier).toFixed(2)
             }else{
                 return Error("float value must be less than 1")
             }
@@ -40,48 +46,47 @@ class FistFile{
             throw Error("Invalid Quantifier")
         }
     }
-    clsvty(){
-        var clues;
+    clean_iv(ity){
+        var ivity = {}
         try{
-            var iv = ivity.split(':');
-            if(iv[0]!='in' && inv[0]!='ex'){
+            ity = ity.split(':');
+            if(ity[0]!='in' && ity[0]!='ex'){
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
                 )
             }else{
-                this.ivity=iv.pop(0)
+                ivity['iv']=ity.pop(0)
             }
-            if(!isInteger(iv[0])&&!isInteger(iv[1])){
+            if(!isInteger(ity[0])&&!isInteger(ity[1])){
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
                 )
             }else{
                 //this means they are integers
-                this.n=iv[0];
-                this.m=iv[1];
-                return
+                ivity['it']=ity[0];
+                ivity['y']=ity[1];
             }
         }catch{
-            if(ivity!='in' && ivity!='ex' && ivity!=undefined){
+            if(ity!='in' && ity!='ex' && ity!=undefined){
                 throw Error(
-                    `an ivity is supposed to look like in:n:m 
+                    `an ity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
                 )
-            }else if(ivity==undefined){
-                this.ivity='n';
-                this.n=undefined;
-                this.m=undefined;
+            }else if(ity==undefined){
+                ivity['iv']=undefined;
+                ivity['it']=ity;
+                ivity['y']=undefined;
             }else{
-                this.ivity=ivity;
-                this.n=undefined;
-                this.m=undefined;
+                ivity['iv']=undefined
+                ivity['it']=undefined;
+                ivity['y']=ity;
             }
         }
-        return
+        return ivity
     }
-    pinpout(){
+    clean_ition(){
         //'at:b' or 'at:e' or 'b' or 'e' or 'at:n', or n, or undefined
         if(isInteger(at)){
             return at
