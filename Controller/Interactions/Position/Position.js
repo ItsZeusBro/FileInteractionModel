@@ -12,16 +12,15 @@ export class Position{
         }else{
             if(at==('at:b'|'at:e'|'b'|'e')){
                 if(at==('b')){
-                    return -Infinity
+                    return Number.NEGATIVE_INFINITY
                 }
                 if(at==('e')){
-                    return Infinity
+                    return Number.INFINITY
                 }else{
                     at = at.split(':')
                     this.whodat(at[1]) 
                     //we know its an b or e, so just use recursion
                 }
-
             }
         }
     }
