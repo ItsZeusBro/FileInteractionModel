@@ -56,7 +56,7 @@ class FistView{
                     or ex:n:m where n and m are a range of ints`
                 )
             }else{
-                ivityObj['iv']=ivity.pop(0)
+                ivityObj['inex']=ivity.pop(0)
             }
             if(!isInteger(ivity[0])&&!isInteger(ivity[1])){
                 throw Error(
@@ -65,8 +65,8 @@ class FistView{
                 )
             }else{
                 //this means they are integers
-                ivityObj['it']=ivity[0];
-                ivityObj['y']=ivity[1];
+                ivityObj['n']=ivity[0];
+                ivityObj['m']=ivity[1];
             }
         }catch{
             if(ivity!='in' && ivity!='ex' && ivity!=undefined){
@@ -75,13 +75,13 @@ class FistView{
                     or ex:n:m where n and m are a range of ints`
                 )
             }else if(ivity==undefined){
-                ivityObj['iv']=undefined;
-                ivityObj['it']=ivity;
-                ivityObj['y']=undefined;
+                ivityObj['inex']=undefined;
+                ivityObj['n']=ivity;
+                ivityObj['m']=undefined;
             }else{
-                ivityObj['iv']=undefined
-                ivityObj['it']=undefined;
-                ivityObj['y']=ivity;
+                ivityObj['inex']=undefined
+                ivityObj['n']=undefined;
+                ivityObj['m']=ivity;
             }
         }
         return ivityObj
