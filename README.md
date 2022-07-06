@@ -37,7 +37,7 @@ Quantality defines the constraints upon the flow which defaults to "all data" wh
 
 
 ### Clusivity
-Clusivity defines whether some data is inclusive with the source after its flow is executed, or whether some data is exclusive to the new owner.
+Clusivity defines whether some data is inclusive with the source after its flow is executed, or whether some data is exclusive to the new owner. The dashed line represents exclusivity on a portion of the data sent from the source. Meaning, the source no longer has access to that data. (its removed from the source). If the clusivity range is not specified, it is assumed to be categorical to the orientation "inclusive" or "exclusive". So in the case of inclusivity, if a range is specified, then the rest is excluded from the source. And again, in the case of exclusivity, if a range is specified, the rest of the data moving to the target is shared with the source.
 
 <img src="https://github.com/ItsZeusBro/FIST/blob/79db3fc288540bf444f1a8a41e3fd5b24ce18563/Docs/Clusivity.jpg" height=350 width=500/>
 
