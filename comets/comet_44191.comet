@@ -1,9 +1,9 @@
 sometest from FileViewThere was an uncaught error
 
 
-Error: You can only flow to another fist
-    at FistView.check (file:///Users/hassan/Projects/GitHub/FIST/src/View/FistView.js:42:19)
-    at FistView.flow (file:///Users/hassan/Projects/GitHub/FIST/src/View/FistView.js:13:14)
+Error: Invalid Quantifier
+    at FistView.cleanQuan (file:///Users/hassan/Projects/GitHub/FIST/src/View/FistView.js:63:19)
+    at FistView.flow (file:///Users/hassan/Projects/GitHub/FIST/src/View/FistView.js:14:14)
     at Fist.flow (file:///Users/hassan/Projects/GitHub/FIST/Fist.js:12:23)
     at FistViewT.flow_fist (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:22:14)
     at FistViewT.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:12:14)

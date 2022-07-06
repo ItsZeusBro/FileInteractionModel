@@ -24,6 +24,14 @@ export class FistViewT extends Comet{
     }
 
     flow_quantifier(){
+        var fist = new Fist();
+        var file='./tests/fist.file'
+        var quantifiers=['all', 'All', 'ALL', 'half', 'HALF', 'Half', 0.1, 0.5, 1.0]
+        quantifiers.forEach(element => {
+            this.comet('Testing Quantifier', element)
+            fist.flow(file, element);
+        });
+
         // var tifier=""
         // this.fist.flow(fist, tifier, ivity, atin, atout);
     }

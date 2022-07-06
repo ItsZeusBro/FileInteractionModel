@@ -9,31 +9,32 @@ export class FistView{
 
     }
     
-    flow(fist, tifier, ivity, atin, atout){
+    flow(fist, tality="all", ivity="in", alitf="", alito=""){
         this.check(fist);
-        //this.cleanQuan(tifier);
-        //this.cleanPosition(atin);
-        //this.cleanPosition(atout);
+        console.log(tality)
+        this.cleanQuan(tality);
+        //this.cleanPosition(alitf);
+        //this.cleanPosition(alito);
         // return new Flow().flow(
         //     this.check(fist), 
-        //     this.cleanQuan(tifier), 
+        //     this.cleanQuan(tality), 
         //     this.cleanClus(ivity), 
-        //     this.cleanPosition(atin), 
-        //     this.cleanPosition(atout)
+        //     this.cleanPosition(alitf), 
+        //     this.cleanPosition(alito)
         // );
     }
 
-    stream(fist, tifier, atin, atout){
+    stream(fist, tality="", alitf="", alito=""){
         this.check(fist);
-        //this.cleanQuan(tifier);
-        //this.cleanPosition(atin);
-        //this.cleanPosition(atout);
+        //this.cleanQuan(tality);
+        //this.cleanPosition(alitf);
+        //this.cleanPosition(alito);
 
         //return new Stream().stream(
         //     this.check(fist), 
-        //     this.cleanQuan(tifier),
-        //     this.cleanPosition(atin),
-        //     this.cleanPosition(atout)
+        //     this.cleanQuan(tality),
+        //     this.cleanPosition(alitf),
+        //     this.cleanPosition(alito)
         // );
     }
     check(fist){
@@ -43,18 +44,18 @@ export class FistView{
         }
     }
 
-    cleanQuan(tifier){
+    cleanQuan(tality){
         //accept a float statistical value between 1 and 100 percent for buffer files
         //abstract options "all", percentage, integer representing bytes, mb, gb, etc.
-        if(tifier=='all' || tifier=='All' || tifier=='ALL'){
+        if(tality=='all' || tality=='All' || tality=='ALL'){
             return Infinity;
-        }else if(tifier=="Half"||tifier=="HALF"||tifier=="half"){
+        }else if(tality=="Half"||tality=="HALF"||tality=="half"){
             return 0.50;
-        }else if(isInteger(tifier)){
-            return tifier;
-        }else if(isFloat(tifier)){
-            if(tifier<1){
-                return Number.parseFloat(tifier).toFixed(2);
+        }else if(Number.isInteger(tality)){
+            return tality;
+        }else if(this.isFloat(tality)){
+            if(tality<1){
+                return Number.parseFloat(tality).toFixed(2);
             }else{
                 return Error("float value must be less than 1");
             }
@@ -75,7 +76,7 @@ export class FistView{
             }else{
                 ivityObj['inex']=ivity.pop(0)
             }
-            if(!isInteger(ivity[0])&&!isInteger(ivity[1])){
+            if(!Number.isInteger(ivity[0])&&!Number.isInteger(ivity[1])){
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
@@ -105,7 +106,7 @@ export class FistView{
     }
     cleanPosition(at){
         //'at:b' or 'at:e' or 'b' or 'e' or 'at:n', or n, or undefined
-        if(isInteger(at)){
+        if(Number.isInteger(at)){
             return at;
         }else{
             if(at==('at:b'|'at:e'|'b'|'e')){
@@ -137,5 +138,8 @@ export class FistView{
             return true
         }
     }
-
+    isFloat(n) {
+        return n === +n && n !== (n|0);
+    }
 }
+
