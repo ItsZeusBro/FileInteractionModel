@@ -95,7 +95,7 @@ This is necessary for some of the features of this specification. Temporary file
 
 
 ## Abstract Api
-This abstract api is useful until we have a Virtual IO Language wrapper
+This abstract api will use pure fist highlevel functions to enable this
 
 
               fist.pre(
