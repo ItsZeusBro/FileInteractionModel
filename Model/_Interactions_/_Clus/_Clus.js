@@ -1,18 +1,18 @@
-export class _Clusive_{
+export class _Clus{
     //keep these low level functions pure
     //do not keep a constructor or state
     //unless you absolutely have to
-    constructor(sourcepath, ivity, n, m){
+    constructor(ivity_, sourcepath, n, m){
         this.sourcepath=sourcepath;
-        this.ivity=ivity;
+        this.ivity_=ivity_;
         this.n=n;
         this.m=m;
     }
     //they call this function
     ivity(){
-        if(this.ivity=='ex'){
+        if(this.ivity_=='ex'){
             return this.ex()
-        }else if (this.ivity=='in'){
+        }else if (this.ivity_=='in'){
             return this.in()
         }
     }
