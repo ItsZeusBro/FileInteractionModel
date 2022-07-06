@@ -129,9 +129,12 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               
 ## Shortcut
 You can use this in your code:
+
         String.prototype.flow = function(some){
             console.log(this)
             return new File(this).flow(some)
         }
+        
 To do something like this on a normal Js string:
+
         "./somefile".flow(//params).flow(//params)
