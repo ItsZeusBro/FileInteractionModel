@@ -1,4 +1,4 @@
-import { _Clusive_ } from "../../Internals/_Clusive_/_Clusive_";
+import { _Clusive_ } from "../../Internals/_Interactions_/_Clusive_/_Clusive_";
 export class Clus{
     constructor(ivity, n, m){
         this.clusivity;

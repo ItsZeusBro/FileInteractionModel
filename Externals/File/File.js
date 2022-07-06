@@ -9,5 +9,40 @@ export class File{
     }
 
 
+    mkdr(...paths){
+
+      }
+  
+      create(...paths){
+
+      }
+  
+      rename(olP, newP){
+
+      }
+  
+      copyAppend(a, b){
+
+      }
+  
+      truncate(p, n){
+
+      }
+  
+      del(p){
+
+      }
+  
+      write(p, data){
+
+      }
+  
+      overwrite(p, data){
+
+      }
+  
+      read(p){
+
+      }
 
 }

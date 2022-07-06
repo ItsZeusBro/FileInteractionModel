@@ -1,6 +1,6 @@
 
 
-import {File} from "./File/File.js";
+import {File} from "./Internals/_Sexy_Transactions_/File.js.js.js.js.js";
 String.prototype.flow = function(some){
     console.log(this)
     return new File(this).flow(some)
