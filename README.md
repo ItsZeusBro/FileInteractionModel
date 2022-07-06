@@ -1,8 +1,8 @@
-# File Interaction Sexy Transaction (FIST) 0.1
+# File Interaction Sexy Transaction (FIST) 0.1 (in progress)
 
 The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
 
-FIST handles all of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
+FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
 
 ## We can begin with the 12 Main Concepts:
 
@@ -125,3 +125,16 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
                               //post script here
                       }
               )
+              
+              
+## Shortcut
+You can use this in your code:
+
+        String.prototype.flow = function(some){
+            console.log(this)
+            return new File(this).flow(some)
+        }
+        
+To do something like this on a normal Js string:
+
+        "./somefile".flow(//params).flow(//params)
