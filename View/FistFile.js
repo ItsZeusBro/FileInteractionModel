@@ -29,7 +29,6 @@ class FistFile{
         clsvty = new Clus(this.sourcepath, clsvty);
 
         pin = new Position(pin);
-
         pout = new Position(pout);
 
         pre = new Script(pre).pre(pre)

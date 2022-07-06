@@ -24,9 +24,4 @@ export class Position{
             }
         }
     }
-
-    //this should get us a file descriptor at the required position
-    at(path){
-        this.fd = this._position_.at(path, this.at)
-    }
 }
