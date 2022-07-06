@@ -128,9 +128,9 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               
 # Legend:
   - Don't use these objects to specify your options, i'm just letting you know this. Strings and integers are better for this!
-  - a is a Fist file object or file string
-  - b is a Fist file object or file string
-  - c is a Fist file object or file string
+  - ***a*** is a Fist file object or file string
+  - ***b*** is a Fist file object or file string
+  - ***c*** is a Fist file object or file string
   - ***tality*** corresponds to a quantality value type
   - ***ivity*** corresponds to a clusivity value type
   - ***alityf*** corresponds to "positionality from node x" (meaning the position from which data is pulled from the source file)
