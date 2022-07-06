@@ -24,30 +24,30 @@ export class Clus{
         try{
             var iv = ivity.split(':');
             if(iv[0]!='in' && inv[0]!='ex'){
-                throw Error("bad inclusivity option")
+                throw Error(
+                    `an ivity is supposed to look like in:n:m 
+                    or ex:n:m where n and m are a range of ints`
+                )
             }else{
                 this.ivity=iv.pop(0)
             }
             if(!isInteger(iv[0])&&!isInteger(iv[1])){
-                throw Error("bad inclusivity option")
+                throw Error(
+                    `an ivity is supposed to look like in:n:m 
+                    or ex:n:m where n and m are a range of ints`
+                )
             }else{
-                try{
-                    this.n=iv.pop(0)
-                }catch{
-                    this.n=undefined
-                    this.m=undefined;
-                    return
-                }
-                try{
-                    this.m=iv.pop(0);
-                }catch{
-                    this.m=undefined;
-                    return
-                }
+                //this means they are integers
+                this.n=iv[0];
+                this.m=iv[1];
+                return
             }
         }catch{
             if(ivity!='in' && ivity!='ex' && ivity!=undefined){
-                throw Error("bad inclusivity option");
+                throw Error(
+                    `an ivity is supposed to look like in:n:m 
+                    or ex:n:m where n and m are a range of ints`
+                )
             }else if(ivity==undefined){
                 this.ivity='n';
                 this.n=undefined;
