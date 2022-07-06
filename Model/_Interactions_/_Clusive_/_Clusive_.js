@@ -8,25 +8,33 @@ export class _Clusive_{
         this.n=n;
         this.m=m;
     }
+    //they call this function
+    ivity(){
+        if(this.ivity=='ex'){
+            return this.ex()
+        }else if (this.ivity=='in'){
+            return this.in()
+        }
+    }
 
     ex(){
         if (this.n && this.m){
-            this._ex_range(this.sourcepath, this.n, this.m)
+            this._ex_range_(this.sourcepath, this.n, this.m)
         }else if(this.n){
-            this._ex_n(this.sourcepath, this.n)
+            this._ex_n_(this.sourcepath, this.n)
         }else if(this.m){
-            this._ex_m(this.sourcepath, this.m)
+            this._ex_m_(this.sourcepath, this.m)
         }else{
-            this._ex(this.sourcepath)
+            this._ex_(this.sourcepath)
         }
     }
     in(){
         if (this.n && this.m){
-            this._in_range(this.sourcepath, this.n, this.m)
+            this._in_range_(this.sourcepath, this.n, this.m)
         }else if(n){
-            this._in_n(this.sourcepath, this.n)
+            this._in_n_(this.sourcepath, this.n)
         }else{
-            this._in_m(this.sourcepath, this.m)
+            this._in_m_(this.sourcepath, this.m)
         }
     }
     _ex_range_(){

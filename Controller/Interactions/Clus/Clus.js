@@ -29,11 +29,16 @@ export class Clus{
             }else{
                 try{
                     this.n=iv.pop(0)
+                }catch{
+                    this.n=undefined
+                    this.m=undefined
+                    return
                 }
                 try{
                     this.m=iv.pop(0)
                 }catch{
                     this.m=undefined
+                    return
                 }
             }
         }catch{
