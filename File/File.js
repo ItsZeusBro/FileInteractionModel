@@ -7,17 +7,12 @@ export class File{
         File.prototype.stream = this.stream;
         this._file_ = _File_(path, post)    //File business logic
     }
-    scripts(pre, post){
-        this._file_.setScriptCallbacks(pre, post)
-    }
-
     flow(b, quant, exclsv, p1, p2, pre, post){
-        b.scripts(pre, post)
-        
+        this._file_.flow(b, quant, exclsv, p1, p2, pre, post)
         return b;
     }
     stream(b, quant, p1, p2, pre, post){
-        b.scripts(pre, post)
+        this._file_.flow(b, quant, p1, p2, pre, post)
         return b;
     }
 

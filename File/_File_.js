@@ -1,4 +1,5 @@
 //BUSINESS LOGIC
+
 class _File_{
     constructor(path, post){
         this.pre;
@@ -9,13 +10,10 @@ class _File_{
         this.pre = pre;
         this.post = post;
     }
-    //read
+    _flow_(b, quant, exclsv, p1, p2, pre, post){
 
-    //write
+    }
+    _stream_(b, quant, p1, p2, pre, post){
 
-    //open
-
-    //close
-
-    //whatever
+    }
 }
