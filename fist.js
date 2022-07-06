@@ -6,4 +6,4 @@ String.prototype.flow = function(some){
     return new File(this).flow(some)
 }
 
-'./some'.flow("some/other/path/to/file").flow("some/third/path/to/file")
+'./some'.flow("some/other/path/to/file", (data)=>{console.log(data)}).flow("some/third/path/to/file")
