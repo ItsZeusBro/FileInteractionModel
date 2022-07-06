@@ -99,6 +99,7 @@ This is necessary for some of the features of this specification. Temporary file
 
 ## Abstract Api
 a, b, and c are files. a.flow(b, //whatever) returns b so that you can do something on it. b.stream(c, //whatever) does the same
+              
               a.flow( 
                       b, 
                       quant, 
