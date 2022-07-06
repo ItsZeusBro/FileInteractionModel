@@ -1,8 +1,9 @@
-export class Flow{
+export class _Stream_{
     constructor(){
         
     }
-    flow(){
+
+    stream(){
         
     }
-} 
+}

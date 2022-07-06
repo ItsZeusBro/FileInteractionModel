@@ -1,6 +1,6 @@
 //INTERFACE
 import * as fs from "node:fs"
-import {_File_} from "_File_.js"
+import {_File_} from "../../Internals/_File_/_File_.js"
 export class File{
     constructor(path, post){
         File.prototype.flow = this.flow;

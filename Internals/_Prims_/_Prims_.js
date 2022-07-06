@@ -1,7 +1,7 @@
 import * as fs from "node:fs"
-import {Comet} from "../Comet/Comet.js"
+import {Comet} from "../../Comet/Comet.js"
 
-export class FistPrims extends Comet{
+export class _Prims_ extends Comet{
     mkdr(...paths){
       this.comet('FistPrims.mkdr')
       for (const dir of paths) {

@@ -1,4 +1,4 @@
-export class Script{
+export class _Script_{
     constructor(){
 
     }
