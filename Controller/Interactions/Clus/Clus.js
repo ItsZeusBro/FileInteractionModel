@@ -16,10 +16,14 @@ export class Clus{
     }
 
     look4clues(ivity){
+        //in:n:m or //out:n:m is expected string
+        //try to split on ':'
+        //if not try and see if its just 'in' or 'in:n' or 'ex' or 'ex:n'
+        //if its nothing set the default to 'in'
         var clues;
         try{
             var iv = ivity.split(':');
-            if(iv[0]!='in' && inv[0]!='out'){
+            if(iv[0]!='in' && inv[0]!='ex'){
                 throw Error("bad inclusivity option")
             }else{
                 this.ivity=iv.pop(0)
@@ -31,25 +35,29 @@ export class Clus{
                     this.n=iv.pop(0)
                 }catch{
                     this.n=undefined
-                    this.m=undefined
+                    this.m=undefined;
                     return
                 }
                 try{
-                    this.m=iv.pop(0)
+                    this.m=iv.pop(0);
                 }catch{
-                    this.m=undefined
+                    this.m=undefined;
                     return
                 }
             }
         }catch{
-            if(ivity!='in' && ivity!='out'){
-                throw Error("bad inclusivity option")
+            if(ivity!='in' && ivity!='ex' && ivity!=undefined){
+                throw Error("bad inclusivity option");
+            }else if(ivity==undefined){
+                this.ivity='n';
+                this.n=undefined;
+                this.m=undefined;
             }else{
-                this.ivity=ivity
+                this.ivity=ivity;
+                this.n=undefined;
+                this.m=undefined;
             }
-        
         }
-        
         return
     }
 
