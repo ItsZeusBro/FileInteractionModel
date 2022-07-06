@@ -131,7 +131,7 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               //b is a File(path, [post_callback])
               //c is a File(path, [post_callback])
               //q is a Quantifier(n, m)
-              //exin is a Clusive(orientation, n, m)
+              //exin is a Clus(ivity, n, m)
               //pin is a Position(n)
               //pout is a Position(n)
 
