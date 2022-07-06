@@ -1,0 +1,19 @@
+{
+  "name": "fist",
+  "version": "1.0.0",
+  "description": "The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsZeusBro/FIST.git"
+  },
+  "author": "Hassan Amad",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ItsZeusBro/FIST/issues"
+  },
+  "homepage": "https://github.com/ItsZeusBro/FIST#readme"
+}
