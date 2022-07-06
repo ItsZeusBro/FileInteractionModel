@@ -9,32 +9,31 @@ export class FistView{
 
     }
     
-    flow(fist, tality="all", ivity="in", alitf="", alito=""){
+    flow(fist, tality="all", ivity="in", alityf="Inf", ality=""){
         this.check(fist);
-        console.log(tality)
         this.cleanQuan(tality);
-        //this.cleanPosition(alitf);
-        //this.cleanPosition(alito);
+        //this.cleanPosition(alityf);
+        //this.cleanPosition(ality);
         // return new Flow().flow(
         //     this.check(fist), 
         //     this.cleanQuan(tality), 
         //     this.cleanClus(ivity), 
-        //     this.cleanPosition(alitf), 
-        //     this.cleanPosition(alito)
+        //     this.cleanPosition(alityf), 
+        //     this.cleanPosition(ality)
         // );
     }
 
-    stream(fist, tality="", alitf="", alito=""){
+    stream(fist, tality="", alityf="", ality=""){
         this.check(fist);
         //this.cleanQuan(tality);
-        //this.cleanPosition(alitf);
-        //this.cleanPosition(alito);
+        //this.cleanPosition(alityf);
+        //this.cleanPosition(ality);
 
         //return new Stream().stream(
         //     this.check(fist), 
         //     this.cleanQuan(tality),
-        //     this.cleanPosition(alitf),
-        //     this.cleanPosition(alito)
+        //     this.cleanPosition(alityf),
+        //     this.cleanPosition(ality)
         // );
     }
     check(fist){
@@ -109,16 +108,12 @@ export class FistView{
         if(Number.isInteger(at)){
             return at;
         }else{
-            if(at==('at:b'|'at:e'|'b'|'e')){
+            if(at==('b'|'e')){
                 if(at==('b')){
                     return Number.NEGATIVE_INFINITY;
                 }
                 if(at==('e')){
                     return Number.INFINITY;
-                }else{
-                    at = at.split(':');
-                    this.cleanPosition(at[1]); 
-                    //we know its an b or e, so just use recursion
                 }
             }
         }
