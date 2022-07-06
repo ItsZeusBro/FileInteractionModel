@@ -1,4 +1,4 @@
-import { FistView } from "./src/View/FistView";
+import { FistView } from "./src/View/FistView.js";
 export class Fist{
     constructor(){
         Fist.prototype.flow = this.flow;

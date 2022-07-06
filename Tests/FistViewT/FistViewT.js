@@ -1,11 +1,10 @@
-import { FistTest } from "../FistTest.js" //inherits comet functionality
 import {Fist} from "../../Fist.js"
+import { Comet } from "../Comet/Comet.js";
 //This basically runs tests on every module
-export class FistViewT extends FistTest{
+export class FistViewT extends Comet{
     constructor(){
         super();
         this.comet("sometest from FileView");
-        this.fist = new Fist();
         this.run_tests();
     }
 
@@ -17,9 +16,10 @@ export class FistViewT extends FistTest{
         this.flow_positionOut();
     }
     flow_fist(){
-        var fist='./tests/fist.file'
+        var fist = new Fist();
+        var file='./tests/fist.file'
         //, tifier, ivity, atin, atout
-        this.fist.flow(fist);
+        this.fist.flow(file);
 
     }
 
