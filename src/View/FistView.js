@@ -1,38 +1,47 @@
 //INTERFACE
-//import {File} from "../Controller/File/File.js"
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
 import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
-import {Fist} from "../../Fist.js"
+import {Fist} from "../../Fist.js";
+import * as fs from "node:fs";
 
 export class FistView{
-    constructor(file, post){
-        //this.FistFile = new Fist(file, post)
+    constructor(){
+
     }
     
     flow(fist, tifier, ivity, atin, atout){
-        return new Flow().flow(
-            this.check(fist), 
-            this.cleanQuan(tifier), 
-            this.cleanClus(ivity), 
-            this.cleanPosition(atin), 
-            this.cleanPosition(atout)
-        );
+        this.check(fist);
+        //this.cleanQuan(tifier);
+        //this.cleanPosition(atin);
+        //this.cleanPosition(atout);
+        // return new Flow().flow(
+        //     this.check(fist), 
+        //     this.cleanQuan(tifier), 
+        //     this.cleanClus(ivity), 
+        //     this.cleanPosition(atin), 
+        //     this.cleanPosition(atout)
+        // );
     }
 
     stream(fist, tifier, atin, atout){
-        return new Stream().stream(
-            this.check(fist), 
-            this.cleanQuan(tifier),
-            this.cleanPosition(atin),
-            this.cleanPosition(atout)
-        );
+        this.check(fist);
+        //this.cleanQuan(tifier);
+        //this.cleanPosition(atin);
+        //this.cleanPosition(atout);
+
+        //return new Stream().stream(
+        //     this.check(fist), 
+        //     this.cleanQuan(tifier),
+        //     this.cleanPosition(atin),
+        //     this.cleanPosition(atout)
+        // );
     }
     check(fist){
-        if(fist != typeof Fist){
+        if((fist != typeof Fist)||(!this.checkpath(fist))){
             throw Error("You can only flow to another fist");
         }
-
     }
+
     cleanQuan(tifier){
         //accept a float statistical value between 1 and 100 percent for buffer files
         //abstract options "all", percentage, integer representing bytes, mb, gb, etc.
@@ -86,7 +95,7 @@ export class FistView{
                 ivityObj['n']=ivity;
                 ivityObj['m']=undefined;
             }else{
-                ivityObj['inex']=undefined
+                ivityObj['inex']=undefined;
                 ivityObj['n']=undefined;
                 ivityObj['m']=ivity;
             }
@@ -100,13 +109,13 @@ export class FistView{
         }else{
             if(at==('at:b'|'at:e'|'b'|'e')){
                 if(at==('b')){
-                    return Number.NEGATIVE_INFINITY
+                    return Number.NEGATIVE_INFINITY;
                 }
                 if(at==('e')){
-                    return Number.INFINITY
+                    return Number.INFINITY;
                 }else{
-                    at = at.split(':')
-                    this.cleanPosition(at[1]) 
+                    at = at.split(':');
+                    this.cleanPosition(at[1]); 
                     //we know its an b or e, so just use recursion
                 }
             }
@@ -118,6 +127,14 @@ export class FistView{
     }
     post(){
 
+    }
+
+    checkpath(path){
+        if(!fs.existsSync(path)){
+            return false
+        }else{
+            return true
+        }
     }
 
 }
