@@ -98,56 +98,26 @@ This is necessary for some of the features of this specification. Temporary file
 
 
 ## Abstract Api
-This abstract api will use pure fist highlevel functions to enable this
-
-
-              fist.pre(
-                       a, 
-                       b,
-                      (data)=>{
-                              //mitigations, conditionals, and looping can be done here for now.
-                              //Under the hood a virtual file structure is created for you
-                              //so you only have to write to the actual file if it completes
-                              //the job without throwing an error (which you can catch here)
-                              //You should be able to do asyncronous behavior here because pre
-                              //only returns "this" to the next chain if that async functionality
-                              //finishes the job.
-                              //pre script here  
-                      }
-            
-              ).post(
-                      a, 
-                      b,
-                      (data)=>{
-                              //some post script
-                              //...
-                      }
-              )
-              .flow(
-                      a, 
+a, b, and c are files. a.flow(b, //whatever) returns b so that you can do something on it. b.stream(c, //whatever) does the same
+              a.flow( 
                       b, 
                       quant, 
                       exclsv, 
                       p1, 
-                      p2
-              )
-              .pre(
-                      b, 
+                      p2,
+                      (data)=>{
+                              //pre script here  
+                      },
+                      (data)=>{
+                              //post script here
+                      }
+                      
+              ).stream( 
                       c,
                       (data)=>{
-                              //pre script here
-                              //...
-
+                              //pre script here  
+                      },
+                      (data)=>{
+                              //post script here
                       }
               )
-              .post(
-                      b, 
-                      c,
-                      (data)=>{
-                              //some post script
-                              //...
-                      }
-              ).stream(
-                      b, 
-                      c
-              ) //then stream to c
