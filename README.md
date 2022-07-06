@@ -9,7 +9,7 @@ FIST will be able to handle most (if not all) of your file system needs in 2 pri
 1. Files
 2. Directionality
 3. Quantality
-4. Exclusivity
+4. Clusivity
 5. Positionality
 6. Conditionals (and Mitigation)
 7. Looping
@@ -36,10 +36,10 @@ Quantality defines the constraints upon the flow which defaults to "all data" wh
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Quantality1.png" height=350 width=500/>
 
 
-### Exclusivity
-Exclusivity defines whether the data is shared after its flow, or whether it becomes exclusive to a new owner.
+### Clusivity
+Clusivity defines whether some data is inclusive with the source after its flow is executed, or whether some data is exclusive to the new owner.
 
-<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Exclusivity.jpg" height=350 width=500/>
+<img src="https://github.com/ItsZeusBro/FIST/blob/79db3fc288540bf444f1a8a41e3fd5b24ce18563/Docs/Clusivity.jpg" height=350 width=500/>
 
 
 ### Positionality
