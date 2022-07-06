@@ -19,7 +19,7 @@ FIST handles all of your file system needs in 2 primary functions, 2 callback fu
 11. Chaining
 12. Flow
 13. Stream
-14. Virtual IO (Looping, Conditionals, and Forks will be disabled until this resource is enabled)
+14. Virtual IO
 
 ### Files
 These are files.
