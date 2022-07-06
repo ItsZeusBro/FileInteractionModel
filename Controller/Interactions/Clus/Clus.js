@@ -20,6 +20,7 @@ export class Clus{
         //try to split on ':'
         //if not try and see if its just 'in' or 'in:n' or 'ex' or 'ex:n'
         //if its nothing set the default to 'in'
+        //USE REGEX ONE DAY TO CLEAN THIS UP
         var clues;
         try{
             var iv = ivity.split(':');
