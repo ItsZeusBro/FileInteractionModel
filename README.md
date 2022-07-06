@@ -130,10 +130,10 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               //a is a File(path, post_callback) 
               //b is a File(path, [post_callback])
               //c is a File(path, [post_callback])
-              //q is a Quantifier(n, m)
-              //exin is a Clus(ivity, n, m)
-              //pin is a Position(n)
-              //pout is a Position(n)
+              //q is a Quantifier([n][,m])
+              //exin is a Clus([ivity],[,n][,m])
+              //pin is a Position([n])
+              //pout is a Position([n])
 
 ## Shortcut
 You can use this in your code:
