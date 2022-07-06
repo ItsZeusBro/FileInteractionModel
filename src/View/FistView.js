@@ -1,10 +1,8 @@
 //INTERFACE
 //import {File} from "../Controller/File/File.js"
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
-import {Fist} from "../../Fist.js"
 import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
-//import {Stream} from "../Controller/SexyTransactions/Stream/Stream.js";
-//import {Fist} from "../Controller/Fist.js"
+import {Fist} from "../../Fist.js"
 
 export class FistView{
     constructor(file, post){
@@ -18,7 +16,7 @@ export class FistView{
             this.cleanClus(ivity), 
             this.cleanPosition(atin), 
             this.cleanPosition(atout)
-        )
+        );
     }
 
     stream(fist, tifier, atin, atout){
@@ -27,12 +25,11 @@ export class FistView{
             this.cleanQuan(tifier),
             this.cleanPosition(atin),
             this.cleanPosition(atout)
-        )
-        
+        );
     }
     check(fist){
         if(fist != typeof Fist){
-            throw Error("You can only flow to another fist")
+            throw Error("You can only flow to another fist");
         }
 
     }
@@ -47,13 +44,13 @@ export class FistView{
             return tifier;
         }else if(isFloat(tifier)){
             if(tifier<1){
-                return Number.parseFloat(tifier).toFixed(2)
+                return Number.parseFloat(tifier).toFixed(2);
             }else{
-                return Error("float value must be less than 1")
+                return Error("float value must be less than 1");
             }
         }
         else{
-            throw Error("Invalid Quantifier")
+            throw Error("Invalid Quantifier");
         }
     }
     cleanClus(ivity){
@@ -64,7 +61,7 @@ export class FistView{
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
-                )
+                );
             }else{
                 ivityObj['inex']=ivity.pop(0)
             }
@@ -72,7 +69,7 @@ export class FistView{
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
-                )
+                );
             }else{
                 //this means they are integers
                 ivityObj['n']=ivity[0];
@@ -83,7 +80,7 @@ export class FistView{
                 throw Error(
                     `an ivity is supposed to look like in:n:m 
                     or ex:n:m where n and m are a range of ints`
-                )
+                );
             }else if(ivity==undefined){
                 ivityObj['inex']=undefined;
                 ivityObj['n']=ivity;
@@ -94,12 +91,12 @@ export class FistView{
                 ivityObj['m']=ivity;
             }
         }
-        return ivityObj
+        return ivityObj;
     }
     cleanPosition(at){
         //'at:b' or 'at:e' or 'b' or 'e' or 'at:n', or n, or undefined
         if(isInteger(at)){
-            return at
+            return at;
         }else{
             if(at==('at:b'|'at:e'|'b'|'e')){
                 if(at==('b')){
