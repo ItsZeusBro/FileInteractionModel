@@ -1,40 +1,41 @@
 export class _Clus{
-    //keep these low level functions pure
-    //do not keep a constructor or state
-    //unless you absolutely have to
-    constructor(ivity_, sourcepath, n, m){
-        this.sourcepath=sourcepath;
-        this.ivity_=ivity_;
-        this.n=n;
-        this.m=m;
+
+    //This accepts an object called ivity_ that contains the following
+    //{ivity:ivity, source:path, n:n, m:m}
+    constructor(ivity_){
+        //'this' is the _Clusivity_ which accepts a ivity_ and provides the _Clus
+        this._ivity_=ivity_['ivity_'];
+        this._path_=ivity_['source'];
+        this._n_=ivity_['n'];
+        this._m_=ivity_['m'];
     }
     //they call this function
-    ivity(){
-        if(this.ivity_=='ex'){
-            return this.ex()
-        }else if (this.ivity_=='in'){
-            return this.in()
+    clusivity(){
+        if(this._ivity_=='ex'){
+            return this.ex_()
+        }else if (this._ivity_=='in'){
+            return this._in_()
         }
     }
 
-    ex(){
-        if (this.n && this.m){
-            this._ex_range_(this.sourcepath, this.n, this.m)
-        }else if(this.n){
-            this._ex_n_(this.sourcepath, this.n)
+    ex_(){
+        if (this._n_ && this._m_){
+            this._ex_range_(this._path_, this._n_, this._m_)
+        }else if(this._n_){
+            this._ex_n_(this._path_, this._n_)
         }else if(this.m){
-            this._ex_m_(this.sourcepath, this.m)
+            this._ex_m_(this._path_, this._m_)
         }else{
-            this._ex_(this.sourcepath)
+            this._ex_(this._path_)
         }
     }
-    in(){
-        if (this.n && this.m){
-            this._in_range_(this.sourcepath, this.n, this.m)
+    _in_(){
+        if (this._n_ && this._m_){
+            this._in_range_(this._path_, this._n_, this._m_)
         }else if(n){
-            this._in_n_(this.sourcepath, this.n)
+            this._in_n_(this._path_, this._n_)
         }else{
-            this._in_m_(this.sourcepath, this.m)
+            this._in_m_(this._path_, this._m_)
         }
         //inclusive without n or m does nothing to the source file
     }

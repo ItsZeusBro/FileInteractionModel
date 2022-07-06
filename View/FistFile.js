@@ -40,6 +40,7 @@ class FistFile{
         return b;   //should always return b!!!
     }
     b(){
+        
 
     }
     q(){
