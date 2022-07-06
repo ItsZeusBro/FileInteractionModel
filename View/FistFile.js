@@ -41,5 +41,57 @@ class FistFile{
         this.Stream.stream(b, q, pin, pout, pre, post)
         return b;   //should always return b!!!
     }
+    b(){
+
+    }
+    q(){
+        //accept a float statistical value between 1 and 100 percent for buffer files
+        //abstract options "all", percentage, integer representing bytes, mb, gb, etc.
+        if(q=='all' || q=='All' || q=='ALL'){
+            return Infinity;
+        }else if(q=="Half"||q=="HALF"||q=="half"){
+            return 0.50;
+        }else if(isInteger(q)){
+            return q;
+        }else if(isFloat(q)){
+            if(q<1){
+                return Number.parseFloat(q).toFixed(2)
+            }else{
+                return Error("float value must be less than 1")
+            }
+        }
+        else{
+            throw Error("Invalid Quantifier")
+        }
+    }
+    clsvty(){
+
+    }
+    pinpout(){
+        //'at:b' or 'at:e' or 'b' or 'e' or 'at:n', or n, or undefined
+        if(isInteger(at)){
+            return at
+        }else{
+            if(at==('at:b'|'at:e'|'b'|'e')){
+                if(at==('b')){
+                    return Number.NEGATIVE_INFINITY
+                }
+                if(at==('e')){
+                    return Number.INFINITY
+                }else{
+                    at = at.split(':')
+                    this.pinpout(at[1]) 
+                    //we know its an b or e, so just use recursion
+                }
+            }
+        }
+    }
+
+    pre(){
+
+    }
+    post(){
+
+    }
 
 }
