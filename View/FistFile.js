@@ -8,7 +8,8 @@ import {Position} from "../Controller/Interactions/Position/Position.js";
 import {Quantifier} from "../Controller/Interactions/Quantifier/Quantifier.js";
 
 class FistFile{
-    constructor(path, po){
+    constructor(sourcepath, po){
+        this.sourcepath=sourcepath;
         Fist.prototype.flow = this.flow;
         Fist.prototype.stream = this.stream;
         this.File = new File(this, path);
@@ -25,11 +26,12 @@ class FistFile{
 
     flow(b, q, clsvty, pin, pout, pre, post){
         q = new Quantifier(q);
-        clsvty = new Clus(clsvty);
+        clsvty = new Clus(this.sourcepath, clsvty);
 
         pin = new Position(pin);
-        
+
         pout = new Position(pout);
+
         pre = new Script(pre).pre(pre)
         this.Flow.flow(b, q, clsvty, pin, pout, pre, post)
         new Script(po).po(po)
