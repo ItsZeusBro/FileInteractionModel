@@ -5,36 +5,25 @@
 //error handling
 //post and prescript handling
 //basically anything to do with the flow of the flow
+import {File} from "./File/File.js";
 class Fist{
-    constructor(){
+    constructor(file){
         Fist.prototype.flow = this.flow;
         Fist.prototype.stream = this.flow;
         Fist.prototype.pre = this.pre;
         Fist.prototype.pre = this.pre;
+        this.file = new File(file)
+    }
+    flow(b, quant, exclsv, p1, p2, pre, post){
 
+        return b;
     }
-    flow(){
-        return this;
-    }
-    stream(){
-        return this;
-    }
-    pre(){
-        return this;
-    }
-    post(){
-        return this;
+    stream(b, quant, p1, p2, pre, post){
+        return b;
     }
 }
-class File{
-    constructor(){
-        File.prototype.create = this.create;
 
-    }
-
-    create(){
-        return this;
-    }
-}
-var fist = new Fist()
-fist.flow().stream().pre().fist().flow().stream().pre().post()
+var a = new Fist('some/file/somewhere')
+var b = new Fist('some/other/file/somewhere')
+var c = new Fist('some/third/file/somewhere')
+a.flow(b, null, null, null, null, ()=>{}, ()=>{}).flow(c, null, null, null, null, ()=>{}, ()=>{})
