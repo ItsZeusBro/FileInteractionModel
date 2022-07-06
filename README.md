@@ -127,6 +127,7 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
               )
               
               //Legend:
+              //Don't use these objects to specify your options, i'm just letting you know this. Strings and integers are better for this!
               //a is a File(path, post_callback) 
               //b is a File(path, [post_callback])
               //c is a File(path, [post_callback])
