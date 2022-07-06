@@ -1,8 +1,8 @@
-# File Interaction Sexy Transaction (FIST) 0.1
+# File Interaction Sexy Transaction (FIST) 0.1 (in progress)
 
 The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
 
-FIST handles all of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
+FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
 
 ## We can begin with the 12 Main Concepts:
 
