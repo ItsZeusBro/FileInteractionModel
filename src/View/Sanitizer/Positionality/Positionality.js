@@ -1,8 +1,23 @@
 export class Positionality{
     constructor(string){
-        
+        //if we don't catch it throw an exception
+        //pattern 
+        // [end || mid || beg] || 
+        // [+ || - || / || *] || 
+        // [ [0-inf] && [ b || mb || gb || tb || %] || 
+        // [0.0-1.0] || 
+        // [ e && [ [ [_] && [0-inf] ] || [0-inf] ] ]
+        this.tokens=[
+            'end', 'mid', 'beg', 
+            
+            'b', 'mb', 'gb', 'tb', 
+            
+            '+', '/', '-', '*', 
+            
+            'e', '_', '%', '.']
+
     }
-    search(){
+    search(string){
 
     }
     collect(){
