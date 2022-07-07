@@ -4,7 +4,7 @@ The File Interaction Sexy Transaction Model is specified as a Turing Complete Fi
 
 FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
 
-## We can begin with the 12 Main Concepts:
+## We can begin with the 12 Main Concepts (plus 2):
 
 1. Files
 2. Directionality
