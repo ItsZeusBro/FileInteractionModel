@@ -14,4 +14,8 @@ exports = {ALITY, IVITY, TALITY}
 //formulas:
 //Anything between 100% and 199% but nothing else (\b[1][0-9][1-9]%(\b)?)
     //Reasoning: its exremely hard to include anything under 100% (inclusive)
-    //but not anything over (especially 101%) 
+    //but not anything over (especially 101%)
+    
+//Anything over 100% (inclusive) but nothing else (\b[1-9][0-9][0-9][0-9]*)%
+    //Reasoning: adding this with the negation of anything between 101% and 199%
+    //grabs anything over 100% non inclusive
