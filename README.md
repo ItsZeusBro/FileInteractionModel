@@ -46,7 +46,7 @@ Solid lines, on the other hand define an inclusive relationship by default betwe
 This could represent a conflict between a destination file that excludes sharing flowed data and a destination file that includes sharing that same data.
 In the case of a conflict, there needs to be a virual file system to resolve this conflict. At least and until this conflict is resolved. What happens when one file excludes a portion data (after its flow) before another file tries to incumber that data, is that the new transaction recieves a file that no longer has the data. If this were to happen in reverse, you have a forked file at the time of the second transaction which aims to exclude it.
 
-Clusivity can take paramters like "all", "half", "50%", "5%", "0.25%", "n:m" (range), which only apply to the data that flows from source to destination. Once the flow is buffered, clusivity takes effect on the buffered data, which can help us virtualize files.
+Clusivity can take paramters like "all", "half", "50%", "5%", 0.25, 0.004, "n:m" (range), which only apply to the data that flows from source to destination. Once the flow is buffered, clusivity takes effect on the buffered data, which can help us virtualize files.
 
 <img src="https://github.com/ItsZeusBro/FIST/blob/79db3fc288540bf444f1a8a41e3fd5b24ce18563/Docs/Clusivity.jpg" height=350 width=500/>
 
