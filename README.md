@@ -48,6 +48,12 @@ In the case of a conflict, there needs to be a virual file system to resolve thi
 
 Clusivity can take paramters like "all", "half", "50%", "5%", 0.25, 0.004, "n:m" (range), which only apply to the data that flows from source to destination. Once the flow is buffered, clusivity takes effect on the buffered data, which can help us virtualize files.
 
+Clusivity is evaluated on a buffer that is created after (and from) the positionality and quantality. Positionality and Quantality provide a position and offset which produce "beg", "mid", and "end" anchors to denote ***how much of the outgoing buffer should be shared with the original source***. This is a colon separated triplet. The first element is the clusivity expressed as "in" or "ex" (inclusive or exclusive), the second is a "beg" or "mid" anchor primitive expression, the third is the offset relative to the second (in the triplet) in the way of another primitive expression using "beg", "mid", or "end" with some op (+*-/) that makes sense relative to the begining of the clusive buffer.
+
+ACCEPTS: beg, end, mid, percentage strings, byte values, and arithmetic (+-*/) ops (but not compound expressions)
+Examples: in:beg+10mb:end-100mb (must actually evaluate to some positive number of bytes, or it is useless and returns nothing)
+
+
 <img src="https://github.com/ItsZeusBro/FIST/blob/79db3fc288540bf444f1a8a41e3fd5b24ce18563/Docs/Clusivity.jpg" height=350 width=500/>
 
 
