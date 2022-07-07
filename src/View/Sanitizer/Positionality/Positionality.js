@@ -57,7 +57,8 @@ export class Positionality{
 //
 //              
 //        ] 
-// so far captures everything valid trailing arithmetic operator (((0\.)|([1-9]))[0-9]*)|((e(_?))|(b|mb|gb|tb))
+// Gets everything but decimals and scientific notation
+// (end|beg|mid)((-|\+|\*|\/)?)((([1-9][0-9]*)?)(b|mb|gb|tb))?
 // Example strings:
 // end 
 // end-1b 
@@ -102,3 +103,4 @@ export class Positionality{
 // 1b+end
 // 2+mid
 // mid+2
+//
