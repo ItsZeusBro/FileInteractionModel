@@ -1,19 +1,17 @@
 //INTERFACE
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
 import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
+import { Comet } from "../../Comet/Comet.js";
 import {Fist} from "../../Fist.js";
 import * as fs from "node:fs";
 
-export class FistView{
+export class FistView extends Comet{
     constructor(){
 
     }
     
     flow(fist, tality="all", ivity="in", alityf="Inf", ality=""){
-        this.check(fist);
-        this.cleanQuan(tality);
-        //this.cleanPosition(alityf);
-        //this.cleanPosition(ality);
+        
         // return new Flow().flow(
         //     this.check(fist), 
         //     this.cleanQuan(tality), 
@@ -24,7 +22,7 @@ export class FistView{
     }
 
     stream(fist, tality="", alityf="", ality=""){
-        this.check(fist);
+        this.fist(fist);
         //this.cleanQuan(tality);
         //this.cleanPosition(alityf);
         //this.cleanPosition(ality);
@@ -43,11 +41,14 @@ export class FistView{
         }
     }
 
-    cleanQuan(tality){
-        //accept a float statistical value between 1 and 100 percent for buffer files
-        //abstract options "all", percentage, integer representing bytes, mb, gb, etc.
+    quan(tality){
+        this.comet(
+            `accepts abstract "all" and 'half' strings, 
+            abstract percentages, abstract integers paired 
+            with b, mb, gb, etc.`
+        )
         if(tality=='all' || tality=='All' || tality=='ALL'){
-            return Infinity;
+            return Number.INFINITY;
         }else if(tality=="Half"||tality=="HALF"||tality=="half"){
             return 0.50;
         }else if(Number.isInteger(tality)){
@@ -56,14 +57,20 @@ export class FistView{
             if(tality<1){
                 return Number.parseFloat(tality).toFixed(2);
             }else{
-                return Error("float value must be less than 1");
+                throw Error("float value must be less than 1")
             }
         }
         else{
             throw Error("Invalid Quantifier");
         }
     }
-    cleanClus(ivity){
+
+    clus(ivity){
+        this.comet(
+            `accepts abstract "all" and 'half' strings, 
+            abstract percentages, abstract integers paired 
+            with b, mb, gb, etc.`
+        )
         var ivityObj = {}
         try{
             ivity = ivity.split(':');
@@ -103,8 +110,12 @@ export class FistView{
         }
         return ivityObj;
     }
-    cleanPosition(at){
-        //'at:b' or 'at:e' or 'b' or 'e' or 'at:n', or n, or undefined
+    pos(at){
+        this.comet(
+            `cleanPosition() accepts 'at:b', 'at:e', 
+            'b', 'e','at:n', n, or undefined`
+        )
+
         if(Number.isInteger(at)){
             return at;
         }else{

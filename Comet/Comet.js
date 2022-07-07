@@ -12,7 +12,7 @@ export class Comet{
         this.cometFile = this.cometsDir+"comet_"+this.instance+'.comet'
 
         process.on('uncaughtException', (err, origin) => {
-            this.comet('There was an uncaught error\n'+'\n',err.stack);
+            this.comet('There was an uncaught error', err.stack);
             //this.comet('Origin of Error\n'+'\n',JSON.stringify(origin));
             
             process.exit(1); // mandatory (as per the Node.js docs)
@@ -28,9 +28,9 @@ export class Comet{
     }
     comet(...data){
 
-        fs.writeFileSync(this.cometFile, data.join('\n'), {flag:'a'})
+        fs.writeFileSync(this.cometFile, data.join(' ')+'\n', {flag:'a'})
         if (this.verbose){
-            console.log(data.join('\n'))
+            console.log(data.join(' '))
         }
         
     }

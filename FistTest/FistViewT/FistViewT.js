@@ -1,5 +1,7 @@
 import {Fist} from "../../Fist.js"
-import { Comet } from "../Comet/Comet.js";
+import { Comet } from "../../Comet/Comet.js";
+import * as assert from "node:assert";
+
 //This basically runs tests on every module
 export class FistViewT extends Comet{
     constructor(){
@@ -9,41 +11,59 @@ export class FistViewT extends Comet{
     }
 
     run_tests(){
-        this.flow_fist();
-        this.flow_quantifier();
-        this.flow_clusivity();
-        this.flow_positionIn();
-        this.flow_positionOut();
+        this.fist();
+        this.quantality();
+        this.clusivity();
+        this.positionality();
     }
     flow_fist(){
         var fist = new Fist();
         var file='./tests/fist.file'
-        //, tifier, ivity, atin, atout
-        fist.flow(file);
-
+        fist.fist(file);
+        var a = new Fist();
+        fist.fist(a)
     }
 
-    flow_quantifier(){
+    quantality(){
         var fist = new Fist();
         var file='./tests/fist.file'
-        var quantifiers=['all', 'All', 'ALL', 'half', 'HALF', 'Half', 0.1, 0.5, 1.0]
-        quantifiers.forEach(element => {
-            this.comet('Testing Quantifier', element)
-            fist.flow(file, element);
+        var quantalities=['all', 'All', 'ALL', 'half', 'HALF', 'Half', 0.1, 0.5, 1.0]
+        quantalities.forEach(tality => {
+            this.comet('Testing Quantifier', tality)
+            assert.equal(this.isInt(fist.quan(tality))||(this.isFloat(fist.quant(tality))), true)
+            assert.equal(fist.quan(tality)>0, true);
         });
 
-        // var tifier=""
-        // this.fist.flow(fist, tifier, ivity, atin, atout);
     }
 
-    flow_clusivity(){
+    clusivity(){
+        // `accepts "all" and 'half' inclusivity, 
+        // percentage inclusivity, integers paired 
+        // with b, mb, gb, etc.`
+        // range inclusivity
+
+        var fist = new Fist();
+        var clusivities = ["all", "half", "All", "ALL", "AlL", ""]
+        // this.fist(fist);
+        // this.quan(tality);
+        // this.clus(ivity);
+        // this.pos(alityf);
+        // this.pos(ality);
+    }
+
+    positionality(){
 
     }
-    flow_positionIn(){
 
+    isInt(n){
+        return Number(n) === n && n % 1 === 0;
     }
-    flow_positionOut(){
-
+    
+    isFloat(n){
+        return Number(n) === n && n % 1 !== 0;
+    }
+    isString(n){
+        return ((typeof n === 'string') || (n instanceof String))
     }
 
     
