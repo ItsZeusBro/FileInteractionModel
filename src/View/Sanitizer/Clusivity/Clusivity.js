@@ -1,37 +1,10 @@
 export class Clusivity{
     constructor(string){
         //if we don't catch it throw an exception
-        this.tokens=[
-            ':', 'in', 'ex', 
 
-            'end', 'mid', 'beg', 
-
-            'b', 'mb', 'gb', 'tb', 
-
-            '+', '/', '-', '*', 
-
-            'e', '_', '%', '.'
-        ]
 
     }
-    search(){
 
-    }
-    collect(){
-
-    }
-    atomEval(){
-
-    }
-    insert(){
-
-    }
-    compEval(){
-
-    }
-    sanitize(){
-        
-    }
 }
         //2. search for longest keywords first (remember position in string),
         //3. collect its requirements (evaluate) from base string 
