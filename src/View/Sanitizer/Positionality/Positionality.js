@@ -57,7 +57,7 @@ export class Positionality{
 //
 //              
 //        ] 
-// so far (end|beg|mid)((-|\/|\+|\*)([1-9][0-9]*)?)?
+// so far captures everything valid trailing arithmetic operator (((0\.)|([1-9]))[0-9]*)|((e(_?))|(b|mb|gb|tb))
 // Example strings:
 // end 
 // end-1b 
