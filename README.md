@@ -52,7 +52,7 @@ Quantality can be represented by an abstract number like 1mb or 1gb. It is concr
 
 The different forms of quantality: x%; xbin xb xmb xgb xtb xeb; 0.xx (floating point precision is an implementation detail); anchors like beg, mid, and end; operators that use an abstract number to help intervene in the processe of handling overflow semantics. 
 
-<img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Quantality1.png" height=350 width=500/>
+<img src="https://github.com/ItsZeusBro/FIST/blob/5aa06c70d530ef91ad68d293d0af92e445d50b15/Docs/Quantalities.jpg" height=350 width=500/>
 
 
 ## Clus-ivity 
