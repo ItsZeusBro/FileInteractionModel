@@ -36,7 +36,7 @@ Quantality defines the constraints upon the flow which defaults to "all data" wh
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Quantality1.png" height=350 width=500/>
 
 
-### Clus-ivity (so is ivity)
+### Clus-ivity (ivity are the properties of some clus relationship between file transactioins)
 Clusivity defines whether data flow is inclusive with the source after its flow is executed, or whether that flow of data is exclusive to the new owner. 
 
 The dashed line represents exclusivity for the entirety of the flow. Meaning, the data that flows into the target will be entirely truncated when there is a dashed line. However, you can add restraints to this general behavior to refine the exclusivity based on the general case. 
