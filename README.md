@@ -8,6 +8,8 @@
 We care more about buffers than we do about files. A buffer is a partuclar string of content we wish to do something with. A file is everything else that we don't need (except for indexing the information we require). It stands to reason that physical files are becoming obsolete in some sense. When Ai discovers how to break up data into statistically used buffers (cache memory) as opposed to entire files, we become aware of this point even further. So operating on buffers with a virtual file model and syntax is more important long term, than reasononing about actual physical files and their locations.
 
 #### FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
+Most importantly, FIST's longterm vision is that the computed flow of data and not where its located on a physical system, is more important. A file computer is therefore in order, to simplify data motion granular transactions.
+
 ## Use Cases
 1. File Buffer Logic
 2. File Virtualization (we have reasons for needing and wanting this)
