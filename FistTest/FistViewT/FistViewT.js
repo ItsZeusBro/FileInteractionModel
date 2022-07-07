@@ -62,6 +62,9 @@ export class FistViewT extends Comet{
             `FistView.clus(ivity) RETURNS {ivity:'', n:'', m:''}`
        )
 
+
+
+
     }
 
     positionality(){
@@ -74,7 +77,7 @@ export class FistViewT extends Comet{
 
         )
 
-        var posTrue=[
+        var positives=[
             'end', 'end-1b', 'end-1mb', 'end-10tb',
             'end/5b', 'end/2mb', 'end/46gb', 'end/50tb',
             'beg', 'beg+2b', 'beg+3gb', 'beg+4tb',
@@ -83,13 +86,41 @@ export class FistViewT extends Comet{
             'mid-5b', 'mid-100mb', 'mid-100gb', 'mid-10tb',
             'mid/5b', 'mid/10mb', 'mid/2gb', 'mid/100tb',
             'mid+0.5', 'end+0.05', 'beg*0.003', 'beg/0.0005','mid*0.0000003', //some of these would be wrong in validation, but not sanitization
-            'mid*0.3e+9', 'beg+0.4e-10', 'end+4e+40', 'end-30e-3', 'mid+1e+100'
+            'mid*0.3e+9', 'beg+0.4e-10', 'end+4e+40', 'end-30e-3', 'mid+1e+100',
+            '1b+end', '2+mid', 'mid+2'
         ]
 
-        var posFalse=[
+        var negatives=[
 
         ]
 
+        //needs:
+        //1. list of operators (classes)
+        //2. operators should have expectations that return true if conditions are met
+        
+        //Expression parsing - part 1:
+        //1. find first operator from string
+        //2. initiate operator class with it and ask it for expectations
+        //3. look directly left of the operator and run algorithm to get anything it owns (set to class object)
+        //4. look directly right of the operator and run algorithm to get anything it owns (set to class object)
+        //5. push that object to queue
+        //6. repeat 1-5 until string empty
+
+        //Atomic Expression evaluation - part 2:
+        //1. pop queue and evaluate object using evaluator object (throw error if false)
+        //2. push to evaluation queue if true
+        //3. repeat 1 and 2
+
+        //Compound Expression evaluation - part 3
+        //1. identify expression type
+        //2. see if atomic expression type from evaluation queue meets compound expression expectations (throw error if false)
+        //3. push to queue
+        //4. repeat 1 and 2 on rest of atomic expressions
+        
+        //Return sanitized object
+        //1. identify compound expression type
+        //2. translate it to sanitized object
+        //3. return sanitized object
     }
 
     
