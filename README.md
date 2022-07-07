@@ -18,7 +18,9 @@ FIST is not yet a robust specification. These are general abstract concepts that
 2. File Virtualization (we have reasons for needing and wanting this)
 3. Stream Filters
 4. Simplifying every possible transaction ever to do with moving data between files
-5. World Domination
+5. Backbone Infrastructure
+6. Big Unstructured Data (like spam and nlp data)
+7. World Domination
 
 ## We can begin with the 12 Main Concepts (plus 2):
 
