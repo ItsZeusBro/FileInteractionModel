@@ -10,3 +10,6 @@ const TALITY = new RegExp()
 
 
 exports = {ALITY, IVITY, TALITY}
+
+//formulas:
+//Anything between 100% and 199% but nothing else (\b[1][0-9][1-9]%(\b)?)
