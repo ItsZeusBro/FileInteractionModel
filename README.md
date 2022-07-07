@@ -147,8 +147,8 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
   - ***a*** is a Fist file object or file string
   - ***b*** is a Fist file object or file string
   - ***c*** is a Fist file object or file string
+  - ***alityf*** corresponds to "positionality from" (meaning the position from which data is pulled from the source file)
   - ***tality*** corresponds to a quantality value type
   - ***ivity*** corresponds to a clusivity value type
-  - ***alityf*** corresponds to "positionality from node x" (meaning the position from which data is pulled from the source file)
-  - ***ality*** corresponds to "positionality" (this always represents the position in the file we are writing to
+  - ***alityt*** corresponds to "positionality to" (this always represents the position in the file we are writing to
 
