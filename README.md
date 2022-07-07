@@ -4,6 +4,9 @@
 
 ### The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
 
+## Background Information
+We care more about buffers than we do about files. A buffer is a partuclar string of content we wish to do something with. A file is everything else that we don't need (except for indexing the information we require). It stands to reason that physical files are becoming obsolete in some sense. When Ai discovers how to break up data into statistically used buffers (cache memory) as opposed to entire files, we become aware of this point even further. So operating on buffers with a virtual file model and syntax is more important long term, than reasononing about actual physical files and their locations.
+
 #### FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
 ## Use Cases
 1. File Buffer Logic
