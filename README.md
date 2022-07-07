@@ -3,6 +3,12 @@
 The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
 
 FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
+## Use Cases
+1. File Buffer Logic
+2. File Virtualization (we have reasons for needing and wanting this)
+3. Stream Filters
+4. Simplifying every possible transaction ever to do with moving data between files
+5. World Domination
 
 ## We can begin with the 12 Main Concepts (plus 2):
 
