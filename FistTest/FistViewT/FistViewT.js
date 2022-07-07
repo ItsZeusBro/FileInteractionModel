@@ -74,8 +74,8 @@ export class FistViewT extends Comet{
             `FistView.position(ality) ACCEPTS beg, end, mid (strings), percentages, +-*/ ops \n`, 
             `Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc`
             `FistView.position(ality) RETURNS {ality:''}`
-
         )
+
 
         var positives=[
             'end', 'end-1b', 'end-1mb', 'end-10tb',
@@ -89,10 +89,11 @@ export class FistViewT extends Comet{
             'mid*0.3e9', 'beg+0.4e_10', 'end+4e40', 'end-30e_3', 'mid+1e100',
             '1b+end', '2+mid', 'mid+2'
         ]
-        //
 
         var negatives=[
-
+            1b+end,
+            2+mid,
+            mid+2,
         ]
 
         //needs:
