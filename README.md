@@ -10,6 +10,9 @@ We care more about buffers than we do about files. A buffer is a partuclar strin
 #### FIST will be able to handle most (if not all) of your file system needs in 2 primary functions, 2 callback functions, and 1 constructor.
 Most importantly, FIST's longterm vision is that the computed flow of data and not where its located on a physical system, is more important. A file computer abstraction is therefore in order, to simplify data motion and granular transactions.
 
+### Notes to Reader:
+FIST is not yet a robust specification. These are general abstract concepts that will make their way into the actual specs. I intend this to be a mere reference implementation that helps me find the issues and formulate the actual specification. Please help with the implementation to learn more about the future of FIST. (right now there is next to nothing in the way of features, i'm still working on santitzation of input (a lot of weird edge cases)
+
 ## Use Cases
 1. File Buffer Logic
 2. File Virtualization (we have reasons for needing and wanting this)
