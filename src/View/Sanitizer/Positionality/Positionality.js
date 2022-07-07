@@ -58,7 +58,7 @@ export class Positionality{
 //              
 //        ] 
 // Gets everything but decimals and a few cases of scientific notation
-// ((end|beg|mid)((-|\+|\*|\/)?)((([1-9][0-9]*)?)(b|mb|gb|tb))?)(([1-9][0-9]*e[1-9][0-9]*)?)(([1-9][0-9]*e_[1-9][0-9]*)?)((0.[0-9][0-9]*)?)
+// ((end|beg|mid)((-|\+|\*|\/)?)((([1-9][0-9]*)?)(b|mb|gb|tb))?)(([1-9][0-9]*e[1-9][0-9]*)?)(([1-9][0-9]*e_[1-9][0-9]*)?)((0.[0-9][0-9]*)?)((e[1-9][0-9]*)?)
 // Example strings:
 // end 
 // end-1b 
