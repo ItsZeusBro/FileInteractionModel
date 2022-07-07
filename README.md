@@ -156,7 +156,7 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
                       (data)=>{
                               //pre script here  
                       },
-                      (data)=>{
+                      (fd, data)=>{
                               //post script here
                       }
                       
@@ -168,7 +168,7 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
                       (data)=>{
                               //pre script here  
                       },
-                      (data)=>{
+                      (fd, data)=>{
                               //post script here
                       }
               )
