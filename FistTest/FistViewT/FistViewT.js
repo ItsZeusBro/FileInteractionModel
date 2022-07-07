@@ -39,9 +39,19 @@ export class FistViewT extends Comet{
             `Example: 1b, 2mb, 14gb, 0.5, 1b, 5% \n`,
             `FistView.quan(tality) RETURNS {tality:''} \n`
         )
-        var quantalitiesTrue=[
-            
-
+        var quantalitiesTrue=[ 
+            "in:1", "in:0.0001", "in:1.0e400-34", "in:0.001e-34+45", "in:0.001e34+45", "in:55e-4",
+            "in:55e-4-31", "in:55e-4+31", "in:55e+4+31", "in:55e4+31", "in:1000bin", "in:400nib",
+            "in:20342mb", "in:342gb", "in:23424tb", "in:end", "in:mid", "in:beg", "in:mid-432bin",
+            "in:mid-432nib","in:mid-432mb", "in:mid-432gb","in:mid-432tb","in:mid-432eb","in:mid+432bin",
+            "in:mid+432nib", "in:mid+432mb", "in:mid+432gb", "in:mid+432tb", "in:mid+432eb", "in:mid/432bin",
+            "in:mid/432nib", "in:mid/432mb", "in:mid/432gb", "in:mid/432tb", "in:mid/432eb", "in:mid*432bin",
+            "in:mid*432nib","in:mid*432mb", "in:mid*432gb","in:mid-432tb", "in:mid-432eb", "in:beg",
+            "in:mid*432tb", "in:mid*432eb", "in:mid-432bin", "in:mid-432nib", "in:mid-432mb", "in:mid-432gb",
+            "in:5%", "in:0.5", "in:0.0001", "ex:0.0001","ex:1","ex:0.0001", "ex:1.0e400-34", "ex:0.001e34+45",
+            "ex:0.001e-34+45", "ex:55e-4+31", "ex:55e-4-31", "ex:1000bin", "ex:400nib", "ex:20342mb",
+            "ex:342gb", "ex:23424tb", "ex:end", "ex:mid", "ex:beg", "ex:5%", "ex:0.5", "ex:4mb", "ex:mid-432mb",
+            "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
         ]
 
     }
@@ -61,7 +71,7 @@ export class FistViewT extends Comet{
              ex:5% \n`,
             `FistView.clus(ivity) RETURNS {ivity:'', n:'', m:''}`
        )
-
+        
 
 
 
@@ -91,9 +101,7 @@ export class FistViewT extends Comet{
         ]
 
         var negatives=[
-            1b+end,
-            2+mid,
-            mid+2,
+
         ]
 
         //needs:
