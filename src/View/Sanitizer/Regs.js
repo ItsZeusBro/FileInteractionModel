@@ -19,3 +19,8 @@ exports = {ALITY, IVITY, TALITY}
 //Anything over 100% (inclusive) but nothing else (\b[1-9][0-9][0-9][0-9]*)%
     //Reasoning: adding this with the negation of anything between 101% and 199%
     //grabs anything over 100% non inclusive
+
+//Using negative lookaheads we can combine the two to exclude these two patterns
+//on word boundaries without consuming any charachters, while also grabbing anything
+//at 100% or less
+//(?!\b[1][0-9][1-9]%)(?!(\b[2-9][0-9][0-9][0-9]*)%)\b[1-9][0-9]?[0-9]?%
