@@ -32,6 +32,7 @@ export class Positionality{
         
     }
 }
+
 //1. search for longest keywords first (remember position in string),
 //2. collect its requirements (evaluate) from base string 
 //3. insert in value ordered array of objects (repeat)
@@ -42,29 +43,41 @@ export class Positionality{
 
 //pseudo pattern 
 
-//      ( end || mid || beg ) || [
-//             [ 
-//                  ( + || - || / || * ) && 
+//      ( end || mid || beg ) || 
+//      [
+//             
+//                  ( + || - || / || * )                                            && 
 //                  [
 //
 //                              [
-//                                  (0-inf) && 
+//                                  
+//                                  (0-inf)                                         && 
 //                                  [
-//                                      (b || mb || gb || tb || %)
-//                                  ]                                       || 
+//                                      (b || mb || gb || tb)
+//                                                                                  || 
+
 //
-//                                  (0.0-1.0)                               || 
+//                                      (0.0-1.0)                                   || 
+
 //                              
-//                                  ( e ) && 
-//                                  [ 
-//                                       ( (_) && (0-inf) )                 || 
-//                                       (0-inf) 
+//                                      ( e )                                       && 
+//                                      [ 
+//                                          ( ( (_) && (0-inf) )  ||  (0-inf) )
+//                                                                                  ||
+
+//                                  
+//                                          (0-100)                                 && 
+//                                          [
+//                                                (%||pct)
+//                                          ]  
+//                                      ]
 //                                  ]
+//                        
 //                              ]
 //                  ]
 //                
 //
-//              ]
+//              
 //        ] 
 // Example strings:
 // 'end', 'end-1b', 'end-1mb', 'end-10tb',
