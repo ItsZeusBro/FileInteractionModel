@@ -110,7 +110,7 @@ This is necessary for some of the features of this specification. Temporary file
 a, b, and c are files. a.flow(b, //whatever) returns b so that you can do something on it. b.stream(c, //whatever) does the same
               
               a.flow( 
-                      b, 
+                      b,      //ionality
                       tality, 
                       ivity, 
                       alityf, 
@@ -123,7 +123,7 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
                       }
                       
               ).stream( 
-                      c,
+                      c,      //ionality
                       tality,
                       alityf,
                       ality,
