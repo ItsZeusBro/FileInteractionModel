@@ -26,24 +26,26 @@ These are files.
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/55cc01abec31d82a72601e547ae22120a9e773b8/Docs/File.png" height=350 width=500/>
 
 ### Direct-ionality
-Directionality simply means what direction belongs to the flow of data. It is represented by an arrow. This is the most simple idea in the specification and cannot be mistaken because its abstractual. The only things that matter here is the fact that its an arrow. This is because all arrows have a direction, and its direction determines the flow of data. If you have a bidirectional arrow without constraints, you can mirror one files behavior to that of the other (from left to right).
+Directionality is evaluated first on a diagram. Directionality simply means what direction belongs to the flow of data. It is represented by an arrow. This is the most simple idea in the specification and cannot be mistaken because its abstractual. The only things that matter here is the fact that its an arrow. This is because all arrows have a direction, and its direction determines the flow of data. If you have a bidirectional arrow without constraints, it represents a mirror where one of the files mirrors the data of the other (from left to right).
 
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Directionality.jpg" height=350 width=500/>
 
 ### Position-ality
-Positionality defines from what position data flows out of a file, and to what position data flows into a file. These can be abstract concepts (like begining or end) or concrete positional integers (like 1 or 20 or 50).
+Positionality is evaluated second on a diagram. This uses the begining and end bytes of the file for the evaluation of a singleton. There are two positionality's in a file transaction. From what byte position the data originates, and to what byte position the data flows. Therefore there are two positionality's that must be specified in the api call. We call them "alityf" and "alityt" (representing "ality from" and "ality to").
 
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/a1e934f8cf644f4423608af5b67b903426952137/Docs/Positionality.png" height=350 width=500/>
 
 
 ### Quan-tality (tality is a thing around here)
-Quantality defines the constraints upon the flow which defaults to "all data" when not constrained. The quantity of data in the flow matters for all kinds of situations in manipulating files. Different keywords such as All, Half, N, [1, 2, ...N], are used to represent the amount of data (in bits, bytes, or  chunks of arbitrary size) flowing from one file to the other. Don't worry about the other stuff on the diagram here for now.
+Quantality is evaluated third on a diagram. It operates on a buffer set by alityf (which is the end position of the source file minus the alityf value). It represents the quantity of bytes from the alityf position that are able to be sent over the flow channel.
 
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Quantality1.png" height=350 width=500/>
 
 
 ### Clus-ivity (ivity are the properties of some clus relationship between file transactioins)
-Clusivity defines whether data flow is inclusive with the source after its flow is executed, or whether that flow of data is exclusive to the new owner. 
+Clusivity is evaluated fourth on a diagram. This operates on a buffer created by Positionality and Quantality.
+
+Clusivity defines how much data flow is inclusive with the source after its flow is executed, or whether all or part of that flow of data is exclusively owned by the new owner. 
 
 The dashed line represents exclusivity for the entirety of the flow. Meaning, the data that flows into the target will be entirely truncated when there is a dashed line. However, you can add restraints to this general behavior to refine the exclusivity based on the general case. 
 
