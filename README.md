@@ -46,7 +46,11 @@ Positionality is evaluated second on a diagram. This uses the begining and end b
 
 ## Quan-tality 
 ##### tality is a thing around here
-Quantality is evaluated third on a diagram. It operates on a buffer set by alityf (which is the end position of the source file minus the alityf value). It represents the quantity of bytes from the alityf position that are able to be sent over the flow channel.
+Quantality is evaluated third on a diagram. It operates on a buffer set by alityf (which is the EOF (end of file) of the source file minus the alityf value). It represents the quantity of bytes from the alityf position that are able to be sent over the flow channel. It just operates on the first buffer. Thats all. And it determines the quantity of data that is capable of flowing out of the file. This first buffer is virtual in a sense because when you create a postion to flow from, there are actual restraints on the file, being its size that you cannot work around. 
+
+Quantality can be represented by an abstract number like 1mb or 1gb. It is concrete in a sense, but what happens when you don't have 1mb or 1gb? So its abstract in that there are specific rules associated with how it is evaluated in different situations that would otherwise not make sense in concrete reality.
+
+The different forms of quantality: x%; xbin xb xmb xgb xtb xeb; 0.xx (floating point precision is an implementation detail); anchors like beg, mid, and end; operators that use an abstract number to help intervene in the processe of handling overflow semantics. 
 
 <img src="https://github.com/ItsZeusBro/FileInteractionModel/blob/9a2d4b37b6a05a4f9afdd46c91150b695839755e/Docs/Quantality1.png" height=350 width=500/>
 
