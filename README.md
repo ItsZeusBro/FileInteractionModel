@@ -37,7 +37,16 @@ Quantality defines the constraints upon the flow which defaults to "all data" wh
 
 
 ### Clus-ivity (so is ivity)
-Clusivity defines whether some data is inclusive with the source after its flow is executed, or whether some data is exclusive to the new owner. The dashed line represents exclusivity on a portion of the data sent from the source. Meaning, the source no longer has access to that data. (its removed from the source). If the clusivity range is not specified, it is assumed to be categorical to the orientation "inclusive" or "exclusive". So in the case of inclusivity, if a range is specified, then the rest is excluded from the source. And again, in the case of exclusivity, if a range is specified, the rest of the data moving to the target is shared with the source.
+Clusivity defines whether data flow is inclusive with the source after its flow is executed, or whether that flow of data is exclusive to the new owner. 
+
+The dashed line represents exclusivity for the entirety of the flow. Meaning, the data that flows into the target will be entirely truncated when there is a dashed line. However, you can add restraints to this general behavior to refine the exclusivity based on the general case. 
+
+Solid lines, on the other hand define an inclusive relationship by default between the source flow and the destination. That means all of the data that flows is shared.
+
+This could represent a conflict between a destination file that excludes sharing flowed data and a destination file that includes sharing that same data.
+In the case of a conflict, there needs to be a virual file system to resolve this conflict. At least and until this conflict is resolved. What happens when one file excludes a portion data (after its flow) before another file tries to incumber that data, is that the new transaction recieves a file that no longer has the data. If this were to happen in reverse, you have a forked file at the time of the second transaction which aims to exclude it.
+
+Clusivity can take paramters like "all", "half", "50%", "5%", "0.25%", "n:m" (range), which only apply to the data that flows from source to destination. Once the flow is buffered, clusivity takes effect on the buffered data, which can help us virtualize files.
 
 <img src="https://github.com/ItsZeusBro/FIST/blob/79db3fc288540bf444f1a8a41e3fd5b24ce18563/Docs/Clusivity.jpg" height=350 width=500/>
 
