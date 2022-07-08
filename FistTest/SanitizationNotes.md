@@ -48,7 +48,7 @@
     - mid-5% (5% is evaluated after the anchor returns a buffer)
     - beg+2gb (this will represent 2gb of data from the start of the file)
 
-### For Quantlity Regex Tests:
+### Positive Quantlity Regex Tests:
 - 0.0005003e6 mb+ 10bin 
 - 0.0005000e6 b+4b 
 - 43.0005e6 -12mb +10mb 
@@ -73,7 +73,7 @@
 - mid
 - beg
 
-//negatives
+### Negative Quantlity Regex Tests:
 - end+25.0505e-5bin+ 4gb
 - beg-25.0505e-5bin+ 4gb
 - mid+-25.0505e-5bin+ 4gb
