@@ -39,4 +39,12 @@
     - n*m 
     - n-m
 
+- Examples:
+    - 0.0005e6 mb
+    - 0.05
+    - 0.05%
+    - 5%
+    - mid+400mb (Everything to the left of this evaluated value will be sent from the buffer)
+    -  
+
     
