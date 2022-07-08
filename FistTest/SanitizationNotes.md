@@ -1,16 +1,16 @@
-# Sanitization of Positionality Requirements:
+# Sanitization of Position-ality Requirements:
     this.ality = new RegExp("\\b(((end|beg|mid)((\\-|\\+|\\*|\\\\|\\/)?)((([1-9][0-9]*)?)(bin|nib|b|mb|gb|tb|%))?)(([1-9][0-9]*e[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)(([1-9][0-9]*e_[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)((0.[0-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)((e[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)((e_[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)(([1-9][1-9]*)?))\\b", 'g');
 
     
 ### Notes:
 
-# Sanitization of Clusivity Requirements:
+# Sanitization of Clus-ivity Requirements:
     
     this.ivity = new RegExp("\\b((in|ex):((end|mid|beg)|(([0-9][0-9]*)))((\\+|\\-|\\/|\\*|\\\|bin|nib|mb|gb|tb|eb|%|\\.)?)(([0-9][0-9]*)?)((bin|nib|mb|gb|tb|eb|%)?)((e(([1-9][0-9]*(\\+|\\-|\\/|\\\|\\*)?([1-9][0-9]*)?)|((((\\+|\\-|\\/|\\\|\\*)[1-9][0-9]*)?)(\\+|\\-|\\/|\\\|\\*)?([1-9][0-9]*)?)|()))?))", 'g');
 
 ### Notes:
 
-# Sanitization of Quantality Requirements:
+# Sanitization of Quan-tality Requirements:
   
     this.tality = new RegExp("([0-9]*\\.[0-9]*e[0-9]* ?-?([0-9]*)?(bin|b|mb|gb|tb|pb|eb) ?\\+? ?[0-9]*(bin|b|mb|gb|tb|pb|eb))|(((((mid|beg|end) ?(\\+|\\-|\\*|\\\|\\/|\\b) ?\\b)([0-9]*\\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)|([0-9]*\\.?([0-9]*)?)%?", 'g');
 
