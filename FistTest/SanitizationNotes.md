@@ -35,5 +35,6 @@ pattern:
     this.ivity = new RegExp("((in|ex):((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\\|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)", 'g');
 
 ### Notes:
-(in|ex):((type of number)[multiplier][ops]((type of number)[multiplier][ops]))*
+
+    (in|ex):((type of number)[multiplier][ops]((type of number)[multiplier][ops]))*
 
