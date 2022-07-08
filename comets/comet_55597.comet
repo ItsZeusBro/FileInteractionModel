@@ -7,8 +7,10 @@ Quantality is evaluated right after positionality for an outgoing transaction
  Example: 1b, 2mb, 14gb, 0.5, 1b, 5% 
  FistView.quan(tality) RETURNS {tality:''} 
 
-TypeError: Cannot read properties of null (reading '0')
-    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:51:78
+
+
+AssertionError [ERR_ASSERTION]: true == false
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:53:20
     at Array.forEach (<anonymous>)
     at FistViewT.quantality (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:50:19)
     at FistViewT.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:18:14)
