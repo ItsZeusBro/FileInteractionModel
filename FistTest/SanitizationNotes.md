@@ -1,19 +1,19 @@
-# Sanitization of Positionality Requirements:
-    
-    const ALITY = new RegExp("((end|beg|mid)((-|\+|\*|\/)?)((([1-9][0-9]*)?)(bin|nib|b|mb|gb|tb|%))?)(([1-9][0-9]*e[1-9][0-9]*((-|\+)[1-9][0-9]*)?)?)(([1-9][0-9]*e_[1-9][0-9]*((-|\+)[1-9][0-9]*)?)?)((0.[0-9][0-9]*((-|\+)[1-9][0-9]*)?)?)((e[1-9][0-9]*((-|\+)[1-9][0-9]*)?)?)((e_[1-9][0-9]*((-|\+)[1-9][0-9]*)?)?)(([1-9][1-9]*)?)");
+# Sanitization of Position-ality Requirements:
+    this.ality = new RegExp("\\b(((end|beg|mid)((\\-|\\+|\\*|\\\\|\\/)?)((([1-9][0-9]*)?)(bin|nib|b|mb|gb|tb|%))?)(([1-9][0-9]*e[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)(([1-9][0-9]*e_[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)((0.[0-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)((e[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)((e_[1-9][0-9]*((\\-|\\+|\\*|\\\\|\\/)[1-9][0-9]*)?)?)(([1-9][1-9]*)?))\\b", 'g');
+
     
 ### Notes:
 
+# Sanitization of Clus-ivity Requirements:
     
-# Sanitization of Clusivity Requirements:
-    
-    const IVITY = new RegExp("(in|ex):((end|mid|beg)|(([0-9][0-9]*)))((\+|-|\/|\*|bin|nib|mb|gb|tb|eb|%|\.)?)(([0-9][0-9]*)?)((bin|nib|mb|gb|tb|eb|%)?)((e(([1-9][0-9]*(\+|-)?([1-9][0-9]*)?)|((((-|\+)[1-9][0-9]*)?)(\+|-)?([1-9][0-9]*)?)|()))?)");
+    this.ivity = new RegExp("\\b((in|ex):((end|mid|beg)|(([0-9][0-9]*)))((\\+|\\-|\\/|\\*|\\\|bin|nib|mb|gb|tb|eb|%|\\.)?)(([0-9][0-9]*)?)((bin|nib|mb|gb|tb|eb|%)?)((e(([1-9][0-9]*(\\+|\\-|\\/|\\\|\\*)?([1-9][0-9]*)?)|((((\\+|\\-|\\/|\\\|\\*)[1-9][0-9]*)?)(\\+|\\-|\\/|\\\|\\*)?([1-9][0-9]*)?)|()))?))", 'g');
 
 ### Notes:
 
-# Sanitization of Quantality Requirements:
-    
-    const TALITY = new RegExp("(\b(((0\.[0-9]*)|([1-9][0-9]*%)|([1-9][0-9]*)|(([0-9]*\.[0-9]*))|((mid|end|beg) ?\+?\-?\\?\*?)\s?)(e|bin|b|mb|gb|tb|pb|eb)?([1-9]?[0-9]*%?\s?\-?)((bin|b|mb|gb|tb|pb|eb)?)(((\s|\+)?(\s?\+?\s?)))))\b");
+# Sanitization of Quan-tality Requirements:
+  
+    this.tality = new RegExp("([0-9]*\\.[0-9]*e[0-9]* ?-?([0-9]*)?(bin|b|mb|gb|tb|pb|eb) ?\\+? ?[0-9]*(bin|b|mb|gb|tb|pb|eb))|(((((mid|beg|end) ?(\\+|\\-|\\*|\\\|\\/|\\b) ?\\b)([0-9]*\\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)|([0-9]*\\.?([0-9]*)?)%?", 'g');
+
 
 ### Notes:
 #### For Quantality we wish to pattern match any of the following patterns (add more if needed):
