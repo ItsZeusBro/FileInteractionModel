@@ -1,0 +1,46 @@
+sometest from FileView
+positionality()
+true Positionality is evaluated first! It uses the entire file capacity to determine position FistView.position(ality) ACCEPTS beg, end, mid (strings), percentages, +-*/ ops 
+ Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc FistView.position(ality) RETURNS {ality:''}
+end is true
+end-1b is true
+end-1mb is true
+end-10tb is true
+end/5b is false
+end/2mb is false
+end/46gb is false
+end/50tb is false
+beg is true
+beg+2b is true
+beg+3gb is true
+beg+4tb is true
+beg*5b is true
+beg*2mb is true
+beg*46gb is true
+beg*50tb is true
+mid is true
+mid+3b is true
+mid+10mb is true
+mid+1000gb is true
+mid+10tb is true
+mid-5b is true
+mid-100mb is true
+mid-100gb is true
+mid-10tb is true
+mid/5b is false
+mid/10mb is false
+mid/2gb is false
+mid/100tb is false
+mid+0.5 is true
+end+0.05 is true
+beg*0.003 is true
+beg/0.0005 is false
+mid*0.0000003 is true
+mid*0.3e9 is true
+beg+0.4e_10 is true
+end+4e40 is true
+end-30e_3 is true
+mid+1e100 is true
+1b+end is false
+2+mid is false
+mid+2 is true

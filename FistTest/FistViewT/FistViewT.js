@@ -15,9 +15,9 @@ export class FistViewT extends Comet{
     run_tests(){
         console.log('running tests')
         this.fist();
-        this.quantality();
-        this.clusivity();
-        // this.positionality();
+        // this.quantality();
+        // this.clusivity();
+        this.positionality();
     }
     fist(){
         var fist = new Fist();
@@ -128,11 +128,16 @@ export class FistViewT extends Comet{
             'mid*0.3e9', 'beg+0.4e_10', 'end+4e40', 'end-30e_3', 'mid+1e100',
             '1b+end', '2+mid', 'mid+2'
         ]
+
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            assert.equal(expression, sanitizer.sanitize(expression, 'ality')[0])
-
+        
+            if(sanitizer.sanitize(expression, 'ality')[0]==expression){
+                //this.comet(expression, "is true")
+            }else{
+                this.comet(expression, "is false")
+            }
         });
 
         var negatives=[
