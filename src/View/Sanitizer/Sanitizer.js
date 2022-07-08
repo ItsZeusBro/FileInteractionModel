@@ -5,17 +5,19 @@ import {Positionality} from "./Positionality/Positionality.js"
 export class Sanitizer{
 
     sanitize(string, context){
+        var spacedOut=string.split(' ').join('')
+
         if (context == 'ality'){
             var ality = new Positionality();
-            return string.match(ality.ality)
+            return {"matches":spacedOut.match(ality.ality), "spacedout":spacedOut, "original":string}
             
         }else if (context == 'tality'){
             var tality = new Quantality();
-            return string.match(tality.tality)
+            return {"matches":spacedOut.match(tality.tality), "spacedout":spacedOut, "original":string}
 
         }else if (context == 'ivity'){
             var ivity = new Clusivity();
-            return string.match(ivity.ivity)
+            return {"matches":spacedOut.match(ivity.ivity), "spacedout":spacedOut, "original":string}
 
         }else{
             throw Error("invalid context for sanitizer")

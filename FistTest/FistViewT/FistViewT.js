@@ -15,8 +15,8 @@ export class FistViewT extends Comet{
     run_tests(){
         console.log('running tests')
         this.fist();
-        // this.quantality();
-        // this.clusivity();
+        this.quantality();
+        this.clusivity();
         this.positionality();
     }
     fist(){
@@ -49,7 +49,7 @@ export class FistViewT extends Comet{
 
         positives.forEach(expression => {
         
-            if(sanitizer.sanitize(expression, 'tality')[0]==expression){
+            if(sanitizer.sanitize(expression, 'tality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
                 this.comet(expression, "is false")
@@ -95,7 +95,7 @@ export class FistViewT extends Comet{
 
             positives.forEach(expression => {
             
-                if(sanitizer.sanitize(expression, 'ivity')[0]==expression){
+                if(sanitizer.sanitize(expression, 'ivity')['matches'][0]==expression){
                     this.comet(expression, "is true")
                 }else{
                     console.log(sanitizer.sanitize(expression, 'ivity'))
@@ -133,8 +133,8 @@ export class FistViewT extends Comet{
 
         positives.forEach(expression => {
         
-            if(sanitizer.sanitize(expression, 'ality')[0]==expression){
-                //this.comet(expression, "is true")
+            if(sanitizer.sanitize(expression, 'ality')['matches'][0]==expression){
+                this.comet(expression, "is true")
             }else{
                 this.comet(expression, "is false")
             }

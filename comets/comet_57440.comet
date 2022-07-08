@@ -1,0 +1,15 @@
+sometest from FileView
+positionality()
+true Positionality is evaluated first! It uses the entire file capacity to determine position FistView.position(ality) ACCEPTS beg, end, mid (strings), percentages, +-*/ ops 
+ Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc FistView.position(ality) RETURNS {ality:''}
+There was an uncaught error ReferenceError: spaced_out is not defined
+    at Sanitizer.sanitize (file:///Users/hassan/Projects/GitHub/FIST/src/View/Sanitizer/Sanitizer.js:8:19)
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:136:26
+    at Array.forEach (<anonymous>)
+    at FistViewT.positionality (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:134:19)
+    at FistViewT.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:20:14)
+    at new FistViewT (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:12:14)
+    at FistTest.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistTest.js:10:9)
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistTest.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:198:25)
+    at async Promise.all (index 0)

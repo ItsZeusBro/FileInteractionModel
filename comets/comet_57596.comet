@@ -1,0 +1,168 @@
+sometest from FileView
+quantality()
+true Quantality is evaluated right after positionality for an outgoing transaction
+                which means it is only a single value that represents where from
+                the start of positionality one wants to extend in the amount of data sent
+             Quantality represents the amount of data flowing from file a to file b FistView.quan(tality) ACCEPTS end, mid, percentages (strings), +-*/ ops 
+ Example: 1b, 2mb, 14gb, 0.5, 1b, 5% 
+ FistView.quan(tality) RETURNS {tality:''} 
+
+0.0005003e600 mb+ 10bin is false
+0.0005000e19 b+4b is false
+43.0005e3 -12mb +10mb is false
+25.0505e-5bin+ 4gb is false
+0.0005e6 mb + 10tb is false
+0.0005e4 b + 4pb is false
+0.0005e9 gb + 10eb is false
+0.05 is false
+1 is false
+100% is false
+200% is false
+500 is false
+5% is false
+mid +0.0005003e643 mb is false
+mid+0.0005000e-234 b+4b is false
+mid-5% is false
+beg + 25.0505e-5bin+ 4gb is false
+end -0.0005e -634 b + 4pb is false
+mid-5% is false
+beg+2gb is false
+end-4gb is false
+end is false
+mid is false
+beg is false
+0.05% is false
+end+25.0505e-5bin+ 4gb is false
+beg-25.0505e-5bin+ 4gb is false
+mid+-25.0505e-5bin+ 4gb is false
+clusivity()
+true This is evaluated after positionality and quantality provide a begining and end anchor
+                we can use beg, mid, and end to denote how much of the outgoing buffer should be shared
+                with the original source. This is a colon separated triplet. The first element is the
+                clusivity (in or ex), the second is beg or mid anchor expressions, the third is relative
+                to the first in the way of a value, or can be anchored by end and used with expressions
+             FistView.clus(ivity) ACCEPTS beg, end, mid, percentage strings, +-*/ ops 
+ Example: 1b, 2mb, 14gb, etc. (prefixed with in or ex or just in or ex) 
+             in:position:offset or in:0.5, or in:1b, or in:end, in:mid, in:beg (for future?) 
+             ex:5% 
+ FistView.clus(ivity) RETURNS {ivity:'', n:'', m:''}
+in:1 is false
+in:0.0001 is false
+in:1.0e400-34 is false
+in:0.001e-34+45 is false
+in:0.001e34+45 is false
+in:55e-4 is false
+in:55e-4-31 is false
+in:55e-4+31 is false
+in:55e+4+31 is false
+in:55e4+31 is false
+in:1000bin is false
+in:400nib is false
+in:20342mb is false
+in:342gb is false
+in:23424tb is false
+in:end is false
+in:mid is false
+in:beg is false
+in:mid-432bin is false
+in:mid-432nib is false
+in:mid-432mb is false
+in:mid-432gb is false
+in:mid-432tb is false
+in:mid-432eb is false
+in:mid+432bin is false
+in:mid+432nib is false
+in:mid+432mb is false
+in:mid+432gb is false
+in:mid+432tb is false
+in:mid+432eb is false
+in:mid/432bin is false
+in:mid/432nib is false
+in:mid/432mb is false
+in:mid/432gb is false
+in:mid/432tb is false
+in:mid/432eb is false
+in:mid*432bin is false
+in:mid*432nib is false
+in:mid*432mb is false
+in:mid*432gb is false
+in:mid-432tb is false
+in:mid-432eb is false
+in:beg is false
+in:mid*432tb is false
+in:mid*432eb is false
+in:mid-432bin is false
+in:mid-432nib is false
+in:mid-432mb is false
+in:mid-432gb is false
+in:5% is false
+in:0.5 is false
+in:0.0001 is false
+ex:0.0001 is false
+ex:1 is false
+ex:0.0001 is false
+ex:1.0e400-34 is false
+ex:0.001e34+45 is false
+ex:0.001e-34+45 is false
+ex:55e-4+31 is false
+ex:55e-4-31 is false
+ex:1000bin is false
+ex:400nib is false
+ex:20342mb is false
+ex:342gb is false
+ex:23424tb is false
+ex:end is false
+ex:mid is false
+ex:beg is false
+ex:5% is false
+ex:0.5 is false
+ex:4mb is false
+ex:mid-432mb is false
+ex:mid-432gb is false
+ex:mid-432nib is false
+ex:mid+432nib is false
+ex:mid+432gb is false
+ex:mid+432mb is false
+positionality()
+true Positionality is evaluated first! It uses the entire file capacity to determine position FistView.position(ality) ACCEPTS beg, end, mid (strings), percentages, +-*/ ops 
+ Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc FistView.position(ality) RETURNS {ality:''}
+end is false
+end-1b is false
+end-1mb is false
+end-10tb is false
+end/5b is false
+end/2mb is false
+end/46gb is false
+end/50tb is false
+beg is false
+beg+2b is false
+beg+3gb is false
+beg+4tb is false
+beg*5b is false
+beg*2mb is false
+beg*46gb is false
+beg*50tb is false
+mid is false
+mid+3b is false
+mid+10mb is false
+mid+1000gb is false
+mid+10tb is false
+mid-5b is false
+mid-100mb is false
+mid-100gb is false
+mid-10tb is false
+mid/5b is false
+mid/10mb is false
+mid/2gb is false
+mid/100tb is false
+mid+0.5 is false
+end+0.05 is false
+beg*0.003 is false
+beg/0.0005 is false
+mid*0.0000003 is false
+mid*0.3e9 is false
+beg+0.4e_10 is false
+end+4e40 is false
+end-30e_3 is false
+mid+1e100 is false
+mid+2 is false
