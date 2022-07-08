@@ -13,9 +13,9 @@
 
 # Sanitization of Quantality Requirements:
     
-    const TALITY = new RegExp()
+    const TALITY = new RegExp("(\b(((0\.[0-9]*)|([1-9][0-9]*%)|([1-9][0-9]*)|(([0-9]*\.[0-9]*))|((mid|end|beg) ?\+?\-?\\?\*?)\s?)(e|bin|b|mb|gb|tb|pb|eb)?([1-9]?[0-9]*%?\s?\-?)((bin|b|mb|gb|tb|pb|eb)?)(((\s|\+)?(\s?\+?\s?)))))\b");
     //almost there
-    //(\b(((0\.[0-9]*)|([1-9][0-9]*%)|([1-9][0-9]*)|(([0-9]*\.[0-9]*))|((mid|end|beg) ?\+?\-?\\?\*?)\s?)(e|bin|b|mb|gb|tb|pb|eb)?([1-9]?[0-9]*%?\s?\-?)((bin|b|mb|gb|tb|pb|eb)?)(((\s|\+)?(\s?\+?\s?)))))\b
+    //
 
 ### Notes:
 #### For Quantality we wish to pattern match any of the following patterns (add more if needed):
