@@ -17,6 +17,26 @@
 
 ### Notes:
 #### For Quantality we wish to pattern match any of the following patterns (add more if needed):
-1. Bit Expression: Nbin, Nb, Nmb, Ngb, Ntb, Npb, Neb
-2. Arithmetic expressions: (+ / * -) with: an integer bit expression tuple, a float, [1-100]%, a scientific notation alongside an integer bit expression tuple, or an anchor that represents a relative value (beg, mid, end) to the buffer size.
+1. Numerical Expressions which include:
+- - an integer bit expression tuple, 
+- a float, 
+- [1-100]%, 
+- a scientific notation alongside an integer bit expression tuple, 
+- an anchor that represents a relative value (beg, mid, end) to the buffer size.
+
+2. Bit Expression where N represents some numerical expression: 
+- Nbin, 
+- Nb, 
+- Nmb, 
+- Ngb, 
+- Ntb, 
+- Npb, 
+- Neb
+
+3. Arithmetic expressions where n and m represent a Numerical expression
+- n+m 
+- n/m 
+- n*m 
+- n-m
+
     
