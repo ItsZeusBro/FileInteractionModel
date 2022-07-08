@@ -23,7 +23,7 @@ FIST is not yet a robust specification. These are general abstract concepts that
 7. Big Unstructured Data (like spam and nlp data)
 8. World Domination
 
-## We can begin with the 12 Main Concepts (plus 2):
+## We can begin with the 14 main concepts:
 
 1. Files
 2. Directionality
