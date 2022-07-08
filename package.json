@@ -4,8 +4,10 @@
   "description": "The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.",
   "main": "index.js",
   "scripts": {
-    "test-verb": "node ./FistTest/FistTest.js --verbose",
-    "test": "node ./FistTest/FistTest.js"
+    "test-verb": "node ./Test/Test.js --verbose",
+    "test": "node ./Test/Test.js",
+    "clean-comet": "rm -rf ./Comet/comets",
+    "archive":"time=$(date +%Y%m%d.%H%M); tar -czf ./Archives/comets/comets${!time}.tgz ./Comet/comets;"
   },
   "repository": {
     "type": "git",

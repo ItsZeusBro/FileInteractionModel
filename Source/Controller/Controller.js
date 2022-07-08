@@ -3,7 +3,7 @@ import {Script} from "../SexyTransactions/Script/Script.js";
 import {Clus} from "../Interactions/Clus/Clus.js";
 import {Pos} from "../Interactions/Pos/Pos.js";
 import {Quant} from "../Interactions/Quan/Quan.js";
-class Fist{
+class Controller{
     constructor(file, po){
         this.fistfile=file;
         Fist.prototype.flow = this.flow;

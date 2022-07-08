@@ -2,10 +2,10 @@ import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
 import { Utils } from "../../Utils/Utils.js";
 import * as assert from "node:assert";
-import { Sanitizer } from "../../src/View/Sanitizer/Sanitizer.js";
+import { Sanitizer } from "../../Source/View/Sanitizer/Sanitizer.js";
 
 //This basically runs tests on every module
-export class FistViewT extends Comet{
+export class View extends Comet{
     constructor(){
         super();
         this.comet("sometest from FileView");

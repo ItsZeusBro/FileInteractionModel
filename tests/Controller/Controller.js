@@ -2,7 +2,7 @@ import * as fs from "node:fs";
 import * as assert from "node:assert";
 import { FistTest } from '../FistTest.js';
 
-export class FistPrimsTest extends FistTest{
+export class Controller extends FistTest{
     constructor(){
         super();
         this.comet(
