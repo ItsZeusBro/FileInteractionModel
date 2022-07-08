@@ -8,3 +8,7 @@ export class Quantality{
 
 //(((((mid|beg|end) ?(\+|\-|\b) ?\b)([0-9]*\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)|(([0-9]*\.[0-9]*)e)
 //(((((mid|beg|end) ?(\+|\-|\b) ?\b)([0-9]*\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)|(([0-9]*\.?%?[0-9]*)e?([0-9]*)? ?\-?(bin|b|mb|gb|tb|pb|eb)?(\+|\-)? ?([0-9]*)?(bin|b|mb|gb|tb|pb|eb)?)
+
+
+
+//(((((mid|beg|end) ?(\+|\-|\b) ?\b)([0-9]*\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)| //this one is good, just add the next to it
