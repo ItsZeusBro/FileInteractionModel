@@ -5,8 +5,9 @@
   "main": "Comet.js",
   "scripts": {
     "clean-comet":"rm -rf ./Comet/comets",
-    "archive-comet": "DATE=`date +%s`; tar -czf ./Archives/comets/comets${DATE}.tgz ./comets/*; npm run clean-comet;"
+    "archive-comet": "DATE=`date +%s`; tar -czf ./Archives/comets/comets${DATE}.tgz ./comets/*; npm run clean-comet;",
+    "comet":"./init.js;"
   },
-  "author": "Hassan Amad",
+  "author": "Hassan Amad aka (itsZeusBro)",
   "license": "SEE LICENSE IN LICENSE"
 }
