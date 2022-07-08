@@ -13,22 +13,20 @@ export class FistViewT extends Comet{
     }
 
     run_tests(){
+        console.log('running tests')
         this.fist();
         this.quantality();
         this.clusivity();
         this.positionality();
     }
     fist(){
-
         var fist = new Fist();
         var file='./tests/fist.file'
         fist.pound(file);
-
-
     }
 
     quantality(){
-
+        this.comet('quantality()')
         this.comet(
             true,
             `Quantality is evaluated right after positionality for an outgoing transaction
@@ -40,7 +38,7 @@ export class FistViewT extends Comet{
             `Example: 1b, 2mb, 14gb, 0.5, 1b, 5% \n`,
             `FistView.quan(tality) RETURNS {tality:''} \n`
         )
-        var quantalitiesTrue=[ 
+        var positives=[ 
             "in:1", "in:0.0001", "in:1.0e400-34", "in:0.001e-34+45", "in:0.001e34+45", "in:55e-4",
             "in:55e-4-31", "in:55e-4+31", "in:55e+4+31", "in:55e4+31", "in:1000bin", "in:400nib",
             "in:20342mb", "in:342gb", "in:23424tb", "in:end", "in:mid", "in:beg", "in:mid-432bin",
@@ -54,10 +52,18 @@ export class FistViewT extends Comet{
             "ex:342gb", "ex:23424tb", "ex:end", "ex:mid", "ex:beg", "ex:5%", "ex:0.5", "ex:4mb", "ex:mid-432mb",
             "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
         ]
+        var sanitizer = new Sanitizer()
 
+        positives.forEach(expression => {
+            console.log(sanitizer.sanitize(expression, 'tality'))
+            if(!sanitizer.sanitize(expression)){
+                throw Error("uncaught expression")
+            }
+        });
     }
 
     clusivity(){
+        this.comet('clusivity()')
 
         this.comet(
             true,
@@ -89,9 +95,18 @@ export class FistViewT extends Comet{
             "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
         ]
 
+        var sanitizer = new Sanitizer()
+
+        positives.forEach(expression => {
+            console.log(sanitizer.sanitize(expression))
+            if(!sanitizer.sanitize(expression, 'ivity')){
+                throw Error("uncaught expression")
+            }
+        });
     }
 
     positionality(){
+        this.comet('positionality()')
 
         this.comet(
             true,
@@ -114,6 +129,14 @@ export class FistViewT extends Comet{
             'mid*0.3e9', 'beg+0.4e_10', 'end+4e40', 'end-30e_3', 'mid+1e100',
             '1b+end', '2+mid', 'mid+2'
         ]
+        var sanitizer = new Sanitizer()
+
+        positives.forEach(expression => {
+            console.log(sanitizer.sanitize(expression, 'ality'))
+            if(!sanitizer.sanitize(expression)){
+                throw Error("uncaught expression")
+            }
+        });
 
         var negatives=[
 

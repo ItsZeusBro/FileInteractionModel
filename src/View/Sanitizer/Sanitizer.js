@@ -4,16 +4,16 @@ import {Positionality} from "./Positionality/Positionality.js"
 
 export class Sanitizer{
 
-    sanitize(string){
-        if (context == 'positionality'){
+    sanitize(string, context){
+        if (context == 'ality'){
             var ality = new Positionality();
             return ality.ality.test(string)
             
-        }else if (context == 'quantality'){
+        }else if (context == 'tality'){
             var tality = new Quantality();
             return tality.tality.test(string)
 
-        }else if (context == 'clusivity'){
+        }else if (context == 'ivity'){
             var ivity = new Clusivity();
             return ivity.ivity.test(string)
 

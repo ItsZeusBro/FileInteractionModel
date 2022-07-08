@@ -1,0 +1,20 @@
+
+
+Quantality is evaluated right after positionality for an outgoing transaction
+                which means it is only a single value that represents where from
+                the start of positionality one wants to extend in the amount of data sent
+             Quantality represents the amount of data flowing from file a to file b FistView.quan(tality) ACCEPTS end, mid, percentages (strings), +-*/ ops 
+ Example: 1b, 2mb, 14gb, 0.5, 1b, 5% 
+ FistView.quan(tality) RETURNS {tality:''} 
+
+SyntaxError: Invalid regular expression: /((((0.[0-9]*)|([1-9][0-9]*%)|([1-9][0-9]*)|(([0-9]*.[0-9]*))|((mid|end|beg) ?+?-?\?*?)s?)(e|bin|b|mb|gb|tb|pb|eb)?([1-9]?[0-9]*%?s?-?)((bin|b|mb|gb|tb|pb|eb)?)(((s|+)?(s?+?s?)))))/: Nothing to repeat
+    at new RegExp (<anonymous>)
+    at new Quantality (file:///Users/hassan/Projects/GitHub/FIST/src/View/Sanitizer/Quantality/Quantality.js:3:23)
+    at Sanitizer.sanitize (file:///Users/hassan/Projects/GitHub/FIST/src/View/Sanitizer/Sanitizer.js:13:26)
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:58:35
+    at Array.forEach (<anonymous>)
+    at FistViewT.quantality (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:57:19)
+    at FistViewT.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:18:14)
+    at new FistViewT (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:12:14)
+    at FistTest.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistTest.js:10:9)
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistTest.js:14:16
