@@ -1,8 +1,9 @@
 # File Interaction Sexy Transaction (FIST) 0.1 (in progress)
 
-<img src="https://github.com/ItsZeusBro/FIST/blob/51690d944a8f7f6a344c556556c93f75479673a6/Docs/fists.gif" height=250 width=400/>
 
-### The File Interaction Sexy Transaction Model is specified as a Turing Complete File Computer.
+## File Interaction Sexy Transaction is specified as a Turing Complete File Computer.
+
+<img src="https://github.com/ItsZeusBro/FIST/blob/51690d944a8f7f6a344c556556c93f75479673a6/Docs/fists.gif" height=200 width=250/>
 
 ## Background Information
 We care more about buffers than we do about files. A buffer is a partuclar string of content we wish to do something with. A file is everything else that we don't need (except for indexing the information we require). It stands to reason that physical files are becoming obsolete in some sense. When Ai discovers how to break up data into statistically used buffers (cache memory) as opposed to entire files, we become aware of this point even further. So operating on buffers with a virtual file model and syntax is more important long term, than reasononing about actual physical files and their locations.
