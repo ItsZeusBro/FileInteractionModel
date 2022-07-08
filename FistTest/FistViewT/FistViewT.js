@@ -39,24 +39,13 @@ export class FistViewT extends Comet{
             `FistView.quan(tality) RETURNS {tality:''} \n`
         )
         var positives=[ 
-            "in:1", "in:0.0001", "in:1.0e400-34", "in:0.001e-34+45", "in:0.001e34+45", "in:55e-4",
-            "in:55e-4-31", "in:55e-4+31", "in:55e+4+31", "in:55e4+31", "in:1000bin", "in:400nib",
-            "in:20342mb", "in:342gb", "in:23424tb", "in:end", "in:mid", "in:beg", "in:mid-432bin",
-            "in:mid-432nib","in:mid-432mb", "in:mid-432gb","in:mid-432tb","in:mid-432eb","in:mid+432bin",
-            "in:mid+432nib", "in:mid+432mb", "in:mid+432gb", "in:mid+432tb", "in:mid+432eb", "in:mid/432bin",
-            "in:mid/432nib", "in:mid/432mb", "in:mid/432gb", "in:mid/432tb", "in:mid/432eb", "in:mid*432bin",
-            "in:mid*432nib","in:mid*432mb", "in:mid*432gb","in:mid-432tb", "in:mid-432eb", "in:beg",
-            "in:mid*432tb", "in:mid*432eb", "in:mid-432bin", "in:mid-432nib", "in:mid-432mb", "in:mid-432gb",
-            "in:5%", "in:0.5", "in:0.0001", "ex:0.0001","ex:1","ex:0.0001", "ex:1.0e400-34", "ex:0.001e34+45",
-            "ex:0.001e-34+45", "ex:55e-4+31", "ex:55e-4-31", "ex:1000bin", "ex:400nib", "ex:20342mb",
-            "ex:342gb", "ex:23424tb", "ex:end", "ex:mid", "ex:beg", "ex:5%", "ex:0.5", "ex:4mb", "ex:mid-432mb",
-            "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
+            
         ]
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            console.log(sanitizer.sanitize(expression, 'tality'))
-            if(!sanitizer.sanitize(expression)){
+            console.log(expression, sanitizer.sanitize(expression, 'tality'))
+            if(!sanitizer.sanitize(expression, 'tality')){
                 throw Error("uncaught expression")
             }
         });
@@ -81,7 +70,7 @@ export class FistViewT extends Comet{
        )
         
     var positives = [
-            "in:1", "in:0.0001", "in:1.0e400-34", "in:0.001e-34+45", "in:0.001e34+45", "in:55e-4",
+        "in:1", "in:0.0001", "in:1.0e400-34", "in:0.001e-34+45", "in:0.001e34+45", "in:55e-4",
             "in:55e-4-31", "in:55e-4+31", "in:55e+4+31", "in:55e4+31", "in:1000bin", "in:400nib",
             "in:20342mb", "in:342gb", "in:23424tb", "in:end", "in:mid", "in:beg", "in:mid-432bin",
             "in:mid-432nib","in:mid-432mb", "in:mid-432gb","in:mid-432tb","in:mid-432eb","in:mid+432bin",
@@ -98,7 +87,7 @@ export class FistViewT extends Comet{
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            console.log(sanitizer.sanitize(expression))
+            console.log(expression, sanitizer.sanitize(expression, 'ivity'))
             if(!sanitizer.sanitize(expression, 'ivity')){
                 throw Error("uncaught expression")
             }
@@ -132,8 +121,8 @@ export class FistViewT extends Comet{
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            console.log(sanitizer.sanitize(expression, 'ality'))
-            if(!sanitizer.sanitize(expression)){
+            console.log(expression, sanitizer.sanitize(expression, 'ality'))
+            if(!sanitizer.sanitize(expression, 'ality')){
                 throw Error("uncaught expression")
             }
         });
