@@ -115,20 +115,5 @@ export class FistViewT extends Comet{
 
         ]
 
-        //needs:
-        //1. list of operators (classes)
-        //2. operators should have expectations that return true if conditions are met
-        
-        //evaluation - part 1:
-        //1. identify compound expression from context (initialize relevant object with string)
-        //2. search for longest keywords first (remember position in string),
-        //3. collect its requirements (evaluate) from base string 
-        //4. insert in value ordered array of objects (repeat)
-        //5. evaluate compound expression
-        //6. translate it to sanitized object
-        //7. return sanitized object
-
-    }
-
-    
+    } 
 }
