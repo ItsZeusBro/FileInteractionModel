@@ -6,7 +6,8 @@
 
 This is a general pattern that we use for both Positionality and Quantality, in that "the number of bits that can be sent" can be represented the same way as "the position of bits from the begining of a buffer".
 pattern:
-(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
+
+    (type of number)[multiplier][ops]((type of number)[multiplier][ops])*
 
 
 # Quan-tality Sanitization Requirements:
@@ -17,7 +18,8 @@ pattern:
 
 This is a general pattern that we use for both Positionality and Quantality, in that "the number of bits that can be sent" can be represented the same way as "the position of bits from the begining of a buffer".
 pattern:
-(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
+
+    (type of number)[multiplier][ops]((type of number)[multiplier][ops])*
 
 
 ### Positionality and Quantlity Tests:
