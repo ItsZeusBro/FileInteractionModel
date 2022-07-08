@@ -26,9 +26,9 @@ export class Comet{
             }
         });
     }
-    comet(quiet=false, ...data){
+    comet(...data){
         fs.writeFileSync(this.cometFile, data.join(' ')+'\n', {flag:'a'})
-        if (this.verbose && quiet == false){
+        if (this.verbose){
             console.log(data.join(' '))
         }
     }

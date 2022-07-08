@@ -50,9 +50,9 @@ export class FistViewT extends Comet{
         positives.forEach(expression => {
         
             if(sanitizer.sanitize(expression, 'tality')[0]==expression){
-                console.log(expression, "is true")
+                this.comet(expression, "is true")
             }else{
-                console.log(expression, "is false")
+                this.comet(expression, "is false")
             }
             //assert.equal(true, sanitizer.sanitize(expression, 'tality').includes(expression))
         });

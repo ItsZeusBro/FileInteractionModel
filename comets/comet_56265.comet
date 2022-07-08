@@ -1,0 +1,37 @@
+sometest from FileView
+quantality()
+true Quantality is evaluated right after positionality for an outgoing transaction
+                which means it is only a single value that represents where from
+                the start of positionality one wants to extend in the amount of data sent
+             Quantality represents the amount of data flowing from file a to file b FistView.quan(tality) ACCEPTS end, mid, percentages (strings), +-*/ ops 
+ Example: 1b, 2mb, 14gb, 0.5, 1b, 5% 
+ FistView.quan(tality) RETURNS {tality:''} 
+
+0.0005003e600 mb+ 10bin is true
+0.0005000e19 b+4b is true
+43.0005e3 -12mb +10mb is true
+25.0505e-5bin+ 4gb is true
+0.0005e6 mb + 10tb is true
+0.0005e4 b + 4pb is true
+0.0005e9 gb + 10eb is true
+0.05 is true
+1 is true
+100% is true
+200% is true
+500 is true
+5% is true
+mid +0.0005003e643 mb is true
+mid+0.0005000e-234 b+4b is true
+mid-5% is true
+beg + 25.0505e-5bin+ 4gb is true
+end -0.0005e -634 b + 4pb is true
+mid-5% is true
+beg+2gb is true
+end-4gb is true
+end is true
+mid is true
+beg is true
+0.05% is true
+end+25.0505e-5bin+ 4gb is true
+beg-25.0505e-5bin+ 4gb is true
+mid+-25.0505e-5bin+ 4gb is false
