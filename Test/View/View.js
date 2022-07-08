@@ -27,10 +27,7 @@ export class View extends Comet{
     }
     quantality(){
         this.comet('quantality()')
-        this.comet(
-            true,
 
-        )
         var positives = POSITIVE_NUMS;
 
         var sanitizer = new Sanitizer()
