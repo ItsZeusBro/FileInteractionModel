@@ -4,30 +4,23 @@
     
 ### Notes:
 
-# Sanitization of Clus-ivity Requirements:
-    
-    this.ivity = new RegExp("((in|ex):((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\\|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)", 'g');
+This is a general pattern that we use for both Positionality and Quantality, in that "the number of bits that can be sent" can be represented the same way as "the position of bits from the begining of a buffer".
+pattern:
+(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
 
 
-### Notes:
-
-# Sanitization of Quan-tality Requirements:
+# Quan-tality Sanitization Requirements:
 
     this.tality = new RegExp("((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\\|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*", 'g');
 
-    
-
-
 ### Notes:
-#### For Quantality we wish to pattern match any of the following patterns (add more if needed):
 
-(type of number)[multiplier][ops]((type of number)[multiplier][ops])* //star is optional behavior
-
-[optional behavior]
-(mandatory)
+This is a general pattern that we use for both Positionality and Quantality, in that "the number of bits that can be sent" can be represented the same way as "the position of bits from the begining of a buffer".
+pattern:
+(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
 
 
-### Positive Quantlity Regex Tests:
+### Positionality and Quantlity Tests:
 - 0.0005003e6 mb+ 10bin 
 - 0.0005000e6 b+4b 
 - 43.0005e6 -12mb +10mb 
@@ -57,5 +50,12 @@
 - beg-25.0505e-5bin+ 4gb
 - mid+-25.0505e-5bin+ 4gb
 
-# Sanitization for Algebraic Expressions (for the future)
-#### We just care for now about sanitizing this type of expression (validation, specification, and interfacing comes later)
+
+
+# Clus-ivity Sanitization Requirements:
+
+    this.ivity = new RegExp("((in|ex):((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\\|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)", 'g');
+
+### Notes:
+(in|ex):((type of number)[multiplier][ops]((type of number)[multiplier][ops]))*
+
