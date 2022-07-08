@@ -1,6 +1,6 @@
 import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
-import { Utils } from "../../Utils/Utils.js";
+import {Utils} from "../../Source/Utils/Utils.js"
 import * as assert from "node:assert";
 import { Sanitizer } from "../../Source/View/Sanitizer/Sanitizer.js";
 

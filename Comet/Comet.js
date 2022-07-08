@@ -4,7 +4,7 @@ export class Comet{
     constructor(){
         this.verbose;
         this.flags()
-        this.cometsDir=process.cwd()+'/comets/'
+        this.cometsDir=process.cwd()+'/Comet/comets/'
         if (!fs.existsSync(this.cometsDir)){
             fs.mkdirSync(this.cometsDir)
         }

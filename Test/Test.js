@@ -11,4 +11,4 @@ class Test extends Comet{
     }   
 }
 
-new FistTest().run_tests()
+new Test().run_tests()

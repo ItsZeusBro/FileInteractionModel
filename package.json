@@ -6,8 +6,8 @@
   "scripts": {
     "test-verb": "node ./Test/Test.js --verbose",
     "test": "node ./Test/Test.js",
-    "clean-comet": "rm -rf ./Comet/comets",
-    "archive":"time=$(date +%Y%m%d.%H%M); tar -czf ./Archives/comets/comets${!time}.tgz ./Comet/comets;"
+    "clean": "",
+    "archive":"cd ./Comet; npm run archive-comet; npm run clean-comet; cd ..;"
   },
   "repository": {
     "type": "git",

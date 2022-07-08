@@ -1,9 +1,0 @@
-
-
-Quantality is evaluated right after positionality for an outgoing transaction
-                which means it is only a single value that represents where from
-                the start of positionality one wants to extend in the amount of data sent
-             Quantality represents the amount of data flowing from file a to file b FistView.quan(tality) ACCEPTS end, mid, percentages (strings), +-*/ ops 
- Example: 1b, 2mb, 14gb, 0.5, 1b, 5% 
- FistView.quan(tality) RETURNS {tality:''} 
-

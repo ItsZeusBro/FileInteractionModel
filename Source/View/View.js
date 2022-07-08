@@ -5,7 +5,7 @@ import { Comet } from "../../Comet/Comet.js"
 import {Fist} from "../../Fist.js";
 import * as fs from "node:fs";
 
-export class FistView extends Comet{
+export class View extends Comet{
     constructor(){
         super()
 
