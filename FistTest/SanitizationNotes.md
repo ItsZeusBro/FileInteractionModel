@@ -25,13 +25,13 @@
     - an anchor that represents a relative value (beg, mid, end) to the buffer size.
 
 - Bit Expression where N represents some numerical expression: 
-    - Nbin, 
-    - Nb, 
-    - Nmb, 
-    - Ngb, 
-    - Ntb, 
-    - Npb, 
-    - Neb
+    - nbin, 
+    - nb, 
+    - nmb, 
+    - ngb, 
+    - ntb, 
+    - npb, 
+    - neb
 
 - Arithmetic expressions where n and m represent a Numerical expression
     - n+m 
