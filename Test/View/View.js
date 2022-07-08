@@ -3,15 +3,16 @@ import { Comet } from "../../Comet/Comet.js";
 import {Utils} from "../../Source/Utils/Utils.js"
 import * as assert from "node:assert";
 import { Sanitizer } from "../../Source/View/Sanitizer/Sanitizer.js";
+import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module
 export class View extends Comet{
     constructor(){
         super();
+        
         this.comet("sometest from FileView");
         this.run_tests();
     }
-
     run_tests(){
         console.log('running tests')
         this.fist();
@@ -24,7 +25,6 @@ export class View extends Comet{
         var file='./tests/fist.file'
         fist.pound(file);
     }
-
     quantality(){
         this.comet('quantality()')
         this.comet(
@@ -38,13 +38,8 @@ export class View extends Comet{
             `Example: 1b, 2mb, 14gb, 0.5, 1b, 5% \n`,
             `FistView.quan(tality) RETURNS {tality:''} \n`
         )
-        var positives=[ 
-            "0.0005003e600 mb+ 10bin","0.0005000e19 b+4b", "43.0005e3 -12mb +10mb", "25.0505e-5bin+ 4gb", 
-            "0.0005e6 mb + 10tb", "0.0005e4 b + 4pb", "0.0005e9 gb + 10eb", "0.05", "1", "100%", "200%",
-            "500", "5%", "mid +0.0005003e643 mb", "mid+0.0005000e-234 b+4b", "mid-5%", "beg + 25.0505e-5bin+ 4gb",
-            "end -0.0005e -634 b + 4pb", "mid-5%", "beg+2gb", "end-4gb", "end", "mid", "beg", "0.05%",
-            "end+25.0505e-5bin+ 4gb","beg-25.0505e-5bin+ 4gb","mid+-25.0505e-5bin+ 4gb"
-        ]
+        var positives = POSITIVE_NUMS;
+
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
@@ -57,10 +52,8 @@ export class View extends Comet{
             //assert.equal(true, sanitizer.sanitize(expression, 'tality').includes(expression))
         });
     }
-
     clusivity(){
         this.comet('clusivity()')
-
         this.comet(
             true,
             `This is evaluated after positionality and quantality provide a begining and end anchor
@@ -75,38 +68,20 @@ export class View extends Comet{
              ex:5% \n`,
             `FistView.clus(ivity) RETURNS {ivity:'', n:'', m:''}`
        )
+        var positives = POSITIVE_CLUS;
+        var sanitizer = new Sanitizer()
+        positives.forEach(expression => {
         
-    var positives = [
-        "in:1", "in:0.0001", "in:1.0e400-34", "in:0.001e-34+45", "in:0.001e34+45", "in:55e-4",
-            "in:55e-4-31", "in:55e-4+31", "in:55e+4+31", "in:55e4+31", "in:1000bin", "in:400nib",
-            "in:20342mb", "in:342gb", "in:23424tb", "in:end", "in:mid", "in:beg", "in:mid-432bin",
-            "in:mid-432nib","in:mid-432mb", "in:mid-432gb","in:mid-432tb","in:mid-432eb","in:mid+432bin",
-            "in:mid+432nib", "in:mid+432mb", "in:mid+432gb", "in:mid+432tb", "in:mid+432eb", "in:mid/432bin",
-            "in:mid/432nib", "in:mid/432mb", "in:mid/432gb", "in:mid/432tb", "in:mid/432eb", "in:mid*432bin",
-            "in:mid*432nib","in:mid*432mb", "in:mid*432gb","in:mid-432tb", "in:mid-432eb", "in:beg",
-            "in:mid*432tb", "in:mid*432eb", "in:mid-432bin", "in:mid-432nib", "in:mid-432mb", "in:mid-432gb",
-            "in:5%", "in:0.5", "in:0.0001", "ex:0.0001","ex:1","ex:0.0001", "ex:1.0e400-34", "ex:0.001e34+45",
-            "ex:0.001e-34+45", "ex:55e-4+31", "ex:55e-4-31", "ex:1000bin", "ex:400nib", "ex:20342mb",
-            "ex:342gb", "ex:23424tb", "ex:end", "ex:mid", "ex:beg", "ex:5%", "ex:0.5", "ex:4mb", "ex:mid-432mb",
-            "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
-        ]
-
-            var sanitizer = new Sanitizer()
-
-            positives.forEach(expression => {
-            
-                if(sanitizer.sanitize(expression, 'ivity')['matches'][0]==expression){
-                    this.comet(expression, "is true")
-                }else{
-                    console.log(sanitizer.sanitize(expression, 'ivity'))
-                    this.comet(expression, "is false")
-                }
-            });
+            if(sanitizer.sanitize(expression, 'ivity')['matches'][0]==expression){
+                this.comet(expression, "is true")
+            }else{
+                console.log(sanitizer.sanitize(expression, 'ivity'))
+                this.comet(expression, "is false")
+            }
+        });
     }
-
     positionality(){
         this.comet('positionality()')
-
         this.comet(
             true,
             `Positionality is evaluated first! It uses the entire file capacity to determine position`,
@@ -114,35 +89,17 @@ export class View extends Comet{
             `Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc`,
             `FistView.position(ality) RETURNS {ality:''}`
         )
-
-
-        var positives=[
-            'end', 'end-1b', 'end-1mb', 'end-10tb',
-            'end/5b', 'end/2mb', 'end/46gb', 'end/50tb',
-            'beg', 'beg+2b', 'beg+3gb', 'beg+4tb',
-            'beg*5b', 'beg*2mb', 'beg*46gb', 'beg*50tb',
-            'mid', 'mid+3b', 'mid+10mb', 'mid+1000gb', 'mid+10tb',
-            'mid-5b', 'mid-100mb', 'mid-100gb', 'mid-10tb',
-            'mid/5b', 'mid/10mb', 'mid/2gb', 'mid/100tb',
-            'mid+0.5', 'end+0.05', 'beg*0.003', 'beg/0.0005','mid*0.0000003', //some of these would be wrong in validation, but not sanitization
-            'mid*0.3e9', 'beg+0.4e_10', 'end+4e40', 'end-30e_3', 'mid+1e100',
-            'mid+2'
-        ]
-
+        var positives = POSITIVE_NUMS;
         var sanitizer = new Sanitizer()
-
         positives.forEach(expression => {
-        
             if(sanitizer.sanitize(expression, 'ality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
                 this.comet(expression, "is false")
             }
         });
-
         var negatives=[
             '1b+end', '2+mid',
         ]
-
     } 
 }
