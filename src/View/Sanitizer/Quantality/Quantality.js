@@ -7,8 +7,3 @@ export class Quantality{
     }
 }
 
-//I think we got it
-//(((((mid|beg|end) ?(\\+|\\-|\\*|\\\|\\/|\\b) ?\\b)([0-9]*\\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)|([0-9]*(\\.)?[0-9]*((e|%)[0-9]*)? ?\\-?([0-9]*)(bin|b|mb|gb|tb|pb|eb)? ?\\+? ?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)?)
-
-
-//([0-9]*\\.[0-9]*e[0-9]* ?-?([0-9]*)?(bin|b|mb|gb|tb|pb|eb) ?\\+? ?[0-9]*(bin|b|mb|gb|tb|pb|eb))|(((((mid|beg|end) ?(\\+|\\-|\\*|\\\|\\/|\\b) ?\\b)([0-9]*\\.[0-9]*)?((e[0-9]*)|[0-9]*)?)|([0-9]*\\.[0-9]*)) ?-?%?(bin|b|mb|gb|tb|pb|eb)?[0-9]* ?(bin|b|mb|gb|tb|pb|eb)? ?\\+? ?([0-9]*(bin|b|mb|gb|tb|pb|eb))?)

@@ -16,7 +16,7 @@ export class FistViewT extends Comet{
         console.log('running tests')
         this.fist();
         this.quantality();
-        // this.clusivity();
+        this.clusivity();
         // this.positionality();
     }
     fist(){
@@ -91,11 +91,17 @@ export class FistViewT extends Comet{
             "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
         ]
 
-        var sanitizer = new Sanitizer()
+            var sanitizer = new Sanitizer()
 
-        positives.forEach(expression => {
-            assert.equal(expression, sanitizer.sanitize(expression, 'ivity')[0])
-        });
+            positives.forEach(expression => {
+            
+                if(sanitizer.sanitize(expression, 'ivity')[0]==expression){
+                    this.comet(expression, "is true")
+                }else{
+                    console.log(sanitizer.sanitize(expression, 'ivity'))
+                    this.comet(expression, "is false")
+                }
+            });
     }
 
     positionality(){

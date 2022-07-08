@@ -1,0 +1,32 @@
+sometest from FileView
+quantality()
+true Quantality is evaluated right after positionality for an outgoing transaction
+                which means it is only a single value that represents where from
+                the start of positionality one wants to extend in the amount of data sent
+             Quantality represents the amount of data flowing from file a to file b FistView.quan(tality) ACCEPTS end, mid, percentages (strings), +-*/ ops 
+ Example: 1b, 2mb, 14gb, 0.5, 1b, 5% 
+ FistView.quan(tality) RETURNS {tality:''} 
+
+mid+-25.0505e-5bin+ 4gb is false
+clusivity()
+true This is evaluated after positionality and quantality provide a begining and end anchor
+                we can use beg, mid, and end to denote how much of the outgoing buffer should be shared
+                with the original source. This is a colon separated triplet. The first element is the
+                clusivity (in or ex), the second is beg or mid anchor expressions, the third is relative
+                to the first in the way of a value, or can be anchored by end and used with expressions
+             FistView.clus(ivity) ACCEPTS beg, end, mid, percentage strings, +-*/ ops 
+ Example: 1b, 2mb, 14gb, etc. (prefixed with in or ex or just in or ex) 
+             in:position:offset or in:0.5, or in:1b, or in:end, in:mid, in:beg (for future?) 
+             ex:5% 
+ FistView.clus(ivity) RETURNS {ivity:'', n:'', m:''}
+There was an uncaught error TypeError: Cannot read properties of null (reading '0')
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:98:59
+    at Array.forEach (<anonymous>)
+    at FistViewT.clusivity (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:96:23)
+    at FistViewT.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:19:14)
+    at new FistViewT (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistViewT/FistViewT.js:12:14)
+    at FistTest.run_tests (file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistTest.js:10:9)
+    at file:///Users/hassan/Projects/GitHub/FIST/FistTest/FistTest.js:14:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:198:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:385:24)
