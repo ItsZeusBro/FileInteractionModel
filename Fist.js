@@ -1,4 +1,5 @@
 import { FistView } from "./src/View/FistView.js";
+import * as fs from "node:fs"
 export class Fist{
     constructor(){
         Fist.prototype.flow = this.flow;
@@ -17,10 +18,12 @@ export class Fist{
         this.FistView.stream(fist, tifier, atin, atout)
         return this;
     }
+    //creates a file if it doesn't exist
     pound(imganirayFist){
-
+        fs.openSync(imganirayFist, 'a');
     }
-    sprinkl(drips){
+    //fills the file with data
+    sprinkl(it){
 
     }
 }

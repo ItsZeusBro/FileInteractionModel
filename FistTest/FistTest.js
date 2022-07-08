@@ -1,5 +1,5 @@
 import { FistViewT } from "./FistViewT/FistViewT.js";
-import { Comet } from "./Comet/Comet.js"
+import { Comet } from "../Comet/Comet.js"
 
 class FistTest extends Comet{
     constructor(){

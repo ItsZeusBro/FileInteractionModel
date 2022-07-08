@@ -2,6 +2,7 @@ import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
 import { Utils } from "../../Utils/Utils.js";
 import * as assert from "node:assert";
+import { Sanitizer } from "../../src/View/Sanitizer/Sanitizer.js";
 
 //This basically runs tests on every module
 export class FistViewT extends Comet{
@@ -21,20 +22,20 @@ export class FistViewT extends Comet{
 
         var fist = new Fist();
         var file='./tests/fist.file'
-        fist.fist(file);
-        var a = new Fist();
-        fist.fist(a);
+        fist.pound(file);
+
 
     }
 
     quantality(){
 
         this.comet(
+            true,
             `Quantality is evaluated right after positionality for an outgoing transaction
                 which means it is only a single value that represents where from
                 the start of positionality one wants to extend in the amount of data sent
-            `
-            `Quantality represents the amount of data flowing from file a to file b`
+            `,
+            `Quantality represents the amount of data flowing from file a to file b`,
             `FistView.quan(tality) ACCEPTS end, mid, percentages (strings), +-*/ ops \n`, 
             `Example: 1b, 2mb, 14gb, 0.5, 1b, 5% \n`,
             `FistView.quan(tality) RETURNS {tality:''} \n`
@@ -53,20 +54,22 @@ export class FistViewT extends Comet{
             "ex:342gb", "ex:23424tb", "ex:end", "ex:mid", "ex:beg", "ex:5%", "ex:0.5", "ex:4mb", "ex:mid-432mb",
             "ex:mid-432gb", "ex:mid-432nib", "ex:mid+432nib", "ex:mid+432gb", "ex:mid+432mb"
         ]
+
     }
 
     clusivity(){
 
         this.comet(
+            true,
             `This is evaluated after positionality and quantality provide a begining and end anchor
                 we can use beg, mid, and end to denote how much of the outgoing buffer should be shared
                 with the original source. This is a colon separated triplet. The first element is the
                 clusivity (in or ex), the second is beg or mid anchor expressions, the third is relative
                 to the first in the way of a value, or can be anchored by end and used with expressions
-            `
+            `,
             `FistView.clus(ivity) ACCEPTS beg, end, mid, percentage strings, +-*/ ops \n`, 
             `Example: 1b, 2mb, 14gb, etc. (prefixed with in or ex or just in or ex) 
-             in:position:offset or in:0.5, or in:1b, or in:end, in:mid, in:beg (for future?), 
+             in:position:offset or in:0.5, or in:1b, or in:end, in:mid, in:beg (for future?) 
              ex:5% \n`,
             `FistView.clus(ivity) RETURNS {ivity:'', n:'', m:''}`
        )
@@ -91,9 +94,10 @@ export class FistViewT extends Comet{
     positionality(){
 
         this.comet(
-            `Positionality is evaluated first! It uses the entire file capacity to determine position`
+            true,
+            `Positionality is evaluated first! It uses the entire file capacity to determine position`,
             `FistView.position(ality) ACCEPTS beg, end, mid (strings), percentages, +-*/ ops \n`, 
-            `Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc`
+            `Examples: 1b, 2mb, 14gb, etc. or 0.5, or 100b, or 5% or beg, end, beg+10b, mid-100mb, etc`,
             `FistView.position(ality) RETURNS {ality:''}`
         )
 

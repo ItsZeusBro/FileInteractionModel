@@ -1,12 +1,13 @@
 //INTERFACE
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
 import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
-import { Comet } from "../../Comet/Comet.js";
+import { Comet } from "../../Comet/Comet.js"
 import {Fist} from "../../Fist.js";
 import * as fs from "node:fs";
 
 export class FistView extends Comet{
     constructor(){
+        super()
 
     }
     flow(fist, tality="all", ivity="in", alityf="Inf", ality=""){

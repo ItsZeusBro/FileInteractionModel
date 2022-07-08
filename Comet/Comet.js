@@ -26,10 +26,10 @@ export class Comet{
             }
         });
     }
-    comet(...data){
+    comet(quiet=false, ...data){
 
         fs.writeFileSync(this.cometFile, data.join(' ')+'\n', {flag:'a'})
-        if (this.verbose){
+        if (this.verbose && quiet == false){
             console.log(data.join(' '))
         }
         
