@@ -7,15 +7,15 @@ export class Sanitizer{
     sanitize(string, context){
         if (context == 'ality'){
             var ality = new Positionality();
-            return ality.ality.test(string)
+            return string.match(ality.ality)
             
         }else if (context == 'tality'){
             var tality = new Quantality();
-            return tality.tality.test(string)
+            return string.match(tality.tality)
 
         }else if (context == 'ivity'){
             var ivity = new Clusivity();
-            return ivity.ivity.test(string)
+            return string.match(ivity.ivity)
 
         }else{
             throw Error("invalid context for sanitizer")

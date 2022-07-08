@@ -48,7 +48,7 @@ export class FistViewT extends Comet{
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            console.log(expression, sanitizer.sanitize(expression, 'tality'))
+            assert.equal(expression, sanitizer.sanitize(expression, 'tality')[0])
             if(!sanitizer.sanitize(expression, 'tality')){
                 throw Error("uncaught expression")
             }
@@ -91,10 +91,7 @@ export class FistViewT extends Comet{
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            console.log(expression, sanitizer.sanitize(expression, 'ivity'))
-            if(!sanitizer.sanitize(expression, 'ivity')){
-                throw Error("uncaught expression")
-            }
+            assert.equal(expression, sanitizer.sanitize(expression, 'ivity')[0])
         });
     }
 
@@ -125,10 +122,8 @@ export class FistViewT extends Comet{
         var sanitizer = new Sanitizer()
 
         positives.forEach(expression => {
-            console.log(expression, sanitizer.sanitize(expression, 'ality'))
-            if(!sanitizer.sanitize(expression, 'ality')){
-                throw Error("uncaught expression")
-            }
+            assert.equal(expression, sanitizer.sanitize(expression, 'ality')[0])
+
         });
 
         var negatives=[
