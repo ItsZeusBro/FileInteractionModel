@@ -40,11 +40,10 @@
     - n-m
 
 - Examples:
-    - 0.0005e6 mb
+    - 0.0005e6 mb + 1gb (will evaluate scientific notation first. Multiply it by mb. Then add 1gb.
     - 0.05
     - 0.05%
-    - 5%
+    - 5% (represents the first 5% of the file)
     - mid+400mb (Everything to the left of this evaluated value will be sent from the buffer)
-    -  
-
-    
+    - mid-5% (5% is evaluated after the anchor returns a buffer)
+    - beg+2gb (this will represent 2gb of data from the start of the file)
