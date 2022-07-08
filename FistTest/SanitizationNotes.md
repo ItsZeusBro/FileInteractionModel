@@ -24,7 +24,7 @@
     - a scientific notation alongside an integer bit expression tuple, 
     - an anchor that represents a relative value (beg, mid, end) to the buffer size.
 
-- Bit Expression where N represents some numerical expression: 
+- Bit Expression tuple where N represents some numerical expression: 
     - n bin, 
     - n b, 
     - n mb, 
