@@ -47,3 +47,6 @@
     - mid+400mb (Everything to the left of this evaluated value will be sent from the buffer)
     - mid-5% (5% is evaluated after the anchor returns a buffer)
     - beg+2gb (this will represent 2gb of data from the start of the file)
+
+# Sanitization for Algebraic Expressions (for the future)
+#### We just care for now about sanitizing this type of expression (validation, specification, and interfacing comes later)
