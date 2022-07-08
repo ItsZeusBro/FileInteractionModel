@@ -19,11 +19,10 @@
 ### Notes:
 #### For Quantality we wish to pattern match any of the following patterns (add more if needed):
 
-(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
+(type of number)[multiplier][ops]((type of number)[multiplier][ops])* //star is optional behavior
 
 [optional behavior]
 (mandatory)
-* (0 to many)
 
 
 ### Positive Quantlity Regex Tests:
