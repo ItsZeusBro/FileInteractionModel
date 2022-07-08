@@ -21,36 +21,12 @@ pattern:
 
 
 ### Positionality and Quantlity Tests:
-- 0.0005003e6 mb+ 10bin 
-- 0.0005000e6 b+4b 
-- 43.0005e6 -12mb +10mb 
-- 25.0505e-5bin+ 4gb 
-- 0.0005e6 mb + 10tb 
-- 0.0005e6 b + 4pb
-- 0.0005e6 gb + 10eb 
-- 0.05
-- 1
-- 500
-- 0.05%
-- 5%
-- mid+0.0005003e6 mb
-- mid+0.0005000e6 b+4b
-- mid-5%
-- beg+25.0505e-5bin+ 4gb
-- end-0.0005e6 b + 4pb
-- mid-5%
-- beg+2gb
-- end-4gb
-- end
-- mid
-- beg
+
 
 ### Negative Quantlity Regex Tests:
-- end+25.0505e-5bin+ 4gb
-- beg-25.0505e-5bin+ 4gb
-- mid+-25.0505e-5bin+ 4gb
 
 
+//we need a lot more tests
 
 # Clus-ivity Sanitization Requirements:
 
