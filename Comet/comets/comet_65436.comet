@@ -1,0 +1,14 @@
+sometest from View
+positionality()
+true
+There was an uncaught error ReferenceError: woudbality is not defined
+    at Sposatiz.re (file:///Users/hassan/Projects/GitHub/FIST/Source/Sanatiz/Sposatiz/Sposatiz.js:26:88)
+    at Sposatiz.sanit (file:///Users/hassan/Projects/GitHub/FIST/Source/Sanatiz/Sposatiz/Sposatiz.js:11:17)
+    at Sanitiz.sanitiz (file:///Users/hassan/Projects/GitHub/FIST/Source/Sanatiz/Sanatiz.js:10:35)
+    at file:///Users/hassan/Projects/GitHub/FIST/Test/View/View.js:37:24
+    at Array.forEach (<anonymous>)
+    at View.positionality (file:///Users/hassan/Projects/GitHub/FIST/Test/View/View.js:36:19)
+    at View.run_tests (file:///Users/hassan/Projects/GitHub/FIST/Test/View/View.js:19:14)
+    at new View (file:///Users/hassan/Projects/GitHub/FIST/Test/View/View.js:14:14)
+    at Test.run_tests (file:///Users/hassan/Projects/GitHub/FIST/Test/Test.js:10:9)
+    at file:///Users/hassan/Projects/GitHub/FIST/Test/Test.js:14:12

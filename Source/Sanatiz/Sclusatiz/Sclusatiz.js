@@ -1,4 +1,4 @@
-export class Sclusitiz{
+export class Sclusatiz{
     //(in|ex):(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
     constructor(){
         this.ities[
@@ -26,7 +26,7 @@ export class Sclusitiz{
     re(ivity){
         var spacedOut=ivity.split(' ').join('')
         var ivityReg = new RegExp(this.ivity);
-        return {"matches":spacedOut.match(ivityReg), "spacedout":spacedOut, "original":string}
+        return {"matches":spacedOut.match(ivityReg), "spacedout":spacedOut, "original":ivity}
     }
 
     tokity(ivity){

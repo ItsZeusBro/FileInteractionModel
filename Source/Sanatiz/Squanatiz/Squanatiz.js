@@ -26,7 +26,7 @@ export class Squanatiz{
     re(tality){
         var spacedOut=tality.split(' ').join('')
         var talityReg = new RegExp(this.tality);
-        return {"matches":spacedOut.match(talityReg), "spacedout":spacedOut, "original":wouldbtality}
+        return {"matches":spacedOut.match(talityReg), "spacedout":spacedOut, "original":tality}
     }
     tokity(tality){
         this.ities.forEach(ity => {

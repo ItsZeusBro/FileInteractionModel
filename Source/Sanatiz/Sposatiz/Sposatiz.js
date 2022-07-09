@@ -23,7 +23,7 @@ export class Sposatiz{
     re(ality){
         var spacedOut=ality.split(' ').join('')
         var alityReg = new RegExp();
-        return {"matches":spacedOut.match(alityReg), "spacedout":spacedOut, "original":woudbality}
+        return {"matches":spacedOut.match(alityReg), "spacedout":spacedOut, "original":ality}
     }
 
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*

@@ -1,4 +1,4 @@
-import {Sclusatiz} from "./Sclusitiz/Sclusitiz.js"
+import {Sclusatiz} from "./Sclusatiz/Sclusatiz.js"
 import {Squanatiz} from "./Squanatiz/Squanatiz.js"
 import {Sposatiz} from "./Sposatiz/Sposatiz.js"
 
