@@ -1,9 +1,10 @@
-# File Interaction Sexy Transaction (FIST) 0.1 (in progress)
+# File Interaction Sexy Transaction (FIST)
 
 
-## File Interaction Sexy Transaction is specified as a Turing Complete File Computer.
+### File Interaction Sexy Transaction 0.1 (in progress) is specified as a Turing Complete File Computer.
 
 <img src="https://github.com/ItsZeusBro/FIST/blob/51690d944a8f7f6a344c556556c93f75479673a6/Docs/fists.gif" height=200 width=250/>
+(https://commons.wikimedia.org/wiki/File:Fist_bump_animated_illustration.gif)
 
 ## Background Information
 We care more about buffers than we do about files. A buffer is a partuclar string of content we wish to do something with. A file is everything else that we don't need (except for indexing the information we require). It stands to reason that physical files are becoming obsolete in some sense. When Ai discovers how to break up data into statistically used buffers (cache memory) as opposed to entire files, we become aware of this point even further. So operating on buffers with a virtual file model and syntax is more important long term, than reasononing about actual physical files and their locations.
@@ -22,7 +23,8 @@ FIST is not yet a robust specification. These are general abstract concepts that
 5. Backbone Infrastructure
 6. UDP stuff?
 7. Big Unstructured Data (like spam and nlp data)
-8. World Domination
+8. Virtual Web Files and Search Engine Optimization
+9. World Domination
 
 ## We can begin with the 14 main concepts:
 
