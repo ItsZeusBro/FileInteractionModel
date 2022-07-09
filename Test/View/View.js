@@ -35,10 +35,10 @@ export class View extends Comet{
         var positives = POSITIVE_NUMS;
         var sanitizer = new Sanitizer()
         positives.forEach(expression => {
-            if(sanitizer.regularize(expression, 'ality')['matches'][0]==expression){
+            if(sanitizer.isRegular(expression, 'ality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                console.log(sanitizer.regularize(expression, 'ality')['matches'])
+                console.log(sanitizer.isRegular(expression, 'ality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -55,10 +55,10 @@ export class View extends Comet{
 
         positives.forEach(expression => {
         
-            if(sanitizer.regularize(expression, 'tality')['matches'][0]==expression){
+            if(sanitizer.isRegular(expression, 'tality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                console.log(sanitizer.regularize(expression, 'tality')['matches'])
+                console.log(sanitizer.isRegular(expression, 'tality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -73,10 +73,10 @@ export class View extends Comet{
         var sanitizer = new Sanitizer()
         positives.forEach(expression => {
         
-            if(sanitizer.regularize(expression, 'ivity')['matches'][0]==expression){
+            if(sanitizer.isRegular(expression, 'ivity')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                console.log(sanitizer.regularize(expression, 'ivity')['matches'])
+                console.log(sanitizer.isRegular(expression, 'ivity')['matches'])
                 this.comet(expression, "is false")
             }
         });

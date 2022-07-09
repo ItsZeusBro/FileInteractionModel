@@ -4,21 +4,21 @@ import {Positionality} from "./Positionality/Positionality.js"
 
 export class Sanitizer{
 
-    regularize(string, context){
+    isRegular(string, context){
         if (context == 'ality'){
 
             var ality = new Positionality();
-            return ality.regularize(string)
+            return ality.isAlity(string)
 
         }else if (context == 'tality'){
 
             var tality = new Quantality();
-            return tality.regularize(string)
+            return tality.isTality(string)
 
         }else if (context == 'ivity'){
 
             var ivity = new Clusivity();
-            return ivity.regularize(string)
+            return ivity.isIvity(string)
 
         }else{
             throw Error("invalid context for sanitizer")
