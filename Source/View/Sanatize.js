@@ -9,13 +9,18 @@ export class Sanatize{
         this.tality=/(^((\+|\-)?((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)((?!\*\*)(\*|\+|\-|\\|\/)?(\+|\-)?(((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)?)*)/g;
         this.ivity=/ /g;
     }
+
     sanatize(sPosaQuanaClus, context){
+        sPosaQuanaCllus = this.regularize(sPosaQuanaClus, context);
+        
+    }
+    regularize(sPosaQuanaClus, context){
         if (context == 'positionality'){
-            return this._sanatize(this.scientize(this.match(this.ality, sPosaQuanaClus, context)))
+            return this.scientize(this.match(this.ality, sPosaQuanaClus, context))
         }else if (context == 'quantality'){
-            return this._sanatize(this.scientize(this.match(this.tality, sPosaQuanaClus, context)))
+            return this.scientize(this.match(this.tality, sPosaQuanaClus, context))
         }else if (context == 'clusivity'){
-            return this._sanatize(this.scientize(this.match(this.ivity, sPosaQuanaClus, context)))
+            return this.scientize(this.match(this.ivity, sPosaQuanaClus, context))
         }else{
             throw Error("invalid context for sanitizer")
         }
@@ -48,4 +53,6 @@ export class Sanatize{
             return sPosaQuanaClus
         }
     }
+
+
 }
