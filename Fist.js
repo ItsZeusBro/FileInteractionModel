@@ -1,4 +1,4 @@
-import { View } from "./Source/View/View.js";
+import { View } from "./Source/View_/View_.js";
 import * as fs from "node:fs"
 export class Fist{
     constructor(){

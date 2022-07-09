@@ -1,4 +1,4 @@
-export class _Clus{
+export class _Clus_{
 
     //This accepts an object called ivity_ that contains the following
     //{ivity:ivity, source:path, n:n, m:m}

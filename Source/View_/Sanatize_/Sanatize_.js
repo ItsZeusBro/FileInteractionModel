@@ -1,3 +1,5 @@
+import { BIT, KBIT, MBIT, GBIT, TBIT, PBIT, EBIT, MID, BEG, END} from "../../GoodyBag/GoodyBag.js";
+import {ANYTHING_SCIENTIFIC} from "../../../../MagicSpells/MagicSpells.js"
 
 export class Sanatize{
     constructor(){
@@ -5,21 +7,21 @@ export class Sanatize{
             "bit":BIT,"kbit":KBIT,"mbit":MBIT, "gbit":GBIT, "tbit":TBIT, "pbit":PBIT, "ebit":EBIT,
             "mid":MID, "beg":BEG, "end":END
         };
-        this.ality= /(^((\+|\-)?((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)((?!\*\*)(\*|\+|\-|\\|\/)?(\+|\-)?(((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)?)*)/g;
-        this.tality= /(^((\+|\-)?((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)((?!\*\*)(\*|\+|\-|\\|\/)?(\+|\-)?(((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)?)*)/g;
-        this.ivity= /(in|ex):(^((\+|\-)?((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)((?!\*\*)(\*|\+|\-|\\|\/)?(\+|\-)?(((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)?)*)/g;
+        
     }
     sanatize(sPosaQuanaClus, context){
         sPosaQuanaCllus = this.regularize(sPosaQuanaClus, context);
-
+    }
+    binatize(){
+        
     }
     regularize(sPosaQuanaClus, context){
         if (context == 'positionality'){
-            return this.scientize(this.match(this.ality, sPosaQuanaClus, context))
+            return this.binatize(this.scientize(this.match(this.ality, sPosaQuanaClus, context)));
         }else if (context == 'quantality'){
-            return this.scientize(this.match(this.tality, sPosaQuanaClus, context))
+            return this.binatize(this.scientize(this.match(this.tality, sPosaQuanaClus, context)));
         }else if (context == 'clusivity'){
-            return this.scientize(this.match(this.ivity, sPosaQuanaClus, context))
+            return this.binatize(this.scientize(this.match(this.ivity, sPosaQuanaClus, context)));
         }else{
             throw Error("invalid context for sanitizer")
         }
@@ -31,7 +33,7 @@ export class Sanatize{
             var spacedOut=sPosaQuanaClus.split(' ').join('');
             match = spacedOut.match(reg)[0];
         }catch{
-            throw Error(context+" is not properly formatted")
+            throw Error(context+" is not properly formatted");
         }
         return match;
     }
@@ -46,9 +48,9 @@ export class Sanatize{
                     scientized = match.replace(reg, new Number(scientality))
                 }
             });
-            return scientized
+            return scientized;
         }catch{
-            return sPosaQuanaClus
+            return sPosaQuanaClus;
         }
     }
 }
