@@ -71,7 +71,7 @@ The different forms of quantality: x%; xbin xb xmb xgb xtb xeb; 0.xx (floating p
 
 ## Clus-ivity 
 ##### ivity are the properties of some clus relationship between file transactioins
-Clusivity is evaluated fourth on a diagram. This operates on a buffer created by Positionality and Quantality.
+Clusivity is evaluated fourth on a diagram. This operates on a concrete buffer (or virtual buffer)  created by Positionality and Quantality. It is concrete in case it is a flow transaction. It is virtual in case it is a stream transaction.
 
 Clusivity defines how much data flow is inclusive with the source after its flow is executed, or whether all or part of that flow of data is exclusively owned by the new owner. 
 
@@ -82,11 +82,10 @@ Solid lines, on the other hand define an inclusive relationship by default betwe
 This could represent a conflict between a destination file that excludes sharing flowed data and a destination file that includes sharing that same data.
 In the case of a conflict, there needs to be a virual file system to resolve this conflict. At least and until this conflict is resolved. What happens when one file excludes a portion data (after its flow) before another file tries to incumber that data, is that the new transaction recieves a file that no longer has the data. If this were to happen in reverse, you have a forked file at the time of the second transaction which aims to exclude it.
 
-Clusivity can take paramters like "end", "mid", "50%", "5%", 0.25, 0.004, "n:m" (range), which only apply to the data that flows from source to destination. Once the flow is buffered, clusivity takes effect on the buffered data, which can help us virtualize files.
 
 Clusivity is evaluated on a buffer that is created after (and from) the positionality and quantality. Positionality and Quantality provide a position and offset which produce "beg", "mid", and "end" anchors to denote ***how much of the outgoing buffer should be shared with the original source***. This is a colon separated triplet. The first element is the clusivity expressed as "in" or "ex" (inclusive or exclusive), the second is a "beg" or "mid" anchor primitive expression, the third is the offset relative to the second (in the triplet) in the way of another primitive expression using "beg", "mid", or "end" with some op (+*-/) that makes sense relative to the begining of the clusive buffer.
 
-ACCEPTS: beg, end, mid, percentage strings, byte values, and arithmetic (+-*/) ops (but not compound expressions)
+ACCEPTS: all quantality expressions prepended with an in: or ex: denoting the sharing properties
 Examples: in:beg+10mb:end-100mb (must actually evaluate to some positive number of bytes, or it is useless and returns nothing)
 
 Rarities: Say you have an inclusive arrow and a clusivity of mid+5%. How would this get resolved? First mid would get resolved. If it were just mid, it would resolve from the begining of the file up to mid. (this is logical for english speakers). Because we are adding to mid, that does not change this rule. The one thing that is odd here is that adding 5% makes this really weird to think about. If we are adding to 5% on half the data, we are not suggesting to only take 5% of half, we are saying add 5%. So this requires flipping some default behavior. Now half takes on the latter half of the file data and left most 5% of that buffer would be shared.
