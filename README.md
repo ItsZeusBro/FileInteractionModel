@@ -23,7 +23,8 @@ FIST is not yet a robust specification. These are general abstract concepts that
 5. Backbone Infrastructure
 6. UDP stuff?
 7. Big Unstructured Data (like spam and nlp data)
-8. World Domination
+8. Virtual Web Files and Search Engine Optimization
+9. World Domination
 
 ## We can begin with the 14 main concepts:
 
