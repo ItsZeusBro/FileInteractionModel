@@ -1,4 +1,4 @@
-export class Sclusatiz{
+export class Clusatize{
     //(in|ex):(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
     constructor(){
         this.ities[

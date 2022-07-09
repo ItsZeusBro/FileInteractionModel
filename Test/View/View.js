@@ -2,7 +2,7 @@ import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
 import {GoodyBag} from "../../Source/GoodyBag/GoodyBag.js"
 import * as assert from "node:assert";
-import { Sanatiz } from "../../Source/Sanatiz/Sanatiz.js";
+import { Sanatize } from "../../Source/Sanatize/Sanatize.js";
 import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module
@@ -29,11 +29,10 @@ export class View extends Comet{
         this.comet('positionality()')
 
         var positives = POSITIVE_NUMS;
-        var sanatiz = new Sanatiz()
+        var sanatize = new Sanatize()
         positives.forEach(expression => {
             console.log('original', expression)
-            var ality = sanatiz.sanatiz(expression, 'ality')
-            console.log("evaluated", eval(ality))
+            var ality = sanatize.sanatize(expression, 'ality')
 
         });
 
@@ -43,14 +42,14 @@ export class View extends Comet{
 
         var positives = POSITIVE_NUMS;
 
-        var sanatiz = new Sanitizer()
+        var sanatize = new Sanitizer()
 
         positives.forEach(expression => {
         
-            if(sanatiz.sanatiz(expression, 'tality')['matches'][0]==expression){
+            if(sanatize.sanatize(expression, 'tality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanatiz.sanatiz(expression, 'tality')['matches'])
+                this.comet(sanatize.sanatize(expression, 'tality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -61,13 +60,13 @@ export class View extends Comet{
     //         true,
     //    )
         var positives = POSITIVE_CLUS;
-        var sanatiz = new Sanitizer()
+        var sanatize = new Sanitizer()
         positives.forEach(expression => {
         
-            if(sanatiz.sanatiz(expression, 'ivity')['matches'][0]==expression){
+            if(sanatize.sanatize(expression, 'ivity')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanatiz.sanatiz(expression, 'ivity')['matches'])
+                this.comet(sanatize.sanatize(expression, 'ivity')['matches'])
                 this.comet(expression, "is false")
             }
         });

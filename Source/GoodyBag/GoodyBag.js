@@ -126,14 +126,13 @@ export class GoodyBag{
  
 }
 
-export const BIN = 1;
-export const NIB = 4;
-export const B = 8;
-export const MB = 1000000; //everything is measured in bits including Mega's
-export const GB = 1000000000;
-export const TB = 1000000000000;
-export const PB = 1000000000000000;
-export const EB = 1000000000000000000;
+export const BIT = 1;
+export const KBIT = 1000;
+export const MBIT = 1000000; //everything is measured in bits including Mega's
+export const GBIT = 1000000000;
+export const TBIT = 1000000000000;
+export const PBIT = 1000000000000000;
+export const EBIT = 1000000000000000000;
 export const BEG = 0; //not a dummy in decimal
 export const MID = 32304218725403733315174624633; //"half a dummy" in decimal is only half as dumb! Way bigger!
 export const END = 431466835321; //"dummy" in decimal

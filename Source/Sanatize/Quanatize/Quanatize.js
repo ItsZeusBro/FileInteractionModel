@@ -1,4 +1,4 @@
-export class Squanatiz{
+export class Quanatize{
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
 
     constructor(){
