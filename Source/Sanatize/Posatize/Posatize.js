@@ -7,7 +7,7 @@ export class Posatize{
             "bit":BIT,"kbit":KBIT,"mbit":MBIT, "gbit":GBIT, "tbit":TBIT, "pbit":PBIT, "ebit":EBIT,
             "mid":MID, "beg":BEG, "end":END
         };
-        this.ality=/(((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bit|kbit|mbit|gbit|tbit|pbit|ebit))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bit|kbit|mbit|gbit|tbit|pbit|ebit)))?)*)/g;
+        this.ality=/(^((\+|\-)?((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)((?!\*\*)(\*|\+|\-|\\|\/)?(\+|\-)?(((beg|end|mid)|([0-9]*\.?[0-9]*e\+?\-?[0-9]*)|([0-9]*\.[0-9]*)|(bin|bit|kbit|mbit|gbit|tbit|pbit|ebit)|([0-9]*))%?)?)*)/g;
     }
     sanat(ality){
         return this.anchorize(this.bin(this.scient(ality)))
