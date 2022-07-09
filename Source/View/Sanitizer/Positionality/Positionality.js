@@ -1,16 +1,34 @@
 export class Positionality{
     constructor(){
+        this.ities = [
+            /(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))/g,
+            /((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))/g
+        ]
     }
-    isAlity(string){
-        var spacedOut=string.split(' ').join('')
+    sanit(ality){
+        var alities=[]
+        if(this.is(ality)){
+            alities=this.tokity(ality)
+        }
+        return this.iz(alities)
+
+    }
+    iz(alities){
+        //returns an object that the rest of the program can consume
+    }
+
+    is(ality){
+        var spacedOut=woudbality.split(' ').join('')
         var alityReg = new RegExp(/(((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g);
-        return {"matches":spacedOut.match(alityReg), "spacedout":spacedOut, "original":string}
+        return {"matches":spacedOut.match(alityReg), "spacedout":spacedOut, "original":woudbality}
     }
+
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
-    alityTok(){
+    tok(ity){
         //gets the next token in the ality string
     }
-    alityTokenize(){
+    tokity(ality){
         //gets all tokens in the ality string
     }
+
 }
