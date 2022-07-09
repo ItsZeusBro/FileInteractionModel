@@ -4,18 +4,18 @@ import {Sposatiz} from "./Sposatiz/Sposatiz.js"
 
 export class Sanatiz{
 
-    sanitiz(sPosaQuanaClus, context){
+    sanatiz(sPosaQuanaClus, context){
         if (context == 'ality'){
             
-            return new Sposatiz().sanit(sPosaQuanaClus)
+            return new Sposatiz().sanat(sPosaQuanaClus)
 
         }else if (context == 'tality'){
 
-            return Squanatiz().sanit(sPosaQuanaClus)
+            return Squanatiz().sanat(sPosaQuanaClus)
 
         }else if (context == 'ivity'){
 
-            return Sclusatiz().sanit(sPosaQuanaClus)
+            return Sclusatiz().sanat(sPosaQuanaClus)
 
         }else{
             throw Error("invalid context for sanitizer")

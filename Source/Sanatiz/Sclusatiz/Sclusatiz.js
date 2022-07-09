@@ -9,7 +9,7 @@ export class Sclusatiz{
         this.ivity=/((in|ex):((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g
 
     }
-    sanit(ivity){
+    sanat(ivity){
         var ivities=[]
         if(this.re(ivity)){
             ivities.push(this.tokity(ivity))

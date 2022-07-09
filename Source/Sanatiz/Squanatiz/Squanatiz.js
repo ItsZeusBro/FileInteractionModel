@@ -9,7 +9,7 @@ export class Squanatiz{
         this.tality=/(((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g
 
     }
-    sanit(tality){
+    sanat(tality){
         var talities=[]
         if(this.re(tality)){
             talities=this.tokity(tality)
