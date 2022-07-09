@@ -134,7 +134,6 @@ export const GB = 1000000000;
 export const TB = 1000000000000;
 export const PB = 1000000000000000;
 export const EB = 1000000000000000000;
-export const E = 'e';
 export const BEG = 0; //not a dummy in decimal
 export const MID = 32304218725403733315174624633; //"half a dummy" in decimal is only half as dumb! Way bigger!
 export const END = 431466835321; //"dummy" in decimal

@@ -1,1 +1,1 @@
-export const ANYTHING_SCIENTIFIC=/[0-9]*\.[0-9]*e[0-9]*/;
+export const ANYTHING_SCIENTIFIC=/[0-9]*\.[0-9]*e\+?\-?[0-9]*/;

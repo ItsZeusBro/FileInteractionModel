@@ -22,30 +22,21 @@ export class View extends Comet{
     }
     fist(){
         var fist = new Fist();
-        console.log(process.cwd())
         var file=process.cwd()+'/Test/tests/fist.file'
         fist.pound(file);
     }
     positionality(){
         this.comet('positionality()')
-        // this.comet(
-        //     true,
-        // )
+
         var positives = POSITIVE_NUMS;
-        console.log(positives)
         var sanatiz = new Sanatiz()
         positives.forEach(expression => {
-            
-            if(sanatiz.sanatiz(expression, 'ality')['matches'][0]==expression){
-                this.comet(expression, "is true")
-            }else{
-                this.comet(sanatiz.sanatiz(expression, 'ality')['matches'])
-                this.comet(expression, "is false")
-            }
+            console.log('original', expression)
+            var ality = sanatiz.sanatiz(expression, 'ality')
+            console.log("evaluated", eval(ality))
+
         });
-        var negatives=[
-            '1b+end', '2+mid',
-        ]
+
     } 
     quantality(){
         this.comet('quantality()')

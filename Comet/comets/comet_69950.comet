@@ -1,0 +1,13 @@
+sometest from View
+positionality()
+There was an uncaught error TypeError: String.prototype.replaceAll called with a non-global RegExp argument
+    at String.replaceAll (<anonymous>)
+    at file:///Users/hassan/Projects/GitHub/Fist/Source/Sanatiz/Sposatiz/Sposatiz.js:34:27
+    at Array.forEach (<anonymous>)
+    at Sposatiz.tokity (file:///Users/hassan/Projects/GitHub/Fist/Source/Sanatiz/Sposatiz/Sposatiz.js:31:29)
+    at Sposatiz.sanatiz (file:///Users/hassan/Projects/GitHub/Fist/Source/Sanatiz/Sposatiz/Sposatiz.js:14:22)
+    at Sanatiz.sanatiz (file:///Users/hassan/Projects/GitHub/Fist/Source/Sanatiz/Sanatiz.js:9:35)
+    at file:///Users/hassan/Projects/GitHub/Fist/Test/View/View.js:39:24
+    at Array.forEach (<anonymous>)
+    at View.positionality (file:///Users/hassan/Projects/GitHub/Fist/Test/View/View.js:37:19)
+    at View.run_tests (file:///Users/hassan/Projects/GitHub/Fist/Test/View/View.js:19:14)
