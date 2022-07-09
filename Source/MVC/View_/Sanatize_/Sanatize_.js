@@ -1,5 +1,8 @@
 import { BIT, KBIT, MBIT, GBIT, TBIT, PBIT, EBIT, MID, BEG, END} from "../../../GoodyBag/GoodyBag.js";
-import {ANYTHING_SCIENTIFIC} from "../../../../../MagicSpells/MagicSpells.js"
+import {ANYTHING_SCIENTIFIC} from "../../../../../MagicSpells/MagicSpells.js";
+import {Clus_} from "../Clusivity_/Clus_.js";
+import {Quan_} from "../Quantality_/Quan_.js"
+import {Position_} from "../Positionality_/Position_.js"
 
 export class Sanatize{
     constructor(){
@@ -7,21 +10,24 @@ export class Sanatize{
             "bit":BIT,"kbit":KBIT,"mbit":MBIT, "gbit":GBIT, "tbit":TBIT, "pbit":PBIT, "ebit":EBIT,
             "mid":MID, "beg":BEG, "end":END
         };
+        this.Clus_= new Clus_();
+        this.Quan_= new Quan_();
+        this.Position_= new Position_();
         
     }
     sanatize(sPosaQuanaClus, context){
-        sPosaQuanaCllus = this.regularize(sPosaQuanaClus, context);
+        sPosaQuanaClus = this.regularize(sPosaQuanaClus, context);
     }
     binatize(){
         
     }
     regularize(sPosaQuanaClus, context){
         if (context == 'positionality'){
-            return this.binatize(this.scientize(this.match(this.ality, sPosaQuanaClus, context)));
+            return this.binatize(this.scientize(this.match(this.Position_.ality, sPosaQuanaClus, context)));
         }else if (context == 'quantality'){
-            return this.binatize(this.scientize(this.match(this.tality, sPosaQuanaClus, context)));
+            return this.binatize(this.scientize(this.match(this.Quan_.tality, sPosaQuanaClus, context)));
         }else if (context == 'clusivity'){
-            return this.binatize(this.scientize(this.match(this.ivity, sPosaQuanaClus, context)));
+            return this.binatize(this.scientize(this.match(this.Clus_.ivity, sPosaQuanaClus, context)));
         }else{
             throw Error("invalid context for sanitizer")
         }

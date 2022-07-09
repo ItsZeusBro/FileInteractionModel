@@ -1,4 +1,4 @@
-export class GoodyBag{
+export class Junk{
     isPath(path){
         if(!fs.existsSync(path)){
             return false
