@@ -8,6 +8,8 @@ Advocates of it like it because it preserves the history of a branch.
 Git rebase compresses all the changes into a single “patch.” Then it integrates the patch onto the target branch. 
 Unlike merging, rebasing flattens history. It transfers the completed work from one branch to another. 
 In the process, unwanted history is eliminated. Advocates of Git rebase like it because it simplifies their review process.
+
+Git rebase and merge both integrate changes from one branch into another. Where they differ is how it's done. Git rebase moves a feature branch into a master. Git merge adds a new commit, preserving the history. (git merge is general between any branches, rebase has to do with master which is why rewriting history is important)
 https://www.perforce.com/blog/vcs/git-rebase-vs-git-merge-which-better
 
 ## We will be using both:
