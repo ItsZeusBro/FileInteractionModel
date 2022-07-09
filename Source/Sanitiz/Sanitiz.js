@@ -4,25 +4,21 @@ import {Sposatiz} from "./Sposatiz/Sposatiz.js"
 
 export class Sanitiz{
 
-    isRegular(string, context){
+    sanitiz(sPosaQuanaClus, context){
         if (context == 'ality'){
-
-            var ality = new Sposatiz();
-            return ality.isAlity(string)
+            
+            return new Sposatiz().sanit(sPosaQuanaClus)
 
         }else if (context == 'tality'){
 
-            var tality = new Squanatiz();
-            return tality.isTality(string)
+            return Squanatiz().sanit(sPosaQuanaClus)
 
         }else if (context == 'ivity'){
 
-            var ivity = new Sclusatiz();
-            return ivity.isIvity(string)
+            return Sclusatiz().sanit(sPosaQuanaClus)
 
         }else{
             throw Error("invalid context for sanitizer")
         }
     }
-
 }

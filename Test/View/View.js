@@ -2,7 +2,7 @@ import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
 import {Utils} from "../../Source/Utils/Utils.js"
 import * as assert from "node:assert";
-import { Sanitizer } from "../../Source/Sanitiz/Sanitiz.js";
+import { Sanitiz } from "../../Source/Sanitiz/Sanitiz.js";
 import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module
@@ -33,12 +33,12 @@ export class View extends Comet{
             
         )
         var positives = POSITIVE_NUMS;
-        var sanitizer = new Sanitizer()
+        var sanitiz = new Sanitiz()
         positives.forEach(expression => {
-            if(sanitizer.isRegular(expression, 'ality')['matches'][0]==expression){
+            if(sanitiz.sanitiz(expression, 'ality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                console.log(sanitizer.isRegular(expression, 'ality')['matches'])
+                this.comet(sanitiz.sanitiz(expression, 'ality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -51,14 +51,14 @@ export class View extends Comet{
 
         var positives = POSITIVE_NUMS;
 
-        var sanitizer = new Sanitizer()
+        var sanitiz = new Sanitizer()
 
         positives.forEach(expression => {
         
-            if(sanitizer.isRegular(expression, 'tality')['matches'][0]==expression){
+            if(sanitiz.sanitiz(expression, 'tality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                console.log(sanitizer.isRegular(expression, 'tality')['matches'])
+                this.comet(sanitiz.sanitiz(expression, 'tality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -70,13 +70,13 @@ export class View extends Comet{
             
        )
         var positives = POSITIVE_CLUS;
-        var sanitizer = new Sanitizer()
+        var sanitiz = new Sanitizer()
         positives.forEach(expression => {
         
-            if(sanitizer.isRegular(expression, 'ivity')['matches'][0]==expression){
+            if(sanitiz.sanitiz(expression, 'ivity')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                console.log(sanitizer.isRegular(expression, 'ivity')['matches'])
+                this.comet(sanitiz.sanitiz(expression, 'ivity')['matches'])
                 this.comet(expression, "is false")
             }
         });
