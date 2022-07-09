@@ -33,12 +33,12 @@ export class View extends Comet{
         // )
         var positives = POSITIVE_NUMS;
         console.log(positives)
-        var sanitiz = new Sanatiz()
+        var sanatiz = new Sanatiz()
         positives.forEach(expression => {
-            if(sanitiz.sanitiz(expression, 'ality')['matches'][0]==expression){
+            if(sanatiz.sanatiz(expression, 'ality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanitiz.sanitiz(expression, 'ality')['matches'])
+                this.comet(sanatiz.sanatiz(expression, 'ality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -51,14 +51,14 @@ export class View extends Comet{
 
         var positives = POSITIVE_NUMS;
 
-        var sanitiz = new Sanitizer()
+        var sanatiz = new Sanitizer()
 
         positives.forEach(expression => {
         
-            if(sanitiz.sanitiz(expression, 'tality')['matches'][0]==expression){
+            if(sanatiz.sanatiz(expression, 'tality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanitiz.sanitiz(expression, 'tality')['matches'])
+                this.comet(sanatiz.sanatiz(expression, 'tality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -69,13 +69,13 @@ export class View extends Comet{
     //         true,
     //    )
         var positives = POSITIVE_CLUS;
-        var sanitiz = new Sanitizer()
+        var sanatiz = new Sanitizer()
         positives.forEach(expression => {
         
-            if(sanitiz.sanitiz(expression, 'ivity')['matches'][0]==expression){
+            if(sanatiz.sanatiz(expression, 'ivity')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanitiz.sanitiz(expression, 'ivity')['matches'])
+                this.comet(sanatiz.sanatiz(expression, 'ivity')['matches'])
                 this.comet(expression, "is false")
             }
         });
