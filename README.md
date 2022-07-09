@@ -64,8 +64,6 @@ Quantality is evaluated third on a diagram. It operates on a buffer set by ality
 
 Quantality can be represented by an abstract number like 1mb or 1gb. It is concrete in a sense, but what happens when you don't have 1mb or 1gb? So its abstract in that there are specific rules associated with how it is evaluated in different situations that would otherwise not make sense in concrete reality.
 
-The different forms of quantality: x%; xbin xb xmb xgb xtb xeb; 0.xx (floating point precision is an implementation detail); anchors like beg, mid, and end; operators that use an abstract number to help intervene in the processe of handling overflow semantics. 
-
 <img src="https://github.com/ItsZeusBro/FIST/blob/5aa06c70d530ef91ad68d293d0af92e445d50b15/Docs/Quantalities.jpg" height=350 width=500/>
 
 
@@ -78,19 +76,6 @@ Clusivity defines how much data flow is inclusive with the source after its flow
 The dashed line represents exclusivity for the entirety of the flow. Meaning, the data that flows into the target will be entirely truncated when there is a dashed line. However, you can add restraints to this general behavior to refine the exclusivity based on the general case. 
 
 Solid lines, on the other hand define an inclusive relationship by default between the source flow and the destination. That means all of the data that flows is shared.
-
-This could represent a conflict between a destination file that excludes sharing flowed data and a destination file that includes sharing that same data.
-In the case of a conflict, there needs to be a virual file system to resolve this conflict. At least and until this conflict is resolved. What happens when one file excludes a portion data (after its flow) before another file tries to incumber that data, is that the new transaction recieves a file that no longer has the data. If this were to happen in reverse, you have a forked file at the time of the second transaction which aims to exclude it.
-
-
-Clusivity is evaluated on a buffer that is created after (and from) the positionality and quantality. Positionality and Quantality provide a position and offset which produce "beg", "mid", and "end" anchors to denote ***how much of the outgoing buffer should be shared with the original source***. This is a colon separated triplet. The first element is the clusivity expressed as "in" or "ex" (inclusive or exclusive), the second is a "beg" or "mid" anchor primitive expression, the third is the offset relative to the second (in the triplet) in the way of another primitive expression using "beg", "mid", or "end" with some op (+*-/) that makes sense relative to the begining of the clusive buffer.
-
-ACCEPTS: all quantality expressions prepended with an in: or ex: denoting the sharing properties
-Examples: in:beg+10mb:end-100mb (must actually evaluate to some positive number of bytes, or it is useless and returns nothing)
-
-Rarities: Say you have an inclusive arrow and a clusivity of mid+5%. How would this get resolved? First mid would get resolved. If it were just mid, it would resolve from the begining of the file up to mid. (this is logical for english speakers). Because we are adding to mid, that does not change this rule. The one thing that is odd here is that adding 5% makes this really weird to think about. If we are adding to 5% on half the data, we are not suggesting to only take 5% of half, we are saying add 5%. So this requires flipping some default behavior. Now half takes on the latter half of the file data and left most 5% of that buffer would be shared.
-
-Why would we do this as opposed to making it mean 55%? Because 55% means 55%, and that is redundant. This allows us to reason backwards from an anchor like mid which is at an unbiased position in its nature.
 
 
 <img src="https://github.com/ItsZeusBro/FIST/blob/163b51b276f8957daf8a05e1bdf8ffb569b2aa7e/Docs/Clusivities.jpg" height=350 width=500/>
