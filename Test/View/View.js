@@ -10,21 +10,41 @@ export class View extends Comet{
     constructor(){
         super();
         
-        this.comet("sometest from FileView");
+        this.comet("sometest from View");
         this.run_tests();
     }
     run_tests(){
         console.log('running tests')
         this.fist();
+        this.positionality();
         this.quantality();
         this.clusivity();
-        this.positionality();
     }
     fist(){
         var fist = new Fist();
-        var file='./tests/fist.file'
+        console.log(process.cwd())
+        var file=process.cwd()+'/Test/tests/fist.file'
         fist.pound(file);
     }
+    positionality(){
+        this.comet('positionality()')
+        this.comet(
+            true,
+            
+        )
+        var positives = POSITIVE_NUMS;
+        var sanitizer = new Sanitizer()
+        positives.forEach(expression => {
+            if(sanitizer.sanitize(expression, 'ality')['matches'][0]==expression){
+                this.comet(expression, "is true")
+            }else{
+                this.comet(expression, "is false")
+            }
+        });
+        var negatives=[
+            '1b+end', '2+mid',
+        ]
+    } 
     quantality(){
         this.comet('quantality()')
 
@@ -60,23 +80,5 @@ export class View extends Comet{
             }
         });
     }
-    positionality(){
-        this.comet('positionality()')
-        this.comet(
-            true,
-            
-        )
-        var positives = POSITIVE_NUMS;
-        var sanitizer = new Sanitizer()
-        positives.forEach(expression => {
-            if(sanitizer.sanitize(expression, 'ality')['matches'][0]==expression){
-                this.comet(expression, "is true")
-            }else{
-                this.comet(expression, "is false")
-            }
-        });
-        var negatives=[
-            '1b+end', '2+mid',
-        ]
-    } 
+    
 }

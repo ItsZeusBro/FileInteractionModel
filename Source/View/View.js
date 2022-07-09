@@ -4,7 +4,7 @@ import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
 import { Comet } from "../../Comet/Comet.js"
 import {Fist} from "../../Fist.js";
 import * as fs from "node:fs";
-import { CLUSIVITY_VIEW, POSITIONALITY_VIEW, QUANTALITY_VIEW } from "../../Source/View/Comets.js";
+import { CLUSIVITY_VIEW, POSITIONALITY_VIEW, QUANTALITY_VIEW } from "./Comets.js";
 
 export class View extends Comet{
     constructor(){
