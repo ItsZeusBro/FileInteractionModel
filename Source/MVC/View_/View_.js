@@ -1,9 +1,9 @@
 //INTERFACE
 import {Flow} from "../Controller/SexyTransactions/Flow/Flow.js";
 import { Stream } from "../Controller/SexyTransactions/Stream/Stream.js";
-import { Comet } from "../../Comet/Comet.js"
-import {Fist} from "../../Fist.js";
-import { CLUSIVITY_VIEW, POSITIONALITY_VIEW, QUANTALITY_VIEW } from "../../Comet/Comet_Consts/Comets.js";
+import { Comet } from "../../../Comet/Comet.js"
+import {Fist} from "../../../Fist.js";
+import { CLUSIVITY_VIEW, POSITIONALITY_VIEW, QUANTALITY_VIEW } from "../../../Comet/Comet_Consts/Comets.js";
 
 export class View extends Comet{
     constructor(){

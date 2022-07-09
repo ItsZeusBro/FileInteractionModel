@@ -1,5 +1,5 @@
-import { BIT, KBIT, MBIT, GBIT, TBIT, PBIT, EBIT, MID, BEG, END} from "../../GoodyBag/GoodyBag.js";
-import {ANYTHING_SCIENTIFIC} from "../../../../MagicSpells/MagicSpells.js"
+import { BIT, KBIT, MBIT, GBIT, TBIT, PBIT, EBIT, MID, BEG, END} from "../../../GoodyBag/GoodyBag.js";
+import {ANYTHING_SCIENTIFIC} from "../../../../../MagicSpells/MagicSpells.js"
 
 export class Sanatize{
     constructor(){

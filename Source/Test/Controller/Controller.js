@@ -1,6 +1,6 @@
 import * as fs from "node:fs";
 import * as assert from "node:assert";
-import { FistTest } from '../FistTest.js';
+import { FistTest } from '../FistTest.js.js';
 
 export class Controller extends FistTest{
     constructor(){
