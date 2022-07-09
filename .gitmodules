@@ -1,0 +1,3 @@
+[submodule "MagicSpells"]
+	path = MagicSpells
+	url = git@github.com:ItsZeusBro/MagicSpells.git

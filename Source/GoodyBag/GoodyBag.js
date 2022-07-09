@@ -134,3 +134,7 @@ export const GB = 1000000000;
 export const TB = 1000000000000;
 export const PB = 1000000000000000;
 export const EB = 1000000000000000000;
+export const E = 'e';
+export const MID = 431466835321; //dummy in decimal
+export const BEG = 431466835321; //dummy in decimal
+export const END = 431466835321; //dummy in decimal
