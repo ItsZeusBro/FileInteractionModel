@@ -1,41 +1,60 @@
 # Glossary
 
-## Broad Concepts
-#### File Interactions
 
-#### Sexy Transactions
-
+## File Interactions
 #### Quantality
 
 #### Positionality
 
 #### Clusivity
 
+## Sexy Transactions
+
+#### Flow
+
+#### Script
+
+#### Stream
+
+
 ## Shorthands
 #### tality
+Short hand for quantality. Usually is something that initializes a Quan class, like this: Quan(tality). Tality here is a valid object describing a Quantity of data that we are flowing or streaming to some file.
 
 #### ality
+Short hand for Positionality. Usually is something that initializes a Position class, like this: Position(ality). Ality in this case is a valid object describing a Position from which we read from or write to.
 
 #### ivity
+Short hand for Clusivity. Usually is something that initializes a Clus class, like this: Clus(ivity). Ivity in this case is a valid object describing the Clusive orientation of the File Interaction. (sharing properties like "inclusive" or "exclusive")
 
 ## Longhands
 #### sPosaQuanaClus
+This is a string that could be a Positionality, Quantality, or Clusivity, in cases where a general class handles all three for general tasks.
 
 ## Corruptions
+
 #### Sanatiz
+This is a corruption of the english word "Sanatizer". We like Sanatiz better. 
 
 #### Sclusatiz
+Sclusatiz is the Sanatiz'r of a would be Clusivity string
 
 #### Squanatiz
+Squanatiz is the Sanatiz'r of a would be Quantality string
 
 #### Sposatiz
+Sposatiz is the Sanatiz'r of a would be Positonality string
+
 
 ## Analogies
 #### Model
+This represents all the code in Source that has to do with low level file operations.
 
 #### View
+This represents all the code having to do with validating input from the user functions, and returning output to the user. Validated input is to be consumed by the Controller functions.
 
 #### Controller
+This represents the business logic middleware between the Model and View.
 
 ## Bug Classes
 #### June Bug 
@@ -52,3 +71,11 @@ Bugs we only see at scale
 
 ## Miscilaneous
 #### Comet
+This is a tool i'm working on to create a better debugging experience, and logs for Ai optimization and debugging. 
+
+#### Goody Bag
+This is an unordered bag of miscellaneous tools
+
+#### Magic Spells
+These are regex strings that are so long and well known, we call them Magic Spells
+
