@@ -5,7 +5,7 @@
   "main": "Comet.js",
   "type": "module",
   "scripts": {
-    "clean-comet":"rm -rf ./Comet/comets",
+    "clean-comet":"rm -rf ./comets/*",
     "archive-comet": "DATE=`date +%s`; tar -czf ./Archives/comets/comets${DATE}.tgz ./comets/*; npm run clean-comet;",
     "comet":"./init.js;"
   },
