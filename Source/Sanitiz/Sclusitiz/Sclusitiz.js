@@ -1,4 +1,4 @@
-export class Clusivity{
+export class Sclusitiz{
     //(in|ex):(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
     constructor(){
         this.ities[
@@ -10,17 +10,20 @@ export class Clusivity{
     }
     sanit(ivity){
         var ivities=[]
-        if(this.is(ivity)){
+        if(this.re(ivity)){
             ivities.push(this.tokity(ivity))
         }
         return this.iz(ivities)
     }
     iz(ivities){
+        var izivity={}
         //returns an object that the rest of the program can consume
+
+        return izivity
     }
 
-    is(ivity){
-        var spacedOut=wouldbivity.split(' ').join('')
+    re(ivity){
+        var spacedOut=ivity.split(' ').join('')
         var ivityReg = new RegExp(/((in|ex):((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g);
         return {"matches":spacedOut.match(ivityReg), "spacedout":spacedOut, "original":string}
     }

@@ -2,7 +2,7 @@ import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
 import {Utils} from "../../Source/Utils/Utils.js"
 import * as assert from "node:assert";
-import { Sanitizer } from "../../Source/View/Sanitizer/Sanitizer.js";
+import { Sanitizer } from "../../Source/Sanitiz/Sanitiz.js";
 import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module

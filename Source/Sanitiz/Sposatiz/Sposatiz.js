@@ -1,4 +1,4 @@
-export class Positionality{
+export class Sposatiz{
     constructor(){
         this.ities = [
             /(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))/g,
@@ -7,18 +7,21 @@ export class Positionality{
     }
     sanit(ality){
         var alities=[]
-        if(this.is(ality)){
+        if(this.re(ality)){
             alities=this.tokity(ality)
         }
         return this.iz(alities)
 
     }
     iz(alities){
+        var izality={}
         //returns an object that the rest of the program can consume
+
+        return izality
     }
 
-    is(ality){
-        var spacedOut=woudbality.split(' ').join('')
+    re(ality){
+        var spacedOut=ality.split(' ').join('')
         var alityReg = new RegExp(/(((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g);
         return {"matches":spacedOut.match(alityReg), "spacedout":spacedOut, "original":woudbality}
     }

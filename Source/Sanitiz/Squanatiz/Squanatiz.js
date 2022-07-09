@@ -1,4 +1,4 @@
-export class Quantality{
+export class Squanatiz{
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
 
     constructor(){
@@ -10,17 +10,20 @@ export class Quantality{
     }
     sanit(tality){
         var talities=[]
-        if(this.is(tality)){
+        if(this.re(tality)){
             talities=this.tokity(tality)
         }
         return this.iz(talities)
-
     }
     iz(talities){
+        var iztality={}
+
         //returns an object that the rest of the program can consume
+
+        return iztality
     }
-    is(tality){
-        var spacedOut=wouldbtality.split(' ').join('')
+    re(tality){
+        var spacedOut=tality.split(' ').join('')
         var talityReg = new RegExp(/(((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g);
         return {"matches":spacedOut.match(talityReg), "spacedout":spacedOut, "original":wouldbtality}
     }
@@ -33,6 +36,4 @@ export class Quantality{
         //gets the next token in the ity string
 
     }
-
-
 }
