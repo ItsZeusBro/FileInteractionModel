@@ -2,7 +2,7 @@ import {Fist} from "../../Fist.js"
 import { Comet } from "../../Comet/Comet.js";
 import {GoodyBag} from "../../Source/GoodyBag/GoodyBag.js"
 import * as assert from "node:assert";
-import { Sanitiz } from "../../Source/Sanatiz/Sanatiz.js";
+import { Sanatiz } from "../../Source/Sanatiz/Sanatiz.js";
 import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module
@@ -33,7 +33,7 @@ export class View extends Comet{
         // )
         var positives = POSITIVE_NUMS;
         console.log(positives)
-        var sanitiz = new Sanitiz()
+        var sanitiz = new Sanatiz()
         positives.forEach(expression => {
             if(sanitiz.sanitiz(expression, 'ality')['matches'][0]==expression){
                 this.comet(expression, "is true")
