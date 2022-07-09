@@ -25,14 +25,17 @@ export class Sposatiz{
         for (const [tok, ity] of Object.entries(this.ity)){
             ality = ality.replaceAll(tok, ity)
         }
-        console.log(ality.match(ANYTHING_SCIENTIFIC))
-        if(ality.match(ANYTHING_SCIENTIFIC)){
-            ality.match(ANYTHING_SCIENTIFIC).forEach(scientity => {
-                ality.replaceAll(scientity, Number(scientity)) //replaces the next scientity regex match for a number
-            });
-        }
-
-
+        //console.log(ANYTHING_SCIENTIFIC)
+        var reg= new RegExp(/[0-9]*\.[0-9]*e[0-9]*/)
+        console.log(reg.exec(ality))
+        //console.log(reg.exec(ality))
+        //console.log(reg)
+        //console.log(ality.match(ANYTHING_SCIENTIFIC))
+        // if(ality.match(ANYTHING_SCIENTIFIC)){
+        //     ality.match(ANYTHING_SCIENTIFIC).forEach(scientity => {
+        //         ality.replaceAll(scientity, Number(scientity)) //replaces the next scientity regex match for a number
+        //     });
+        // }
         return ality
     }
     evaluate(ality){
