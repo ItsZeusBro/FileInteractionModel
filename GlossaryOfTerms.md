@@ -8,6 +8,7 @@ This is a special word we use for describing the abstract quantity context and r
 #### Positionality
 This is a special word we use for describing the abstract position context and rules associated with some concrete attempt to move bits from a potential position in a file.
 
+
 #### Clusivity
 This is a special word we use for describing the abstract clusive context and rules associated with some concrete attempt to describe the orientation of data ownership after the flow of data has occured.
 
@@ -32,6 +33,12 @@ Short hand for Positionality. Usually is something that initializes a Position c
 
 #### ivity
 Short hand for Clusivity. Usually is something that initializes a Clus class, like this: Clus(ivity). Ivity in this case is a valid object describing the Clusive orientation of the File Interaction. (sharing properties like "inclusive" or "exclusive")
+
+#### alityf
+This is the "ality from" position associated with the source file and bit position from which data flows or streams.
+
+#### alityt
+This is the "ality to" position associated with the destination file and bit position to which data flows or streams.
 
 ## Longhands
 #### sPosaQuanaClus
