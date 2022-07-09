@@ -24,4 +24,9 @@ export class Sanitizer{
             throw Error("invalid context for sanitizer")
         }
     }
+
+    tokenize(){
+        //tokenize string for subpatterns in left to right order
+        
+    }
 }
