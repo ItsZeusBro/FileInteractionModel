@@ -7,6 +7,7 @@ export class Sposatiz{
         this.ality=/(((((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|nib|b|mb|gb|tb|pb|eb))((\*|\/|\-|\+)(((mid|beg|end)|(((0\.)|([0-9]*\.))?[0-9]*%?(e(([0-9]*)|((\+|\-)[0-9]*)))?))|(bin|b|mb|gb|tb|pb|eb)))?)*)/g
     }
     sanat(ality){
+        console.log(ality)
         var alities=[]
         if(this.re(ality)){
             alities=this.tokity(ality)
@@ -29,9 +30,11 @@ export class Sposatiz{
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
     tok(ity){
         //gets the next token in the ality string
+        return {}
     }
     tokity(ality){
         //gets all tokens in the ality string
+        return {}
     }
 
 }

@@ -31,10 +31,12 @@ export class Sclusatiz{
 
     tokity(ivity){
         //gets all tokens in the ivity string
+        return {}
     }
 
     tok(ity){
         //gets the next token in the ity string
+        return {}
     }
 
 

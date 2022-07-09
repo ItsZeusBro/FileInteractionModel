@@ -35,6 +35,7 @@ export class View extends Comet{
         console.log(positives)
         var sanatiz = new Sanatiz()
         positives.forEach(expression => {
+            
             if(sanatiz.sanatiz(expression, 'ality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{

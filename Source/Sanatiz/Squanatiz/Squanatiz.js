@@ -32,9 +32,10 @@ export class Squanatiz{
         this.ities.forEach(ity => {
             
         });
+        return {}
     }
     tok(ity){
         //gets the next token in the ity string
-
+        return {}
     }
 }
