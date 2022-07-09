@@ -6,15 +6,15 @@ export class Sanatiz{
 
     sanatiz(sPosaQuanaClus, context){
         if (context == 'ality'){
-            return new Sposatiz().sanat(sPosaQuanaClus)
+            return new Sposatiz().sanatiz(sPosaQuanaClus)
 
         }else if (context == 'tality'){
 
-            return Squanatiz().sanat(sPosaQuanaClus)
+            return Squanatiz().sanatiz(sPosaQuanaClus)
 
         }else if (context == 'ivity'){
 
-            return Sclusatiz().sanat(sPosaQuanaClus)
+            return Sclusatiz().sanatiz(sPosaQuanaClus)
 
         }else{
             throw Error("invalid context for sanitizer")

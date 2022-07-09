@@ -1,4 +1,4 @@
-import { BIN, NIB, B, MB, GB, TB, PB, EB, E } from "../../GoodyBag/GoodyBag";
+import { BIN, NIB, B, MB, GB, TB, PB, EB, E, MID, BEG, END} from "../../GoodyBag/GoodyBag.js";
 import {ANYTHING_SCIENTIFIC} from "../../../MagicSpells/MagicSpells.js"
 export class Sposatiz{
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
@@ -23,11 +23,15 @@ export class Sposatiz{
 
     tokity(ality){
         for (const [tok, ity] of Object.entries(this.ity)){
-            ality.replaceAll(tok, ity)
+            ality = ality.replaceAll(tok, ity)
         }
-        ality.match(ANYTHING_SCIENTIFIC).forEach(scientity => {
-            ality.replaceAll(scientity, Number(scientity))
-        });
+        console.log(ality.match(ANYTHING_SCIENTIFIC))
+        if(ality.match(ANYTHING_SCIENTIFIC)){
+            ality.match(ANYTHING_SCIENTIFIC).forEach(scientity => {
+                ality.replaceAll(scientity, Number(scientity)) //replaces the next scientity regex match for a number
+            });
+        }
+
 
         return ality
     }
