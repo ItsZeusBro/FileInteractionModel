@@ -3,18 +3,24 @@
 
 ## File Interactions
 #### Quantality
+This is a special word we use for describing the abstract quantity context and rules associated with some concrete attempt to move a specific number of bits.
 
 #### Positionality
+This is a special word we use for describing the abstract position context and rules associated with some concrete attempt to move bits from a potential position in a file.
 
 #### Clusivity
+This is a special word we use for describing the abstract clusive context and rules associated with some concrete attempt to describe the orientation of data ownership after the flow of data has occured.
 
 ## Sexy Transactions
 
 #### Flow
+This is a complex one time transaction between files, that is described by the Quantality, Positionality, and Clusivity of the flow.
 
 #### Script
 
+
 #### Stream
+This is a complex stream transaction between files, that is described by the Quantality, Positionality, and Clusivity of the stream.
 
 
 ## Shorthands
