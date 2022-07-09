@@ -3,7 +3,7 @@ import {ANYTHING_SCIENTIFIC} from "../../../MagicSpells/MagicSpells.js"
 export class Sposatiz{
     //(type of number)[multiplier][ops]((type of number)[multiplier][ops])*
     constructor(){
-        this.tokens = {
+        this.ity = {
             "bin":BIN, "nib":NIB, "b":B, "mb":MB,
             "gb":GB, "tb":TB, "pb":PB, "eb":EB,
             "mid":MID, "beg":BEG, "end":END, 'e':E
@@ -22,12 +22,17 @@ export class Sposatiz{
     }
 
     tokity(ality){
-        for (const [tok, ity] of Object.entries(this.tokens)){
+        for (const [tok, ity] of Object.entries(this.ity)){
             ality.replaceAll(tok, ity)
-        } 
+        }
+        ality.match(ANYTHING_SCIENTIFIC).forEach(scientity => {
+            ality.replaceAll(scientity, Number(scientity))
+        });
+
         return ality
     }
     evaluate(ality){
-
+        console.log(ality)
+        throw Error("stop here")
     }
 }
