@@ -26,16 +26,16 @@ export class Sposatiz{
             ality = ality.replaceAll(tok, ity)
         }
         //console.log(ANYTHING_SCIENTIFIC)
-        var reg= new RegExp(/[0-9]*\.[0-9]*e[0-9]*/)
+        var reg= new RegExp(ANYTHING_SCIENTIFIC)
         console.log(reg.exec(ality))
-        //console.log(reg.exec(ality))
-        //console.log(reg)
-        //console.log(ality.match(ANYTHING_SCIENTIFIC))
-        // if(ality.match(ANYTHING_SCIENTIFIC)){
-        //     ality.match(ANYTHING_SCIENTIFIC).forEach(scientity => {
-        //         ality.replaceAll(scientity, Number(scientity)) //replaces the next scientity regex match for a number
-        //     });
-        // }
+        if(reg.exec(ality)){
+            reg.exec(ality).forEach(scientity => {
+                console.log(scientity, JSON.stringify(Number(scientity)))
+                if(JSON.stringify(Number(scientity))){
+                    ality.replaceAll(scientity, '*'+JSON.stringify(Number(scientity))) //replaces the next scientity regex match for a number
+                }
+            });
+        }
         return ality
     }
     evaluate(ality){
