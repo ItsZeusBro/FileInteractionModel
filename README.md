@@ -1,7 +1,7 @@
-# File Interaction Sexy Transaction (FIST) 0.1 (in progress)
+# File Interaction Sexy Transaction (FIST)
 
 
-## File Interaction Sexy Transaction is specified as a Turing Complete File Computer.
+### File Interaction Sexy Transaction 0.1 (in progress) is specified as a Turing Complete File Computer.
 
 <img src="https://github.com/ItsZeusBro/FIST/blob/51690d944a8f7f6a344c556556c93f75479673a6/Docs/fists.gif" height=200 width=250/>
 (https://commons.wikimedia.org/wiki/File:Fist_bump_animated_illustration.gif)
