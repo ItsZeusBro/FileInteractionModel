@@ -125,3 +125,12 @@ export class GoodyBag{
       }
  
 }
+
+export const BIN = 1;
+export const NIB = 4;
+export const B = 8;
+export const MB = 1000000; //everything is measured in bits including Mega's
+export const GB = 1000000000;
+export const TB = 1000000000000;
+export const PB = 1000000000000000;
+export const EB = 1000000000000000000;
