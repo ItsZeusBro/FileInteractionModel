@@ -168,6 +168,7 @@ a, b, and c are files. a.flow(b, //whatever) returns b so that you can do someth
                       c,      //ionality
                       alityf,
                       tality,
+                      ivity,
                       alityt,
                       (data)=>{
                               //pre script here  
