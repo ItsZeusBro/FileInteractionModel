@@ -1,7 +1,7 @@
 import { BIT, KBIT, MBIT, GBIT, TBIT, PBIT, EBIT, MID, BEG, END} from "../../../Drawer/Junk.js";
 import {ANYTHING_SCIENTIFIC} from "../../../../../MagicSpells/MagicSpells.js";
-import {_Clus} from "../_ClusIvity_/_Clus.js";
-import {_Quan} from "../_QuantAlity/_Quan.js"
+import {_Clus} from "../_ClusIvity/_Clus.js";
+import {_Quan} from "../_QuanTality/_Quan.js"
 import {_Position} from "../_PositionAlity/_Position.js"
 
 export class _Sanatize{
@@ -27,6 +27,7 @@ export class _Sanatize{
 
     _regularize(_sPosaQuanaClus, _context){
         if (_context == 'positionality'){
+            console.log(_sPosaQuanaClus)
             return this._binatize(this._scientize(this._match(this._Position._ality, _sPosaQuanaClus, _context)));
         }else if (_context == 'quantality'){
             return this._binatize(this._scientize(this._match(this._Quan._tality, _sPosaQuanaClus, _context)));
@@ -38,19 +39,19 @@ export class _Sanatize{
     }
 
     _match(_reg, _sPosaQuanaClus, _context){
+        console.log("MATCH",_reg, _sPosaQuanaClus, _context)
         _reg = new RegExp(_reg);
         var _match;
-        try{
-            var _spacedOut=_sPosaQuanaClus.split(' ').join('');
-            _match = _spacedOut.match(reg)[0];
-        }catch{
-            throw Error(context+" is not properly formatted");
-        }
+
+        _sPosaQuanaClus =_sPosaQuanaClus.split(' ').join('');
+        _match = _sPosaQuanaClus.match(_reg)
+
+
         return _match;
     }
 
     _scientize(_sPosaQuanaClus){
-        var _spacedOut=_sPosaQuanaClus.split(' ').join('');
+        _sPosaQuanaClus=_sPosaQuanaClus.split(' ').join('');
         var _match = this.match(_sPosaQuanaClus);
         var _scientized;
         var _reg= new RegExp(ANYTHING_SCIENTIFIC);

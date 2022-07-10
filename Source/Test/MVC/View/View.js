@@ -1,53 +1,54 @@
 import {Fist} from "../../../../Fist.js"
 import { Comet } from "../../../Comet/Comet.js";
-import { Sanatize } from "../../../MVC/View_/Sanatize_/Sanatize_.js";
+import { _Sanatize } from "../../../MVC/_View/_Sanatize/_Sanatize.js";
 import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module
 export class View extends Comet{
 
     constructor(){
-        this.comet('Test.MVC.View.constructor(): View Tests')
         super();
+        this.comet('Test.MVC.View.constructor(): View Tests')
         this.runTests();
     }
 
     runTests(){
         this.comet('Test.MVC.View.runTests(): Running Tests')
-        this.fist();
+        this.createFist();
         this.testPositionAlity();
         // this.testQuanTality();
         // this.testClusIvity();
     }
 
     createFist(){
-        this.comet('Test.MVC.View.createFist(): Creating ', process.cwd()+'/Test/tests/fist.file')
+        this.comet('Test.MVC.View.createFist(): Creating ', process.cwd()+'/Source/Test/tests/fist.file')
         var fist = new Fist();
-        var file = process.cwd()+'/Test/tests/fist.file'
-        fist.pound(file);
+        var imaginaryFist = process.cwd()+'/Source/Test/tests/fist.file'
+        console.log(imaginaryFist)
+        fist.pound(imaginaryFist);
     }
 
     testPositionAlity(){
         this.comet('Test.MVC.View.positionality(): ')
         var positives = POSITIVE_NUMS;
-        var sanatize = new Sanatize()
+        var _sanatize = new _Sanatize()
 
         positives.forEach(expression => {
             console.log('original', expression)
-            var ality = sanatize.sanatize(expression, 'ality')
+            var ality = _sanatize._sanatize(expression, 'positionality')
         });
     } 
 
     testQuanTality(){
         this.comet('quantality()')
         var positives = POSITIVE_NUMS;
-        var sanatize = new Sanitize_();
+        var _sanatize = new _Sanitize();
 
         positives.forEach(expression => {
-            if(sanatize.sanatize(expression, 'tality')['matches'][0]==expression){
+            if(_sanatize._sanatize(expression, 'quantality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanatize.sanatize(expression, 'tality')['matches'])
+                this.comet(_sanatize._sanatize(expression, 'tality')['matches'])
                 this.comet(expression, "is false")
             }
         });
@@ -56,13 +57,13 @@ export class View extends Comet{
     testClusIvity(){
         this.comet('clusivity()')
         var positives = POSITIVE_CLUS;
-        var sanatize = new Sanitize_()
+        var _sanatize = new _Sanitize();
 
         positives.forEach(expression => {
-            if(sanatize.sanatize(expression, 'ivity')['matches'][0]==expression){
+            if(_sanatize._sanatize(expression, 'clusivity')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
-                this.comet(sanatize.sanatize(expression, 'ivity')['matches'])
+                this.comet(_sanatize._sanatize(expression, 'ivity')['matches'])
                 this.comet(expression, "is false")
             }
         });

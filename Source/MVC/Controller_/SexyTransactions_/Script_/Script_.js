@@ -3,7 +3,6 @@
 export class Script_{
     // constructor(prepo){
     //     // this._Script_ = new _Script_(prepo)
-        
     // }
 
 }
