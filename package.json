@@ -20,7 +20,5 @@
     "url": "https://github.com/ItsZeusBro/FIST/issues"
   },
   "homepage": "https://github.com/ItsZeusBro/FIST#readme",
-  "dependencies": {
-    "mathjs": "^10.6.4"
-  }
+
 }
