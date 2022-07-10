@@ -176,20 +176,6 @@ This is the "ality to" position associated with the destination file and bit pos
 #### sPosaQuanaClus
 This is a string that could be a Positionality, Quantality, or Clusivity, in cases where a general class handles all three for general tasks.
 
-## Corruptions
-
-#### Sanatiz
-This is a corruption of the english word "Sanatizer". We like Sanatiz better. 
-
-#### Sclusatiz
-Sclusatiz is the Sanatiz'r of a would be Clusivity string
-
-#### Squanatiz
-Squanatiz is the Sanatiz'r of a would be Quantality string
-
-#### Sposatiz
-Sposatiz is the Sanatiz'r of a would be Positonality string
-
 
 ## Analogies
 #### Model
