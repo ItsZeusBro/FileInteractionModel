@@ -1,12 +1,13 @@
-import { View } from "./View/View.js";
+import { View } from "./MVC/View/View.js";
 import { Comet } from "../Comet/Comet.js"
-
+import { Spells } from "./Magic/Spells.js"
 class Test extends Comet{
     constructor(){
         super();
 
     }
     run_tests(){
+        new Spells()
         new View()
     }   
 }

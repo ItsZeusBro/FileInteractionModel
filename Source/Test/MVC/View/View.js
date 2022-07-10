@@ -1,18 +1,17 @@
-import {Fist} from "../../Fist.js"
-import { Comet } from "../../Comet/Comet.js";
-import {GoodyBag} from "../../Source/GoodyBag/GoodyBag.js"
-import * as assert from "node:assert";
-import { Sanatize } from "../../Source/Sanatize/Sanatize.js";
+import {Fist} from "../../../../Fist.js"
+import { Comet } from "../../../Comet/Comet.js";
+import { Sanatize } from "../../../MVC/View_/Sanatize_/Sanatize_.js";
 import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 
 //This basically runs tests on every module
 export class View extends Comet{
+
     constructor(){
         super();
-        
         this.comet("sometest from View");
         this.run_tests();
     }
+
     run_tests(){
         console.log('running tests')
         this.fist();
@@ -20,11 +19,13 @@ export class View extends Comet{
         this.quantality();
         this.clusivity();
     }
+
     fist(){
         var fist = new Fist();
-        var file=process.cwd()+'/Test/tests/fist.file'
+        var file = process.cwd()+'/Test/tests/fist.file'
         fist.pound(file);
     }
+
     positionality(){
         this.comet('positionality()')
 
@@ -37,12 +38,13 @@ export class View extends Comet{
         });
 
     } 
+
     quantality(){
         this.comet('quantality()')
 
         var positives = POSITIVE_NUMS;
 
-        var sanatize = new Sanitizer()
+        var sanatize = new Sanitize_()
 
         positives.forEach(expression => {
         
@@ -54,13 +56,12 @@ export class View extends Comet{
             }
         });
     }
+
     clusivity(){
         this.comet('clusivity()')
-    //     this.comet(
-    //         true,
-    //    )
+
         var positives = POSITIVE_CLUS;
-        var sanatize = new Sanitizer()
+        var sanatize = new Sanitize_()
         positives.forEach(expression => {
         
             if(sanatize.sanatize(expression, 'ivity')['matches'][0]==expression){

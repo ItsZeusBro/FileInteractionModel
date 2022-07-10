@@ -4,7 +4,7 @@ import {Clus_} from "../Clusivity_/Clus_.js";
 import {Quan_} from "../Quantality_/Quan_.js"
 import {Position_} from "../Positionality_/Position_.js"
 
-export class Sanatize{
+export class Sanatize_{
     constructor(){
         this.binalities = {
             "bit":BIT,"kbit":KBIT,"mbit":MBIT, "gbit":GBIT, "tbit":TBIT, "pbit":PBIT, "ebit":EBIT,
