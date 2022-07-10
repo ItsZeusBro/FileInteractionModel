@@ -7,47 +7,43 @@ import { POSITIVE_CLUS, POSITIVE_NUMS } from "./Cases.js";
 export class View extends Comet{
 
     constructor(){
+        this.comet('Test.MVC.View.constructor(): View Tests')
         super();
-        this.comet("sometest from View");
-        this.run_tests();
+        this.runTests();
     }
 
-    run_tests(){
-        console.log('running tests')
+    runTests(){
+        this.comet('Test.MVC.View.runTests(): Running Tests')
         this.fist();
-        this.positionality();
-        this.quantality();
-        this.clusivity();
+        this.testPositionAlity();
+        // this.testQuanTality();
+        // this.testClusIvity();
     }
 
-    fist(){
+    createFist(){
+        this.comet('Test.MVC.View.createFist(): Creating ', process.cwd()+'/Test/tests/fist.file')
         var fist = new Fist();
         var file = process.cwd()+'/Test/tests/fist.file'
         fist.pound(file);
     }
 
-    positionality(){
-        this.comet('positionality()')
-
+    testPositionAlity(){
+        this.comet('Test.MVC.View.positionality(): ')
         var positives = POSITIVE_NUMS;
         var sanatize = new Sanatize()
+
         positives.forEach(expression => {
             console.log('original', expression)
             var ality = sanatize.sanatize(expression, 'ality')
-
         });
-
     } 
 
-    quantality(){
+    testQuanTality(){
         this.comet('quantality()')
-
         var positives = POSITIVE_NUMS;
-
-        var sanatize = new Sanitize_()
+        var sanatize = new Sanitize_();
 
         positives.forEach(expression => {
-        
             if(sanatize.sanatize(expression, 'tality')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
@@ -57,13 +53,12 @@ export class View extends Comet{
         });
     }
 
-    clusivity(){
+    testClusIvity(){
         this.comet('clusivity()')
-
         var positives = POSITIVE_CLUS;
         var sanatize = new Sanitize_()
+
         positives.forEach(expression => {
-        
             if(sanatize.sanatize(expression, 'ivity')['matches'][0]==expression){
                 this.comet(expression, "is true")
             }else{
@@ -72,5 +67,4 @@ export class View extends Comet{
             }
         });
     }
-    
 }
