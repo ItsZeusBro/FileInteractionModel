@@ -187,30 +187,6 @@ This represents all the code having to do with validating input from the user fu
 #### Controller
 This represents the business logic middleware between the Model and View.
 
-## Bug Classes
-#### June Bug 
-A type of bug that should only exist in limited contexts
-
-#### No-See-Ums
-A type of bug we don't often see, but we know still exists
-
-#### Water Bugs 
-A memory leak bug
-
-#### Praying Mantis
-Bugs we only see at scale
-
-## Miscilaneous
-#### Comet
-This is a tool i'm working on to create a better debugging experience, and logs for Ai optimization and debugging. 
-
-#### Goody Bag
-This is an unordered bag of miscellaneous tools
-
-#### Magic Spells
-These are regex strings that are so long and well known, we call them Magic Spells
-
-
 
 ## An Api (still working on it, thanks)
 a, b, and c are files. a.flow(b, //whatever) returns b so that you can do something on it. b.stream(c, //whatever) does the same
